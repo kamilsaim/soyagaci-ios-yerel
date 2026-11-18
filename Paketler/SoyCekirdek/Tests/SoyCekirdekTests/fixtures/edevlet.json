@@ -13766,6 +13766,203 @@
       }
     },
     {
+      "ad": "analiz: cocugun cocugu belirsiz",
+      "girdi": {
+        "tur": "analiz",
+        "kisiler": [
+          {
+            "sira": 1,
+            "cinsiyet": "E",
+            "relationship": "Kendisi",
+            "givn": "ALİ",
+            "surn": "KAYA",
+            "babaAdi": "",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 2,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "MEHMET",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 3,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "HASAN",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 4,
+            "cinsiyet": "K",
+            "relationship": "Oğlunun Kızı",
+            "givn": "ZEYNEP",
+            "surn": "KAYA",
+            "babaAdi": "SELİM",
+            "anaAdi": "AYŞE",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 5,
+            "cinsiyet": "E",
+            "relationship": "Oğlunun Oğlu",
+            "givn": "CAN",
+            "surn": "KAYA",
+            "babaAdi": "MEHMET",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          }
+        ]
+      },
+      "beklenen": {
+        "dugumler": [
+          {
+            "sira": 1,
+            "yol": "",
+            "cins": "M",
+            "ad": "ALİ",
+            "tok": [],
+            "baba": null,
+            "anne": null
+          },
+          {
+            "sira": 2,
+            "yol": "C",
+            "cins": "M",
+            "ad": "MEHMET",
+            "tok": [
+              {
+                "t": "C",
+                "sex": "M"
+              }
+            ],
+            "baba": {
+              "tur": "dugum",
+              "i": 0
+            },
+            "anne": null
+          },
+          {
+            "sira": 3,
+            "yol": "C",
+            "cins": "M",
+            "ad": "HASAN",
+            "tok": [
+              {
+                "t": "C",
+                "sex": "M"
+              }
+            ],
+            "baba": {
+              "tur": "dugum",
+              "i": 0
+            },
+            "anne": null
+          },
+          {
+            "sira": 4,
+            "yol": "CC",
+            "cins": "F",
+            "ad": "ZEYNEP",
+            "tok": [
+              {
+                "t": "C",
+                "sex": "M"
+              },
+              {
+                "t": "C",
+                "sex": "F"
+              }
+            ],
+            "baba": null,
+            "anne": null
+          },
+          {
+            "sira": 5,
+            "yol": "CC",
+            "cins": "M",
+            "ad": "CAN",
+            "tok": [
+              {
+                "t": "C",
+                "sex": "M"
+              },
+              {
+                "t": "C",
+                "sex": "M"
+              }
+            ],
+            "baba": {
+              "tur": "dugum",
+              "i": 1
+            },
+            "anne": null
+          }
+        ],
+        "uyarilar": [
+          "4. Zeynep: hangi çocuğun çocuğu olduğu bulunamadı (baba adı Selim, ana adı Ayşe)."
+        ]
+      }
+    },
+    {
       "ad": "analiz: bos",
       "girdi": {
         "tur": "analiz",
@@ -24279,6 +24476,586 @@
       }
     },
     {
+      "ad": "gedcom: cocugun cocugu belirsiz / varsayilan",
+      "girdi": {
+        "tur": "gedcom",
+        "kisiler": [
+          {
+            "sira": 1,
+            "cinsiyet": "E",
+            "relationship": "Kendisi",
+            "givn": "ALİ",
+            "surn": "KAYA",
+            "babaAdi": "",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 2,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "MEHMET",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 3,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "HASAN",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 4,
+            "cinsiyet": "K",
+            "relationship": "Oğlunun Kızı",
+            "givn": "ZEYNEP",
+            "surn": "KAYA",
+            "babaAdi": "SELİM",
+            "anaAdi": "AYŞE",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 5,
+            "cinsiyet": "E",
+            "relationship": "Oğlunun Oğlu",
+            "givn": "CAN",
+            "surn": "KAYA",
+            "babaAdi": "MEHMET",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          }
+        ],
+        "secenek": null
+      },
+      "beklenen": {
+        "ged": "0 HEAD\n1 SOUR EDEVLET-GED\n2 NAME e-Devlet Soyagaci -> GEDCOM\n2 VERS 2.0\n1 DATE 18 NOV 2026\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 NOTE NVI Alt-Ust Soy Bilgisi. Gunu-ayi bilinmeyen eski dogumlar yalnizca yil olarak yazildi.\n0 @I1@ INDI\n1 NAME Ali /Kaya/\n2 GIVN Ali\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Kendisi\n1 _YAKINLIK Kendisi\n1 FAMS @F1@\n0 @I2@ INDI\n1 NAME Mehmet /Kaya/\n2 GIVN Mehmet\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n1 FAMS @F2@\n0 @I3@ INDI\n1 NAME Hasan /Kaya/\n2 GIVN Hasan\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n0 @I4@ INDI\n1 NAME Zeynep /Kaya/\n2 GIVN Zeynep\n2 SURN Kaya\n1 SEX F\n1 NOTE e-Devlet yakınlık: Oğlunun Kızı\n1 _YAKINLIK Oğlunun Kızı\n0 @I5@ INDI\n1 NAME Can /Kaya/\n2 GIVN Can\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlunun Oğlu\n1 _YAKINLIK Oğlunun Oğlu\n1 FAMC @F2@\n0 @F1@ FAM\n1 HUSB @I1@\n1 CHIL @I2@\n1 CHIL @I3@\n0 @F2@ FAM\n1 HUSB @I2@\n1 CHIL @I5@\n0 TRLR\n"
+      }
+    },
+    {
+      "ad": "gedcom: cocugun cocugu belirsiz / hepsi acik",
+      "girdi": {
+        "tur": "gedcom",
+        "kisiler": [
+          {
+            "sira": 1,
+            "cinsiyet": "E",
+            "relationship": "Kendisi",
+            "givn": "ALİ",
+            "surn": "KAYA",
+            "babaAdi": "",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 2,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "MEHMET",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 3,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "HASAN",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 4,
+            "cinsiyet": "K",
+            "relationship": "Oğlunun Kızı",
+            "givn": "ZEYNEP",
+            "surn": "KAYA",
+            "babaAdi": "SELİM",
+            "anaAdi": "AYŞE",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 5,
+            "cinsiyet": "E",
+            "relationship": "Oğlunun Oğlu",
+            "givn": "CAN",
+            "surn": "KAYA",
+            "babaAdi": "MEHMET",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          }
+        ],
+        "secenek": {
+          "tc": true,
+          "ghost": true,
+          "maiden": true,
+          "note": true
+        }
+      },
+      "beklenen": {
+        "ged": "0 HEAD\n1 SOUR EDEVLET-GED\n2 NAME e-Devlet Soyagaci -> GEDCOM\n2 VERS 2.0\n1 DATE 18 NOV 2026\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 NOTE NVI Alt-Ust Soy Bilgisi. Gunu-ayi bilinmeyen eski dogumlar yalnizca yil olarak yazildi.\n0 @I1@ INDI\n1 NAME Ali /Kaya/\n2 GIVN Ali\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Kendisi\n1 _YAKINLIK Kendisi\n1 FAMS @F1@\n0 @I2@ INDI\n1 NAME Mehmet /Kaya/\n2 GIVN Mehmet\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n1 FAMS @F2@\n0 @I3@ INDI\n1 NAME Hasan /Kaya/\n2 GIVN Hasan\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n0 @I4@ INDI\n1 NAME Zeynep /Kaya/\n2 GIVN Zeynep\n2 SURN Kaya\n1 SEX F\n1 NOTE e-Devlet yakınlık: Oğlunun Kızı\n1 _YAKINLIK Oğlunun Kızı\n0 @I5@ INDI\n1 NAME Can /Kaya/\n2 GIVN Can\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlunun Oğlu\n1 _YAKINLIK Oğlunun Oğlu\n1 FAMC @F2@\n0 @F1@ FAM\n1 HUSB @I1@\n1 CHIL @I2@\n1 CHIL @I3@\n0 @F2@ FAM\n1 HUSB @I2@\n1 CHIL @I5@\n0 TRLR\n"
+      }
+    },
+    {
+      "ad": "gedcom: cocugun cocugu belirsiz / hepsi kapali",
+      "girdi": {
+        "tur": "gedcom",
+        "kisiler": [
+          {
+            "sira": 1,
+            "cinsiyet": "E",
+            "relationship": "Kendisi",
+            "givn": "ALİ",
+            "surn": "KAYA",
+            "babaAdi": "",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 2,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "MEHMET",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 3,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "HASAN",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 4,
+            "cinsiyet": "K",
+            "relationship": "Oğlunun Kızı",
+            "givn": "ZEYNEP",
+            "surn": "KAYA",
+            "babaAdi": "SELİM",
+            "anaAdi": "AYŞE",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 5,
+            "cinsiyet": "E",
+            "relationship": "Oğlunun Oğlu",
+            "givn": "CAN",
+            "surn": "KAYA",
+            "babaAdi": "MEHMET",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          }
+        ],
+        "secenek": {
+          "tc": false,
+          "ghost": false,
+          "maiden": false,
+          "note": false
+        }
+      },
+      "beklenen": {
+        "ged": "0 HEAD\n1 SOUR EDEVLET-GED\n2 NAME e-Devlet Soyagaci -> GEDCOM\n2 VERS 2.0\n1 DATE 18 NOV 2026\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 NOTE NVI Alt-Ust Soy Bilgisi. Gunu-ayi bilinmeyen eski dogumlar yalnizca yil olarak yazildi.\n0 @I1@ INDI\n1 NAME ALİ /KAYA/\n2 GIVN ALİ\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Kendisi\n1 _YAKINLIK Kendisi\n1 FAMS @F1@\n0 @I2@ INDI\n1 NAME MEHMET /KAYA/\n2 GIVN MEHMET\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n1 FAMS @F2@\n0 @I3@ INDI\n1 NAME HASAN /KAYA/\n2 GIVN HASAN\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n0 @I4@ INDI\n1 NAME ZEYNEP /KAYA/\n2 GIVN ZEYNEP\n2 SURN KAYA\n1 SEX F\n1 NOTE e-Devlet yakınlık: Oğlunun Kızı\n1 _YAKINLIK Oğlunun Kızı\n0 @I5@ INDI\n1 NAME CAN /KAYA/\n2 GIVN CAN\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlunun Oğlu\n1 _YAKINLIK Oğlunun Oğlu\n1 FAMC @F2@\n0 @F1@ FAM\n1 HUSB @I1@\n1 CHIL @I2@\n1 CHIL @I3@\n0 @F2@ FAM\n1 HUSB @I2@\n1 CHIL @I5@\n0 TRLR\n"
+      }
+    },
+    {
+      "ad": "gedcom: cocugun cocugu belirsiz / yalniz tc",
+      "girdi": {
+        "tur": "gedcom",
+        "kisiler": [
+          {
+            "sira": 1,
+            "cinsiyet": "E",
+            "relationship": "Kendisi",
+            "givn": "ALİ",
+            "surn": "KAYA",
+            "babaAdi": "",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 2,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "MEHMET",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 3,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "HASAN",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 4,
+            "cinsiyet": "K",
+            "relationship": "Oğlunun Kızı",
+            "givn": "ZEYNEP",
+            "surn": "KAYA",
+            "babaAdi": "SELİM",
+            "anaAdi": "AYŞE",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 5,
+            "cinsiyet": "E",
+            "relationship": "Oğlunun Oğlu",
+            "givn": "CAN",
+            "surn": "KAYA",
+            "babaAdi": "MEHMET",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          }
+        ],
+        "secenek": {
+          "tc": true,
+          "ghost": false,
+          "maiden": false,
+          "note": false
+        }
+      },
+      "beklenen": {
+        "ged": "0 HEAD\n1 SOUR EDEVLET-GED\n2 NAME e-Devlet Soyagaci -> GEDCOM\n2 VERS 2.0\n1 DATE 18 NOV 2026\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 NOTE NVI Alt-Ust Soy Bilgisi. Gunu-ayi bilinmeyen eski dogumlar yalnizca yil olarak yazildi.\n0 @I1@ INDI\n1 NAME Ali /Kaya/\n2 GIVN Ali\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Kendisi\n1 _YAKINLIK Kendisi\n1 FAMS @F1@\n0 @I2@ INDI\n1 NAME Mehmet /Kaya/\n2 GIVN Mehmet\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n1 FAMS @F2@\n0 @I3@ INDI\n1 NAME Hasan /Kaya/\n2 GIVN Hasan\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n0 @I4@ INDI\n1 NAME Zeynep /Kaya/\n2 GIVN Zeynep\n2 SURN Kaya\n1 SEX F\n1 NOTE e-Devlet yakınlık: Oğlunun Kızı\n1 _YAKINLIK Oğlunun Kızı\n0 @I5@ INDI\n1 NAME Can /Kaya/\n2 GIVN Can\n2 SURN Kaya\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlunun Oğlu\n1 _YAKINLIK Oğlunun Oğlu\n1 FAMC @F2@\n0 @F1@ FAM\n1 HUSB @I1@\n1 CHIL @I2@\n1 CHIL @I3@\n0 @F2@ FAM\n1 HUSB @I2@\n1 CHIL @I5@\n0 TRLR\n"
+      }
+    },
+    {
+      "ad": "gedcom: cocugun cocugu belirsiz / yalniz hayali+not",
+      "girdi": {
+        "tur": "gedcom",
+        "kisiler": [
+          {
+            "sira": 1,
+            "cinsiyet": "E",
+            "relationship": "Kendisi",
+            "givn": "ALİ",
+            "surn": "KAYA",
+            "babaAdi": "",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 2,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "MEHMET",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 3,
+            "cinsiyet": "E",
+            "relationship": "Oğlu",
+            "givn": "HASAN",
+            "surn": "KAYA",
+            "babaAdi": "ALİ",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 4,
+            "cinsiyet": "K",
+            "relationship": "Oğlunun Kızı",
+            "givn": "ZEYNEP",
+            "surn": "KAYA",
+            "babaAdi": "SELİM",
+            "anaAdi": "AYŞE",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          },
+          {
+            "sira": 5,
+            "cinsiyet": "E",
+            "relationship": "Oğlunun Oğlu",
+            "givn": "CAN",
+            "surn": "KAYA",
+            "babaAdi": "MEHMET",
+            "anaAdi": "",
+            "birthPlace": "",
+            "birthDate": "",
+            "il": "",
+            "ilce": "",
+            "mahalle": "",
+            "cilt": "",
+            "hane": "",
+            "birey": "",
+            "medeniHal": "",
+            "status": "sağ",
+            "deathDate": ""
+          }
+        ],
+        "secenek": {
+          "tc": false,
+          "ghost": true,
+          "maiden": false,
+          "note": true
+        }
+      },
+      "beklenen": {
+        "ged": "0 HEAD\n1 SOUR EDEVLET-GED\n2 NAME e-Devlet Soyagaci -> GEDCOM\n2 VERS 2.0\n1 DATE 18 NOV 2026\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 NOTE NVI Alt-Ust Soy Bilgisi. Gunu-ayi bilinmeyen eski dogumlar yalnizca yil olarak yazildi.\n0 @I1@ INDI\n1 NAME ALİ /KAYA/\n2 GIVN ALİ\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Kendisi\n1 _YAKINLIK Kendisi\n1 FAMS @F1@\n0 @I2@ INDI\n1 NAME MEHMET /KAYA/\n2 GIVN MEHMET\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n1 FAMS @F2@\n0 @I3@ INDI\n1 NAME HASAN /KAYA/\n2 GIVN HASAN\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlu\n1 _YAKINLIK Oğlu\n1 FAMC @F1@\n0 @I4@ INDI\n1 NAME ZEYNEP /KAYA/\n2 GIVN ZEYNEP\n2 SURN KAYA\n1 SEX F\n1 NOTE e-Devlet yakınlık: Oğlunun Kızı\n1 _YAKINLIK Oğlunun Kızı\n0 @I5@ INDI\n1 NAME CAN /KAYA/\n2 GIVN CAN\n2 SURN KAYA\n1 SEX M\n1 NOTE e-Devlet yakınlık: Oğlunun Oğlu\n1 _YAKINLIK Oğlunun Oğlu\n1 FAMC @F2@\n0 @F1@ FAM\n1 HUSB @I1@\n1 CHIL @I2@\n1 CHIL @I3@\n0 @F2@ FAM\n1 HUSB @I2@\n1 CHIL @I5@\n0 TRLR\n"
+      }
+    },
+    {
       "ad": "gedcom: bos / varsayilan",
       "girdi": {
         "tur": "gedcom",
@@ -30550,6 +31327,881 @@
       }
     },
     {
+      "ad": "pdf: alt bilgi bantlari (gov.tr, sayfa x / y)",
+      "girdi": {
+        "tur": "pdf",
+        "sayfalar": [
+          [
+            {
+              "str": "Sıra",
+              "x": 30,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "C",
+              "x": 62,
+              "y": 760,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Yakınlık",
+              "x": 90,
+              "y": 760,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Derecesi",
+              "x": 125.6,
+              "y": 760,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Adı",
+              "x": 390,
+              "y": 760,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Soyadı",
+              "x": 460,
+              "y": 760,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Baba",
+              "x": 530,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Adı",
+              "x": 548.8,
+              "y": 760,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Ana",
+              "x": 600,
+              "y": 760,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Adı",
+              "x": 614.6,
+              "y": 760,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Doğum",
+              "x": 670,
+              "y": 760,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "Yeri",
+              "x": 693,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "ve",
+              "x": 711.8,
+              "y": 760,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "Tarihi",
+              "x": 722.2,
+              "y": 760,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "İl-İlçe-Mahalle/Köy",
+              "x": 780,
+              "y": 760,
+              "w": 79.8,
+              "h": 8
+            },
+            {
+              "str": "Cilt-Hane-Birey",
+              "x": 890,
+              "y": 760,
+              "w": 63,
+              "h": 8
+            },
+            {
+              "str": "Sıra",
+              "x": 955,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "No",
+              "x": 973.8,
+              "y": 760,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "Medeni",
+              "x": 990,
+              "y": 760,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Hali",
+              "x": 1017.2,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Durumu",
+              "x": 1080,
+              "y": 760,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "1",
+              "x": 30,
+              "y": 725.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "E",
+              "x": 62,
+              "y": 727.3,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 90,
+              "y": 726,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 130.2,
+              "y": 726.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "An",
+              "x": 170.4,
+              "y": 724.9,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "n",
+              "x": 179.1,
+              "y": 726.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "esinin",
+              "x": 183.6,
+              "y": 725.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Babası",
+              "x": 211.5,
+              "y": 727.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "HACI",
+              "x": 390,
+              "y": 726,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "MEHMET",
+              "x": 409.2,
+              "y": 726.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "DERE",
+              "x": 460,
+              "y": 724.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "MEHMET",
+              "x": 530,
+              "y": 726.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "EMİNE",
+              "x": 600,
+              "y": 725.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 727.3,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1841",
+              "x": 670,
+              "y": 716,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 726.9,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 714.9,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "KELER",
+              "x": 780,
+              "y": 706.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 803.4,
+              "y": 705.4,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "6-43-1",
+              "x": 890,
+              "y": 727.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Dul",
+              "x": 990,
+              "y": 726,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 726.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "01/07/1931",
+              "x": 1080,
+              "y": 714.9,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "2",
+              "x": 30,
+              "y": 672.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "K",
+              "x": 62,
+              "y": 671.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 90,
+              "y": 673.3,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 130.2,
+              "y": 672,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "An",
+              "x": 170.4,
+              "y": 672.9,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "n",
+              "x": 179.1,
+              "y": 670.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "esinin",
+              "x": 183.6,
+              "y": 672.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Annesi",
+              "x": 211.5,
+              "y": 671.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "ÜMMÜGÜLSÜN",
+              "x": 390,
+              "y": 673.3,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "DERE",
+              "x": 460,
+              "y": 672,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "BİLAL",
+              "x": 530,
+              "y": 672.9,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "EMİNE",
+              "x": 600,
+              "y": 670.9,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 672.4,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1845",
+              "x": 670,
+              "y": 661.4,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 673.3,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 662,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "KELER",
+              "x": 780,
+              "y": 652.9,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 803.4,
+              "y": 650.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "6-43-3",
+              "x": 890,
+              "y": 672.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Evli",
+              "x": 990,
+              "y": 671.4,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 673.3,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 1080,
+              "y": 662,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "3",
+              "x": 30,
+              "y": 618.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "E",
+              "x": 62,
+              "y": 616.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 90,
+              "y": 618.4,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Babasının",
+              "x": 130.2,
+              "y": 617.4,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Ba",
+              "x": 170.4,
+              "y": 619.3,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "b",
+              "x": 179.1,
+              "y": 618,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "asının",
+              "x": 183.6,
+              "y": 618.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Babası",
+              "x": 211.5,
+              "y": 616.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "OSMAN",
+              "x": 390,
+              "y": 618.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 460,
+              "y": 617.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "İSMAİL",
+              "x": 530,
+              "y": 619.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "ŞERİFE",
+              "x": 600,
+              "y": 618,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 618.9,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1861",
+              "x": 670,
+              "y": 606.9,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 618.4,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 607.4,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "İDRİS",
+              "x": 780,
+              "y": 599.3,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 803.4,
+              "y": 598,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "4-37-1",
+              "x": 890,
+              "y": 618.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Evli",
+              "x": 990,
+              "y": 616.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 618.4,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 1080,
+              "y": 607.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "4",
+              "x": 30,
+              "y": 565.3,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "E",
+              "x": 62,
+              "y": 564,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Babasının",
+              "x": 90,
+              "y": 564.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Babasının",
+              "x": 130.2,
+              "y": 562.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Ba",
+              "x": 170.4,
+              "y": 564.4,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "b",
+              "x": 179.1,
+              "y": 563.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "asının",
+              "x": 183.6,
+              "y": 565.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Babası",
+              "x": 211.5,
+              "y": 564,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "MEHMET",
+              "x": 390,
+              "y": 564.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "SAİM",
+              "x": 460,
+              "y": 562.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "İSMAİL",
+              "x": 530,
+              "y": 564.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "FATMA",
+              "x": 600,
+              "y": 563.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 565.3,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1874",
+              "x": 670,
+              "y": 554,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 564.9,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 552.9,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "BEYLERYUKARI",
+              "x": 780,
+              "y": 544.4,
+              "w": 50.4,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 832.8,
+              "y": 543.4,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "1-22-2",
+              "x": 890,
+              "y": 565.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Evli",
+              "x": 990,
+              "y": 564,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 564.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 1080,
+              "y": 552.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Toplam Sayfa 1 / 2",
+              "x": 380,
+              "y": 40,
+              "w": 75.6,
+              "h": 8
+            },
+            {
+              "str": "Dogrulama kodu: x1 www.egov.tr",
+              "x": 380,
+              "y": 60,
+              "w": 126,
+              "h": 8
+            },
+            {
+              "str": "7",
+              "x": 30,
+              "y": 80,
+              "w": 4.2,
+              "h": 8
+            }
+          ]
+        ]
+      },
+      "beklenen": {
+        "izgara": [
+          [
+            "1",
+            "E",
+            "Annesinin Annesinin Annesinin Babası",
+            "HACI MEHMET",
+            "DERE",
+            "MEHMET",
+            "EMİNE",
+            "YEŞİLHİSAR\n01/07/1841",
+            "Kayseri/\nYeşilhisar/\nKELER MAHALLESİ",
+            "6-43-1",
+            "Dul",
+            "Ölüm\n01/07/1931"
+          ],
+          [
+            "2",
+            "K",
+            "Annesinin Annesinin Annesinin Annesi",
+            "ÜMMÜGÜLSÜN",
+            "DERE",
+            "BİLAL",
+            "EMİNE",
+            "YEŞİLHİSAR\n01/07/1845",
+            "Kayseri/\nYeşilhisar/\nKELER MAHALLESİ",
+            "6-43-3",
+            "Evli",
+            "Ölüm\n-"
+          ],
+          [
+            "3",
+            "E",
+            "Annesinin Babasının Babasının Babası",
+            "OSMAN",
+            "-",
+            "İSMAİL",
+            "ŞERİFE",
+            "YEŞİLHİSAR\n01/07/1861",
+            "Kayseri/\nYeşilhisar/\nİDRİS MAHALLESİ",
+            "4-37-1",
+            "Evli",
+            "Ölüm\n-"
+          ],
+          [
+            "4",
+            "E",
+            "Babasının Babasının Babasının Babası",
+            "MEHMET",
+            "SAİM",
+            "İSMAİL",
+            "FATMA",
+            "YEŞİLHİSAR\n01/07/1874",
+            "Kayseri/\nYeşilhisar/\nBEYLERYUKARI MAHALLESİ",
+            "1-22-2",
+            "Evli",
+            "Ölüm\n-"
+          ],
+          [
+            "7",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      }
+    },
+    {
       "ad": "pdf: baslik yok",
       "girdi": {
         "tur": "pdf",
@@ -30558,469 +32210,469 @@
             {
               "str": "1",
               "x": 30,
-              "y": 759.4,
+              "y": 760.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 761.3,
+              "y": 759.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 760,
+              "y": 761.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 130.2,
-              "y": 760.9,
+              "y": 760,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "An",
               "x": 170.4,
-              "y": 758.9,
+              "y": 760.9,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "n",
               "x": 179.1,
-              "y": 760.4,
+              "y": 758.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "esinin",
               "x": 183.6,
-              "y": 759.4,
+              "y": 760.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Babası",
               "x": 211.5,
-              "y": 761.3,
+              "y": 759.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "HACI",
               "x": 390,
-              "y": 760,
+              "y": 761.3,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 409.2,
-              "y": 760.9,
+              "y": 760,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "DERE",
               "x": 460,
-              "y": 758.9,
+              "y": 760.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 530,
-              "y": 760.4,
+              "y": 758.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "EMİNE",
               "x": 600,
-              "y": 759.4,
+              "y": 760.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 761.3,
+              "y": 759.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1841",
               "x": 670,
-              "y": 750,
+              "y": 751.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 760.9,
+              "y": 760,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 748.9,
+              "y": 750.9,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 740.4,
+              "y": 738.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 739.4,
+              "y": 740.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-43-1",
               "x": 890,
-              "y": 761.3,
+              "y": 759.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Dul",
               "x": 990,
-              "y": 760,
+              "y": 761.3,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 760.9,
+              "y": 760,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "01/07/1931",
               "x": 1080,
-              "y": 748.9,
+              "y": 750.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "2",
               "x": 30,
-              "y": 706.4,
+              "y": 704.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "K",
               "x": 62,
-              "y": 705.4,
+              "y": 706.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 707.3,
+              "y": 705.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 130.2,
-              "y": 706,
+              "y": 707.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "An",
               "x": 170.4,
-              "y": 706.9,
+              "y": 706,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "n",
               "x": 179.1,
-              "y": 704.9,
+              "y": 706.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "esinin",
               "x": 183.6,
-              "y": 706.4,
+              "y": 704.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Annesi",
               "x": 211.5,
-              "y": 705.4,
+              "y": 706.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "ÜMMÜGÜLSÜN",
               "x": 390,
-              "y": 707.3,
+              "y": 705.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "DERE",
               "x": 460,
-              "y": 706,
+              "y": 707.3,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "BİLAL",
               "x": 530,
-              "y": 706.9,
+              "y": 706,
               "w": 21,
               "h": 8
             },
             {
               "str": "EMİNE",
               "x": 600,
-              "y": 704.9,
+              "y": 706.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 706.4,
+              "y": 704.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1845",
               "x": 670,
-              "y": 695.4,
+              "y": 696.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 707.3,
+              "y": 705.4,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 696,
+              "y": 697.3,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 686.9,
+              "y": 686,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 684.9,
+              "y": 686.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-43-3",
               "x": 890,
-              "y": 706.4,
+              "y": 704.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Evli",
               "x": 990,
-              "y": 705.4,
+              "y": 706.4,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 707.3,
+              "y": 705.4,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "-",
               "x": 1080,
-              "y": 696,
+              "y": 697.3,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "3",
               "x": 30,
-              "y": 652.9,
+              "y": 652,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 650.9,
+              "y": 652.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 652.4,
+              "y": 650.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 130.2,
-              "y": 651.4,
+              "y": 652.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Ba",
               "x": 170.4,
-              "y": 653.3,
+              "y": 651.4,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "b",
               "x": 179.1,
-              "y": 652,
+              "y": 653.3,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "asının",
               "x": 183.6,
-              "y": 652.9,
+              "y": 652,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Babası",
               "x": 211.5,
-              "y": 650.9,
+              "y": 652.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "OSMAN",
               "x": 390,
-              "y": 652.4,
+              "y": 650.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "-",
               "x": 460,
-              "y": 651.4,
+              "y": 652.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "İSMAİL",
               "x": 530,
-              "y": 653.3,
+              "y": 651.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "ŞERİFE",
               "x": 600,
-              "y": 652,
+              "y": 653.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 652.9,
+              "y": 652,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1861",
               "x": 670,
-              "y": 640.9,
+              "y": 642.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 652.4,
+              "y": 650.9,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 641.4,
+              "y": 642.4,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "İDRİS",
               "x": 780,
-              "y": 633.3,
+              "y": 631.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 632,
+              "y": 633.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "4-37-1",
               "x": 890,
-              "y": 652.9,
+              "y": 652,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Evli",
               "x": 990,
-              "y": 650.9,
+              "y": 652.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 652.4,
+              "y": 650.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "-",
               "x": 1080,
-              "y": 641.4,
+              "y": 642.4,
               "w": 4.2,
               "h": 8
             }
@@ -31202,315 +32854,315 @@
             {
               "str": "1",
               "x": 30,
-              "y": 727.3,
+              "y": 725.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 726,
+              "y": 727.3,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 726.9,
+              "y": 726,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 130.2,
-              "y": 724.9,
+              "y": 726.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "An",
               "x": 170.4,
-              "y": 726.4,
+              "y": 724.9,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "n",
               "x": 179.1,
-              "y": 725.4,
+              "y": 726.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "esinin",
               "x": 183.6,
-              "y": 727.3,
+              "y": 725.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Babası",
               "x": 211.5,
-              "y": 726,
+              "y": 727.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "HACI",
               "x": 390,
-              "y": 726.9,
+              "y": 726,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 409.2,
-              "y": 724.9,
+              "y": 726.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "DERE",
               "x": 460,
-              "y": 726.4,
+              "y": 724.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 530,
-              "y": 725.4,
+              "y": 726.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "EMİNE",
               "x": 600,
-              "y": 727.3,
+              "y": 725.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 726,
+              "y": 727.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1841",
               "x": 670,
-              "y": 716.9,
+              "y": 716,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 724.9,
+              "y": 726.9,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 716.4,
+              "y": 714.9,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 705.4,
+              "y": 706.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 707.3,
+              "y": 705.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-43-1",
               "x": 890,
-              "y": 726,
+              "y": 727.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Dul",
               "x": 990,
-              "y": 726.9,
+              "y": 726,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 724.9,
+              "y": 726.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "01/07/1931",
               "x": 1080,
-              "y": 716.4,
+              "y": 714.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "2",
               "x": 30,
-              "y": 671.4,
+              "y": 672.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "K",
               "x": 62,
-              "y": 673.3,
+              "y": 671.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 672,
+              "y": 673.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 130.2,
-              "y": 672.9,
+              "y": 672,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "An",
               "x": 170.4,
-              "y": 670.9,
+              "y": 672.9,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "n",
               "x": 179.1,
-              "y": 672.4,
+              "y": 670.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "esinin",
               "x": 183.6,
-              "y": 671.4,
+              "y": 672.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Annesi",
               "x": 211.5,
-              "y": 673.3,
+              "y": 671.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "ÜMMÜGÜLSÜN",
               "x": 390,
-              "y": 672,
+              "y": 673.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "DERE",
               "x": 460,
-              "y": 672.9,
+              "y": 672,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "BİLAL",
               "x": 530,
-              "y": 670.9,
+              "y": 672.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "EMİNE",
               "x": 600,
-              "y": 672.4,
+              "y": 670.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 671.4,
+              "y": 672.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1845",
               "x": 670,
-              "y": 663.3,
+              "y": 661.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 672,
+              "y": 673.3,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 662.9,
+              "y": 662,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 650.9,
+              "y": 652.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 652.4,
+              "y": 650.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-43-3",
               "x": 890,
-              "y": 671.4,
+              "y": 672.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Evli",
               "x": 990,
-              "y": 673.3,
+              "y": 671.4,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 672,
+              "y": 673.3,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "-",
               "x": 1080,
-              "y": 662.9,
+              "y": 662,
               "w": 4.2,
               "h": 8
             }
@@ -31669,727 +33321,6 @@
             },
             {
               "str": "DURUMU",
-              "x": 1080,
-              "y": 760,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "1",
-              "x": 30,
-              "y": 724.9,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "E",
-              "x": 62,
-              "y": 726.4,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "Annesinin",
-              "x": 90,
-              "y": 725.4,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "Annesinin",
-              "x": 130.2,
-              "y": 727.3,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "An",
-              "x": 170.4,
-              "y": 726,
-              "w": 8.4,
-              "h": 8
-            },
-            {
-              "str": "n",
-              "x": 179.1,
-              "y": 726.9,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "esinin",
-              "x": 183.6,
-              "y": 724.9,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Babası",
-              "x": 211.5,
-              "y": 726.4,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "HACI",
-              "x": 390,
-              "y": 725.4,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "MEHMET",
-              "x": 409.2,
-              "y": 727.3,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "DERE",
-              "x": 460,
-              "y": 726,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "MEHMET",
-              "x": 530,
-              "y": 726.9,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "EMİNE",
-              "x": 600,
-              "y": 724.9,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "YEŞİLHİSAR",
-              "x": 670,
-              "y": 726.4,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "01/07/1841",
-              "x": 670,
-              "y": 715.4,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "Kayseri/",
-              "x": 780,
-              "y": 727.3,
-              "w": 33.6,
-              "h": 8
-            },
-            {
-              "str": "Yeşilhisar/",
-              "x": 780,
-              "y": 716,
-              "w": 46.2,
-              "h": 8
-            },
-            {
-              "str": "KELER",
-              "x": 780,
-              "y": 706.9,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "MAHALLESİ",
-              "x": 803.4,
-              "y": 704.9,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "6-43-1",
-              "x": 890,
-              "y": 726.4,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Dul",
-              "x": 990,
-              "y": 725.4,
-              "w": 12.6,
-              "h": 8
-            },
-            {
-              "str": "Ölüm",
-              "x": 1080,
-              "y": 727.3,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "01/07/1931",
-              "x": 1080,
-              "y": 716,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "2",
-              "x": 30,
-              "y": 672.9,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "K",
-              "x": 62,
-              "y": 670.9,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "Annesinin",
-              "x": 90,
-              "y": 672.4,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "Annesinin",
-              "x": 130.2,
-              "y": 671.4,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "An",
-              "x": 170.4,
-              "y": 673.3,
-              "w": 8.4,
-              "h": 8
-            },
-            {
-              "str": "n",
-              "x": 179.1,
-              "y": 672,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "esinin",
-              "x": 183.6,
-              "y": 672.9,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Annesi",
-              "x": 211.5,
-              "y": 670.9,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "ÜMMÜGÜLSÜN",
-              "x": 390,
-              "y": 672.4,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "DERE",
-              "x": 460,
-              "y": 671.4,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "BİLAL",
-              "x": 530,
-              "y": 673.3,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "EMİNE",
-              "x": 600,
-              "y": 672,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "YEŞİLHİSAR",
-              "x": 670,
-              "y": 672.9,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "01/07/1845",
-              "x": 670,
-              "y": 660.9,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "Kayseri/",
-              "x": 780,
-              "y": 672.4,
-              "w": 33.6,
-              "h": 8
-            },
-            {
-              "str": "Yeşilhisar/",
-              "x": 780,
-              "y": 661.4,
-              "w": 46.2,
-              "h": 8
-            },
-            {
-              "str": "KELER",
-              "x": 780,
-              "y": 653.3,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "MAHALLESİ",
-              "x": 803.4,
-              "y": 652,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "6-43-3",
-              "x": 890,
-              "y": 672.9,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Evli",
-              "x": 990,
-              "y": 670.9,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "Ölüm",
-              "x": 1080,
-              "y": 672.4,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "-",
-              "x": 1080,
-              "y": 661.4,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "3",
-              "x": 30,
-              "y": 619.3,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "E",
-              "x": 62,
-              "y": 618,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "Annesinin",
-              "x": 90,
-              "y": 618.9,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "Babasının",
-              "x": 130.2,
-              "y": 616.9,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "Ba",
-              "x": 170.4,
-              "y": 618.4,
-              "w": 8.4,
-              "h": 8
-            },
-            {
-              "str": "b",
-              "x": 179.1,
-              "y": 617.4,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "asının",
-              "x": 183.6,
-              "y": 619.3,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Babası",
-              "x": 211.5,
-              "y": 618,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "OSMAN",
-              "x": 390,
-              "y": 618.9,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "-",
-              "x": 460,
-              "y": 616.9,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "İSMAİL",
-              "x": 530,
-              "y": 618.4,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "ŞERİFE",
-              "x": 600,
-              "y": 617.4,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "YEŞİLHİSAR",
-              "x": 670,
-              "y": 619.3,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "01/07/1861",
-              "x": 670,
-              "y": 608,
-              "w": 42,
-              "h": 8
-            },
-            {
-              "str": "Kayseri/",
-              "x": 780,
-              "y": 618.9,
-              "w": 33.6,
-              "h": 8
-            },
-            {
-              "str": "Yeşilhisar/",
-              "x": 780,
-              "y": 606.9,
-              "w": 46.2,
-              "h": 8
-            },
-            {
-              "str": "İDRİS",
-              "x": 780,
-              "y": 598.4,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "MAHALLESİ",
-              "x": 803.4,
-              "y": 597.4,
-              "w": 37.8,
-              "h": 8
-            },
-            {
-              "str": "4-37-1",
-              "x": 890,
-              "y": 619.3,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Evli",
-              "x": 990,
-              "y": 618,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "Ölüm",
-              "x": 1080,
-              "y": 618.9,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "-",
-              "x": 1080,
-              "y": 606.9,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "AÇIKLAMALAR",
-              "x": 30,
-              "y": 564,
-              "w": 46.2,
-              "h": 8
-            },
-            {
-              "str": "99",
-              "x": 30,
-              "y": 540.4,
-              "w": 8.4,
-              "h": 8
-            },
-            {
-              "str": "E",
-              "x": 62,
-              "y": 539.4,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "Kendisi",
-              "x": 90,
-              "y": 541.3,
-              "w": 29.4,
-              "h": 8
-            },
-            {
-              "str": "HAYALET",
-              "x": 390,
-              "y": 540,
-              "w": 29.4,
-              "h": 8
-            },
-            {
-              "str": "   ",
-              "x": 100,
-              "y": 500,
-              "w": 12.6,
-              "h": 8
-            },
-            {
-              "str": "",
-              "x": 120,
-              "y": 500,
-              "w": 0,
-              "h": 8
-            }
-          ]
-        ]
-      },
-      "beklenen": {
-        "izgara": [
-          [
-            "1",
-            "E",
-            "Annesinin Annesinin Annesinin Babası",
-            "HACI MEHMET",
-            "DERE",
-            "MEHMET",
-            "EMİNE",
-            "YEŞİLHİSAR\n01/07/1841",
-            "Kayseri/\nYeşilhisar/\nKELER MAHALLESİ",
-            "6-43-1",
-            "Dul",
-            "Ölüm\n01/07/1931"
-          ],
-          [
-            "2",
-            "K",
-            "Annesinin Annesinin Annesinin Annesi",
-            "ÜMMÜGÜLSÜN",
-            "DERE",
-            "BİLAL",
-            "EMİNE",
-            "YEŞİLHİSAR\n01/07/1845",
-            "Kayseri/\nYeşilhisar/\nKELER MAHALLESİ",
-            "6-43-3",
-            "Evli",
-            "Ölüm\n-"
-          ],
-          [
-            "3",
-            "E",
-            "Annesinin Babasının Babasının Babası",
-            "OSMAN",
-            "-",
-            "İSMAİL",
-            "ŞERİFE",
-            "YEŞİLHİSAR\n01/07/1861",
-            "Kayseri/\nYeşilhisar/\nİDRİS MAHALLESİ",
-            "4-37-1",
-            "Evli",
-            "Ölüm\n-"
-          ]
-        ]
-      }
-    },
-    {
-      "ad": "pdf: baslik parcalari dalgali y",
-      "girdi": {
-        "tur": "pdf",
-        "sayfalar": [
-          [
-            {
-              "str": "Sıra",
-              "x": 30,
-              "y": 760,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "C",
-              "x": 62,
-              "y": 761.2,
-              "w": 4.2,
-              "h": 8
-            },
-            {
-              "str": "Yakınlık",
-              "x": 90,
-              "y": 762.4,
-              "w": 33.6,
-              "h": 8
-            },
-            {
-              "str": "Derecesi",
-              "x": 125.6,
-              "y": 760,
-              "w": 33.6,
-              "h": 8
-            },
-            {
-              "str": "Adı",
-              "x": 390,
-              "y": 761.2,
-              "w": 12.6,
-              "h": 8
-            },
-            {
-              "str": "Soyadı",
-              "x": 460,
-              "y": 762.4,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Baba",
-              "x": 530,
-              "y": 760,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "Adı",
-              "x": 548.8,
-              "y": 761.2,
-              "w": 12.6,
-              "h": 8
-            },
-            {
-              "str": "Ana",
-              "x": 600,
-              "y": 762.4,
-              "w": 12.6,
-              "h": 8
-            },
-            {
-              "str": "Adı",
-              "x": 614.6,
-              "y": 760,
-              "w": 12.6,
-              "h": 8
-            },
-            {
-              "str": "Doğum",
-              "x": 670,
-              "y": 761.2,
-              "w": 21,
-              "h": 8
-            },
-            {
-              "str": "Yeri",
-              "x": 693,
-              "y": 762.4,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "ve",
-              "x": 711.8,
-              "y": 760,
-              "w": 8.4,
-              "h": 8
-            },
-            {
-              "str": "Tarihi",
-              "x": 722.2,
-              "y": 761.2,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "İl-İlçe-Mahalle/Köy",
-              "x": 780,
-              "y": 762.4,
-              "w": 79.8,
-              "h": 8
-            },
-            {
-              "str": "Cilt-Hane-Birey",
-              "x": 890,
-              "y": 760,
-              "w": 63,
-              "h": 8
-            },
-            {
-              "str": "Sıra",
-              "x": 955,
-              "y": 761.2,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "No",
-              "x": 973.8,
-              "y": 762.4,
-              "w": 8.4,
-              "h": 8
-            },
-            {
-              "str": "Medeni",
-              "x": 990,
-              "y": 760,
-              "w": 25.2,
-              "h": 8
-            },
-            {
-              "str": "Hali",
-              "x": 1017.2,
-              "y": 760,
-              "w": 16.8,
-              "h": 8
-            },
-            {
-              "str": "Durumu",
               "x": 1080,
               "y": 760,
               "w": 25.2,
@@ -32863,6 +33794,727 @@
               "y": 608.9,
               "w": 4.2,
               "h": 8
+            },
+            {
+              "str": "AÇIKLAMALAR",
+              "x": 30,
+              "y": 564,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "99",
+              "x": 30,
+              "y": 538.9,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "E",
+              "x": 62,
+              "y": 540.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Kendisi",
+              "x": 90,
+              "y": 539.4,
+              "w": 29.4,
+              "h": 8
+            },
+            {
+              "str": "HAYALET",
+              "x": 390,
+              "y": 541.3,
+              "w": 29.4,
+              "h": 8
+            },
+            {
+              "str": "   ",
+              "x": 100,
+              "y": 500,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "",
+              "x": 120,
+              "y": 500,
+              "w": 0,
+              "h": 8
+            }
+          ]
+        ]
+      },
+      "beklenen": {
+        "izgara": [
+          [
+            "1",
+            "E",
+            "Annesinin Annesinin Annesinin Babası",
+            "HACI MEHMET",
+            "DERE",
+            "MEHMET",
+            "EMİNE",
+            "YEŞİLHİSAR\n01/07/1841",
+            "Kayseri/\nYeşilhisar/\nKELER MAHALLESİ",
+            "6-43-1",
+            "Dul",
+            "Ölüm\n01/07/1931"
+          ],
+          [
+            "2",
+            "K",
+            "Annesinin Annesinin Annesinin Annesi",
+            "ÜMMÜGÜLSÜN",
+            "DERE",
+            "BİLAL",
+            "EMİNE",
+            "YEŞİLHİSAR\n01/07/1845",
+            "Kayseri/\nYeşilhisar/\nKELER MAHALLESİ",
+            "6-43-3",
+            "Evli",
+            "Ölüm\n-"
+          ],
+          [
+            "3",
+            "E",
+            "Annesinin Babasının Babasının Babası",
+            "OSMAN",
+            "-",
+            "İSMAİL",
+            "ŞERİFE",
+            "YEŞİLHİSAR\n01/07/1861",
+            "Kayseri/\nYeşilhisar/\nİDRİS MAHALLESİ",
+            "4-37-1",
+            "Evli",
+            "Ölüm\n-"
+          ]
+        ]
+      }
+    },
+    {
+      "ad": "pdf: baslik parcalari dalgali y",
+      "girdi": {
+        "tur": "pdf",
+        "sayfalar": [
+          [
+            {
+              "str": "Sıra",
+              "x": 30,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "C",
+              "x": 62,
+              "y": 761.2,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Yakınlık",
+              "x": 90,
+              "y": 762.4,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Derecesi",
+              "x": 125.6,
+              "y": 760,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Adı",
+              "x": 390,
+              "y": 761.2,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Soyadı",
+              "x": 460,
+              "y": 762.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Baba",
+              "x": 530,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Adı",
+              "x": 548.8,
+              "y": 761.2,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Ana",
+              "x": 600,
+              "y": 762.4,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Adı",
+              "x": 614.6,
+              "y": 760,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Doğum",
+              "x": 670,
+              "y": 761.2,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "Yeri",
+              "x": 693,
+              "y": 762.4,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "ve",
+              "x": 711.8,
+              "y": 760,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "Tarihi",
+              "x": 722.2,
+              "y": 761.2,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "İl-İlçe-Mahalle/Köy",
+              "x": 780,
+              "y": 762.4,
+              "w": 79.8,
+              "h": 8
+            },
+            {
+              "str": "Cilt-Hane-Birey",
+              "x": 890,
+              "y": 760,
+              "w": 63,
+              "h": 8
+            },
+            {
+              "str": "Sıra",
+              "x": 955,
+              "y": 761.2,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "No",
+              "x": 973.8,
+              "y": 762.4,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "Medeni",
+              "x": 990,
+              "y": 760,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Hali",
+              "x": 1017.2,
+              "y": 760,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Durumu",
+              "x": 1080,
+              "y": 760,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "1",
+              "x": 30,
+              "y": 726,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "E",
+              "x": 62,
+              "y": 726.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 90,
+              "y": 724.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 130.2,
+              "y": 726.4,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "An",
+              "x": 170.4,
+              "y": 725.4,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "n",
+              "x": 179.1,
+              "y": 727.3,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "esinin",
+              "x": 183.6,
+              "y": 726,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Babası",
+              "x": 211.5,
+              "y": 726.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "HACI",
+              "x": 390,
+              "y": 724.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "MEHMET",
+              "x": 409.2,
+              "y": 726.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "DERE",
+              "x": 460,
+              "y": 725.4,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "MEHMET",
+              "x": 530,
+              "y": 727.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "EMİNE",
+              "x": 600,
+              "y": 726,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 726.9,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1841",
+              "x": 670,
+              "y": 714.9,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 726.4,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 715.4,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "KELER",
+              "x": 780,
+              "y": 707.3,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 803.4,
+              "y": 706,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "6-43-1",
+              "x": 890,
+              "y": 726.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Dul",
+              "x": 990,
+              "y": 724.9,
+              "w": 12.6,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 726.4,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "01/07/1931",
+              "x": 1080,
+              "y": 715.4,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "2",
+              "x": 30,
+              "y": 673.3,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "K",
+              "x": 62,
+              "y": 672,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 90,
+              "y": 672.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 130.2,
+              "y": 670.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "An",
+              "x": 170.4,
+              "y": 672.4,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "n",
+              "x": 179.1,
+              "y": 671.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "esinin",
+              "x": 183.6,
+              "y": 673.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Annesi",
+              "x": 211.5,
+              "y": 672,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "ÜMMÜGÜLSÜN",
+              "x": 390,
+              "y": 672.9,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "DERE",
+              "x": 460,
+              "y": 670.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "BİLAL",
+              "x": 530,
+              "y": 672.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "EMİNE",
+              "x": 600,
+              "y": 671.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 673.3,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1845",
+              "x": 670,
+              "y": 662,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 672.9,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 660.9,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "KELER",
+              "x": 780,
+              "y": 652.4,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 803.4,
+              "y": 651.4,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "6-43-3",
+              "x": 890,
+              "y": 673.3,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Evli",
+              "x": 990,
+              "y": 672,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 672.9,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 1080,
+              "y": 660.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "3",
+              "x": 30,
+              "y": 618.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "E",
+              "x": 62,
+              "y": 617.4,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "Annesinin",
+              "x": 90,
+              "y": 619.3,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Babasının",
+              "x": 130.2,
+              "y": 618,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "Ba",
+              "x": 170.4,
+              "y": 618.9,
+              "w": 8.4,
+              "h": 8
+            },
+            {
+              "str": "b",
+              "x": 179.1,
+              "y": 616.9,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "asının",
+              "x": 183.6,
+              "y": 618.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Babası",
+              "x": 211.5,
+              "y": 617.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "OSMAN",
+              "x": 390,
+              "y": 619.3,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 460,
+              "y": 618,
+              "w": 4.2,
+              "h": 8
+            },
+            {
+              "str": "İSMAİL",
+              "x": 530,
+              "y": 618.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "ŞERİFE",
+              "x": 600,
+              "y": 616.9,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "YEŞİLHİSAR",
+              "x": 670,
+              "y": 618.4,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "01/07/1861",
+              "x": 670,
+              "y": 607.4,
+              "w": 42,
+              "h": 8
+            },
+            {
+              "str": "Kayseri/",
+              "x": 780,
+              "y": 619.3,
+              "w": 33.6,
+              "h": 8
+            },
+            {
+              "str": "Yeşilhisar/",
+              "x": 780,
+              "y": 608,
+              "w": 46.2,
+              "h": 8
+            },
+            {
+              "str": "İDRİS",
+              "x": 780,
+              "y": 598.9,
+              "w": 21,
+              "h": 8
+            },
+            {
+              "str": "MAHALLESİ",
+              "x": 803.4,
+              "y": 596.9,
+              "w": 37.8,
+              "h": 8
+            },
+            {
+              "str": "4-37-1",
+              "x": 890,
+              "y": 618.4,
+              "w": 25.2,
+              "h": 8
+            },
+            {
+              "str": "Evli",
+              "x": 990,
+              "y": 617.4,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "Ölüm",
+              "x": 1080,
+              "y": 619.3,
+              "w": 16.8,
+              "h": 8
+            },
+            {
+              "str": "-",
+              "x": 1080,
+              "y": 608,
+              "w": 4.2,
+              "h": 8
             }
           ]
         ]
@@ -33084,854 +34736,854 @@
             {
               "str": "1",
               "x": 30,
-              "y": 724.9,
+              "y": 726.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 726.4,
+              "y": 724.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 90,
-              "y": 725.4,
+              "y": 726.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 130.2,
-              "y": 727.3,
+              "y": 725.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Ba",
               "x": 170.4,
-              "y": 726,
+              "y": 727.3,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "b",
               "x": 179.1,
-              "y": 726.9,
+              "y": 726,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "ası",
               "x": 183.6,
-              "y": 724.9,
+              "y": 726.9,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 390,
-              "y": 726.4,
+              "y": 724.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "SAİM",
               "x": 460,
-              "y": 725.4,
+              "y": 726.4,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "İSMAİL",
               "x": 530,
-              "y": 727.3,
+              "y": 725.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "FATMA",
               "x": 600,
-              "y": 726,
+              "y": 727.3,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 726.9,
+              "y": 726,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1874",
               "x": 670,
-              "y": 714.9,
+              "y": 716.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 726.4,
+              "y": 724.9,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 715.4,
+              "y": 716.4,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "BEYLERYUKARI",
               "x": 780,
-              "y": 707.3,
+              "y": 705.4,
               "w": 50.4,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 832.8,
-              "y": 706,
+              "y": 707.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "1-22-2",
               "x": 890,
-              "y": 726.9,
+              "y": 726,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Evli",
               "x": 990,
-              "y": 724.9,
+              "y": 726.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 726.4,
+              "y": 724.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "-",
               "x": 1080,
-              "y": 715.4,
+              "y": 716.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "2",
               "x": 30,
-              "y": 673.3,
+              "y": 671.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 672,
+              "y": 673.3,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 672.9,
+              "y": 672,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 130.2,
-              "y": 670.9,
+              "y": 672.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Ba",
               "x": 170.4,
-              "y": 672.4,
+              "y": 670.9,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "b",
               "x": 179.1,
-              "y": 671.4,
+              "y": 672.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "ası",
               "x": 183.6,
-              "y": 673.3,
+              "y": 671.4,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "BEKİR",
               "x": 390,
-              "y": 672,
+              "y": 673.3,
               "w": 21,
               "h": 8
             },
             {
               "str": "DAĞLIOĞLU",
               "x": 460,
-              "y": 672.9,
+              "y": 672,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "EMİN",
               "x": 530,
-              "y": 670.9,
+              "y": 672.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "HASAN",
               "x": 549.2,
-              "y": 672.4,
+              "y": 670.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "FATMA",
               "x": 600,
-              "y": 671.4,
+              "y": 672.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 673.3,
+              "y": 671.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1880",
               "x": 670,
-              "y": 662,
+              "y": 663.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 672.9,
+              "y": 672,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 660.9,
+              "y": 662.9,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 652.4,
+              "y": 650.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 651.4,
+              "y": 652.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-35-2",
               "x": 890,
-              "y": 673.3,
+              "y": 671.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Dul",
               "x": 990,
-              "y": 672,
+              "y": 673.3,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 672.9,
+              "y": 672,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "12/06/1940",
               "x": 1080,
-              "y": 660.9,
+              "y": 662.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "3",
               "x": 30,
-              "y": 618.4,
+              "y": 616.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "K",
               "x": 62,
-              "y": 617.4,
+              "y": 618.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 619.3,
+              "y": 617.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 130.2,
-              "y": 618,
+              "y": 619.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "An",
               "x": 170.4,
-              "y": 618.9,
+              "y": 618,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "n",
               "x": 179.1,
-              "y": 616.9,
+              "y": 618.9,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "esi",
               "x": 183.6,
-              "y": 618.4,
+              "y": 616.9,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "SANİYE",
               "x": 390,
-              "y": 617.4,
+              "y": 618.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "DAĞLIOĞLU",
               "x": 460,
-              "y": 619.3,
+              "y": 617.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 530,
-              "y": 618,
+              "y": 619.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "FATMA",
               "x": 600,
-              "y": 618.9,
+              "y": 618,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 616.9,
+              "y": 618.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1884",
               "x": 670,
-              "y": 608.4,
+              "y": 606.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 617.4,
+              "y": 618.4,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 609.3,
+              "y": 607.4,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 598,
+              "y": 599.3,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 598.9,
+              "y": 598,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-35-4",
               "x": 890,
-              "y": 616.9,
+              "y": 618.9,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Evli",
               "x": 990,
-              "y": 618.4,
+              "y": 616.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 617.4,
+              "y": 618.4,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "02/11/1918",
               "x": 1080,
-              "y": 609.3,
+              "y": 607.4,
               "w": 42,
               "h": 8
             },
             {
               "str": "4",
               "x": 30,
-              "y": 564,
+              "y": 565.3,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "K",
               "x": 62,
-              "y": 564.9,
+              "y": 564,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 90,
-              "y": 562.9,
+              "y": 564.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 130.2,
-              "y": 564.4,
+              "y": 562.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "An",
               "x": 170.4,
-              "y": 563.4,
+              "y": 564.4,
               "w": 8.4,
               "h": 8
             },
             {
               "str": "n",
               "x": 179.1,
-              "y": 565.3,
+              "y": 563.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "esi",
               "x": 183.6,
-              "y": 564,
+              "y": 565.3,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "FATMA",
               "x": 390,
-              "y": 564.9,
+              "y": 564,
               "w": 21,
               "h": 8
             },
             {
               "str": "SAİM",
               "x": 460,
-              "y": 562.9,
+              "y": 564.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "SAİL",
               "x": 530,
-              "y": 564.4,
+              "y": 562.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "EFENDİ",
               "x": 549.2,
-              "y": 563.4,
+              "y": 564.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "PEMPE",
               "x": 600,
-              "y": 565.3,
+              "y": 563.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 564,
+              "y": 565.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1884",
               "x": 670,
-              "y": 554.9,
+              "y": 554,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 562.9,
+              "y": 564.9,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 554.4,
+              "y": 552.9,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "BEYLERYUKARI",
               "x": 780,
-              "y": 543.4,
+              "y": 544.4,
               "w": 50.4,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 832.8,
-              "y": 545.3,
+              "y": 543.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "1-22-7",
               "x": 890,
-              "y": 564,
+              "y": 565.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Dul",
               "x": 990,
-              "y": 564.9,
+              "y": 564,
               "w": 12.6,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 562.9,
+              "y": 564.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "10/06/1949",
               "x": 1080,
-              "y": 554.4,
+              "y": 552.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "5",
               "x": 30,
-              "y": 509.4,
+              "y": 510.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 511.3,
+              "y": 509.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Babasının",
               "x": 90,
-              "y": 510,
+              "y": 511.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babası",
               "x": 130.2,
-              "y": 510.9,
+              "y": 510,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "HASAN",
               "x": 390,
-              "y": 508.9,
+              "y": 510.9,
               "w": 21,
               "h": 8
             },
             {
               "str": "SAİM",
               "x": 460,
-              "y": 510.4,
+              "y": 508.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "MEHMET",
               "x": 530,
-              "y": 509.4,
+              "y": 510.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "FATMA",
               "x": 600,
-              "y": 511.3,
+              "y": 509.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 510,
+              "y": 511.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "01/07/1905",
               "x": 670,
-              "y": 500.9,
+              "y": 500,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 508.9,
+              "y": 510.9,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 500.4,
+              "y": 498.9,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "BEYLERYUKARI",
               "x": 780,
-              "y": 489.4,
+              "y": 490.4,
               "w": 50.4,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 832.8,
-              "y": 491.3,
+              "y": 489.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "1-22-5",
               "x": 890,
-              "y": 510,
+              "y": 511.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Bekâr",
               "x": 990,
-              "y": 510.9,
+              "y": 510,
               "w": 21,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 508.9,
+              "y": 510.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "01/07/1995",
               "x": 1080,
-              "y": 500.4,
+              "y": 498.9,
               "w": 42,
               "h": 8
             },
             {
               "str": "6",
               "x": 30,
-              "y": 455.4,
+              "y": 456.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "E",
               "x": 62,
-              "y": 457.3,
+              "y": 455.4,
               "w": 4.2,
               "h": 8
             },
             {
               "str": "Annesinin",
               "x": 90,
-              "y": 456,
+              "y": 457.3,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "Babası",
               "x": 130.2,
-              "y": 456.9,
+              "y": 456,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "MUSTAFA",
               "x": 390,
-              "y": 454.9,
+              "y": 456.9,
               "w": 29.4,
               "h": 8
             },
             {
               "str": "DAĞLIOĞLU",
               "x": 460,
-              "y": 456.4,
+              "y": 454.9,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "BEKİR",
               "x": 530,
-              "y": 455.4,
+              "y": 456.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "SANİYE",
               "x": 600,
-              "y": 457.3,
+              "y": 455.4,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "YEŞİLHİSAR",
               "x": 670,
-              "y": 456,
+              "y": 457.3,
               "w": 42,
               "h": 8
             },
             {
               "str": "24/10/1907",
               "x": 670,
-              "y": 446.9,
+              "y": 446,
               "w": 42,
               "h": 8
             },
             {
               "str": "Kayseri/",
               "x": 780,
-              "y": 454.9,
+              "y": 456.9,
               "w": 33.6,
               "h": 8
             },
             {
               "str": "Yeşilhisar/",
               "x": 780,
-              "y": 446.4,
+              "y": 444.9,
               "w": 46.2,
               "h": 8
             },
             {
               "str": "KELER",
               "x": 780,
-              "y": 435.4,
+              "y": 436.4,
               "w": 21,
               "h": 8
             },
             {
               "str": "MAHALLESİ",
               "x": 803.4,
-              "y": 437.3,
+              "y": 435.4,
               "w": 37.8,
               "h": 8
             },
             {
               "str": "6-35-6",
               "x": 890,
-              "y": 456,
+              "y": 457.3,
               "w": 25.2,
               "h": 8
             },
             {
               "str": "Evli",
               "x": 990,
-              "y": 456.9,
+              "y": 456,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "Ölüm",
               "x": 1080,
-              "y": 454.9,
+              "y": 456.9,
               "w": 16.8,
               "h": 8
             },
             {
               "str": "20/11/1973",
               "x": 1080,
-              "y": 446.4,
+              "y": 444.9,
               "w": 42,
               "h": 8
             },

@@ -211,4 +211,20 @@ final class EDevletTests: XCTestCase {
             XCTAssertEqual(EDevlet.gedDate(v.girdi["s"]?.metin ?? ""), v.beklenen["s"]?.metin, v.ad)
         }
     }
+
+    /// Fixture'daki ozel vakalar gercekten tetikleniyor (alt bilgi atlama, "cocugun cocugu" uyarisi).
+    func test_ozelVakalar() {
+        for v in secili("pdf: alt bilgi") {
+            let sayfalar: [[PdfParca]] = (v.girdi["sayfalar"]?.dizi ?? []).map { ($0.dizi ?? []).map { parca($0) } }
+            let g = EDevlet.pdfItemsToGrid(sayfalar) ?? []
+            let hepsi = g.flatMap { $0 }.joined(separator: " ")
+            XCTAssertFalse(g.isEmpty)
+            XCTAssertFalse(hepsi.contains("egov"), "gov.tr bandi atilmali")
+            XCTAssertFalse(hepsi.contains("Toplam"), "sayfa x / y bandi atilmali")
+        }
+        for v in secili("analiz: cocugun cocugu") {
+            let a = EDevlet.analyze(kisiler(v.girdi["kisiler"]))
+            XCTAssertTrue(a.warns.contains { $0.contains("hangi çocuğun çocuğu olduğu bulunamadı") }, v.ad)
+        }
+    }
 }

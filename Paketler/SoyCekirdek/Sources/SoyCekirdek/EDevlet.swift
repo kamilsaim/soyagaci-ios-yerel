@@ -109,6 +109,8 @@ public struct EDSecenek: Equatable {
 }
 
 /// pdf.js `getTextContent().items` ogesi: `str`, `transform[4]`=x, `transform[5]`=y, `width`, `height`.
+/// `y` pdf.js kipinde YUKARI dogru artar (sayfa altindan olculur; ust satirlarin y'si buyuktur).
+/// `h`: pdf.js `item.height`, 0 ise `abs(transform[3])`, o da 0 ise 8 (web `pdfToGrid` dusme degeri).
 public struct PdfParca: Codable, Equatable {
     public var str: String
     public var x: Double
@@ -592,8 +594,8 @@ public enum EDevlet {
 
     /// Cevrilmis kisiler -> GEDCOM 5.5.1 metni. `simdi`/`takvim`: web `new Date()` (baslik tarihi ve hayali kisinin
     /// "yasli" sayilmasi); uygulama `Calendar(identifier: .gregorian)` + yerel saat dilimi vermeli.
-    public static func buildGedcom(_ analiz: EDAnaliz, opt: EDSecenek = EDSecenek(), simdi: Date = Date(),
-                                   takvim: Calendar = EDevlet.utcTakvim()) -> String {
+    public static func buildGedcom(_ analiz: EDAnaliz, opt: EDSecenek = EDSecenek(), simdi: Date,
+                                   takvim: Calendar) -> String {
         let nodes = analiz.nodes
         if !nodes.contains(where: { $0.path.isEmpty }) { return "" }
         func nm(_ s: String) -> String { return opt.tc ? titleCase(s) : kirp(s) }

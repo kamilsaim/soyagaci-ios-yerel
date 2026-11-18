@@ -78,6 +78,12 @@ const K = (sira, cins, rel, givn, surn, baba = '', ana = '', o = {}) => ({
 });
 
 export default async function uret() {
+  for (const f of ['edevlet-gedcom.html', 'soyagaci.xlsx', 'kamilsoyagaci.docx', 'mustafa saim soy.xlsx']) {
+    if (!fs.existsSync(path.join(girdiDizini, f))) {
+      console.warn(`UYARI: e-Devlet girdisi yok (${path.join(girdiDizini, f)}); edevlet fixture'i atlandi (EDEVLET_GIRDI ile belirtin).`);
+      return null;
+    }
+  }
   const E = edvYukle();
   const J = (x) => JSON.parse(JSON.stringify(x)); // undefined alanlari at
   const dosyalar = [
@@ -150,6 +156,7 @@ export default async function uret() {
     ['isim uyusmazligi', [K(1, 'E', 'Kendisi', 'ALİ', 'KAYA', 'VELİ', 'AYŞE'), K(2, 'E', 'Babası', 'MUSTAFA', 'KAYA', '', 'ZEHRA'), K(3, 'K', 'Annesi', 'AYSEL', 'KAYA', 'MEHMET', '')]],
     ['turkce harf katlama', [K(1, 'E', 'Kendisi', 'ışık', 'KAYA', 'İSMAİL', 'ıSPARTA'), K(2, 'E', 'Babası', 'ISMAIL', 'KAYA'), K(3, 'K', 'Annesi', 'ısparta', 'X')]],
     ['es kendisinin cocugu adla', [K(1, 'E', 'Kendisi', 'ALİ', 'K'), K(2, 'K', 'Eşi', 'AYŞE', 'K'), K(3, 'E', 'Oğlu', 'C', 'K', 'ALİ', 'AYŞE'), K(4, 'E', 'Oğlu', 'D', 'K', 'ALİ', 'MEDİHA')]],
+    ['cocugun cocugu belirsiz', [K(1, 'E', 'Kendisi', 'ALİ', 'KAYA'), K(2, 'E', 'Oğlu', 'MEHMET', 'KAYA', 'ALİ'), K(3, 'E', 'Oğlu', 'HASAN', 'KAYA', 'ALİ'), K(4, 'K', 'Oğlunun Kızı', 'ZEYNEP', 'KAYA', 'SELİM', 'AYŞE'), K(5, 'E', 'Oğlunun Oğlu', 'CAN', 'KAYA', 'MEHMET')]],
     ['bos', []],
   );
   for (const [ad, l] of kisiListeleri) ekle('analiz: ' + ad, { tur: 'analiz', kisiler: l }, J(analizSerisi(l)));
@@ -258,6 +265,11 @@ export default async function uret() {
       sayfaYap([kaynak[0], altBant], { baslik: true, altBilgi: 'Sayfa 1 / 2' }),
       sayfaYap([kaynak[1], kaynak[2]], { baslik: false, altBilgi: 'Sayfa 2 / 2' }),
     ]);
+  }
+  { // alt bilgi bantlari: isJunk'a takilmayan (onek farkli) sayfa numarasi ve gov.tr satiri bandin tamamen atilmasini saglar
+    const s = sayfaYap(kaynak.slice(0, 4), { baslik: true, ustBilgi: false });
+    s.push(parca('Toplam Sayfa 1 / 2', 380, 40), parca('Dogrulama kodu: x1 www.egov.tr', 380, 60), parca('7', 30, 80));
+    pdfVaka('alt bilgi bantlari (gov.tr, sayfa x / y)', [s]);
   }
   pdfVaka('baslik yok', [sayfaYap(kaynak.slice(0, 3), { baslik: false })]);
   pdfVaka('bos sayfa', [[]]);
