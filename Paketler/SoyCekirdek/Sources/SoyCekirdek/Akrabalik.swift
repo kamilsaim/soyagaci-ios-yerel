@@ -51,6 +51,14 @@ public struct AileModeli {
         public var b: String?
         public var status: String
         public var kids: [String]
+
+        public init(key: String, a: String, b: String?, status: String, kids: [String]) {
+            self.key = key
+            self.a = a
+            self.b = b
+            self.status = status
+            self.kids = kids
+        }
     }
 
     public private(set) var aileler: [Aile] = []
@@ -58,30 +66,43 @@ public struct AileModeli {
     public private(set) var famOf: [String: [Int]] = [:]
     /// çocuk -> aile dizini (web `parentFam`)
     public private(set) var parentFam: [String: Int] = [:]
+    /// çift anahtarı (pairKey) -> aileler dizini (web `famMap` anahtarları)
+    public private(set) var aileIndeks: [String: Int] = [:]
+    /// Web `Object.keys(people)` sırası (yalnızca kişi olan kayıtlar)
+    public private(set) var sira: [String] = []
     var kisiler: [String: Kisi] = [:]
+    /// kişi -> doğum yılı (yoksa "9999"), web `yearOf(birthDate)||'9999'`
+    var dogumYili: [String: String] = [:]
 
     public init(_ agac: Agac) {
-        var sira: [String] = []
         for k in agac.people.anahtarlar {
             if let kisi = agac.kisi(k) {
                 kisiler[k] = kisi
                 sira.append(k)
+                let y = Tarih.yearOf(kisi.birthDate)
+                dogumYili[k] = y.isEmpty ? "9999" : y
             }
         }
         kur(sira)
     }
 
-    func cinsiyet(_ id: String) -> String? { return kisiler[id]?.gender }
+    /// Ham cinsiyet değeri: alan yoksa nil (JS `undefined`), "" ile aynı DEĞİLDİR.
+    func cinsiyet(_ id: String) -> JSON? { return kisiler[id]?.ham["gender"] }
+
+    /// Web `partnerIn(F,id)`
+    public func partnerIn(_ f: Aile, _ id: String) -> String? {
+        return f.a == id ? f.b : f.a
+    }
 
     /// Erkek önde olacak şekilde çift anahtarı (tek ebeveyn: "id|")
-    func pairKey(_ x: String?, _ y: String?) -> String {
+    public func pairKey(_ x: String?, _ y: String?) -> String {
         guard let x = x, !x.isEmpty, let y = y, !y.isEmpty else {
             let t = (x == nil || x!.isEmpty) ? (y ?? "") : x!
             return t + "|"
         }
         let gx = cinsiyet(x)
         let gy = cinsiyet(y)
-        if gx == "F" && gy == "M" { return y + "|" + x }
+        if gx == JSON.string("F") && gy == JSON.string("M") { return y + "|" + x }
         if gx == gy && AileModeli.jsBuyuk(x, y) { return y + "|" + x }
         return x + "|" + y
     }
@@ -92,15 +113,14 @@ public struct AileModeli {
     }
 
     private mutating func kur(_ sira: [String]) {
-        var indeks: [String: Int] = [:]
         func aileBul(_ m: inout AileModeli, _ x: String?, _ y: String?) -> Int {
             let k = m.pairKey(x, y)
-            if let i = indeks[k] { return i }
+            if let i = m.aileIndeks[k] { return i }
             let parca = k.split(separator: "|", omittingEmptySubsequences: false).map { String($0) }
             let a = parca[0]
             let b: String? = (parca.count > 1 && !parca[1].isEmpty) ? parca[1] : nil
             m.aileler.append(Aile(key: k, a: a, b: b, status: "married", kids: []))
-            indeks[k] = m.aileler.count - 1
+            m.aileIndeks[k] = m.aileler.count - 1
             return m.aileler.count - 1
         }
         // Çocuğun ebeveynleri: father/mother alanları + onu children listesinde tutanlar
@@ -171,8 +191,7 @@ public struct AileModeli {
     }
 
     private func yil(_ id: String) -> String {
-        let y = Tarih.yearOf(kisiler[id]?.birthDate ?? "")
-        return y.isEmpty ? "9999" : y
+        return dogumYili[id] ?? "9999"
     }
 
     /// Web `parentsOf`
