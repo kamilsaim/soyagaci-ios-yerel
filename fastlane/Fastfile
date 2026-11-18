@@ -1,0 +1,75 @@
+# Soy Ağacı iOS (yerel SwiftUI) — bulut derlemesi (GitHub Actions çağırır, elle çalıştırılmaz).
+# Akış: API anahtarı → sertifikayı geçici anahtarlığa al → App ID (yoksa oluştur, Apple ile Giriş aç)
+#       → App Store profilini indir/oluştur → elle imzaya çevir → arşivle → (yukle:true ise) TestFlight'a yükle.
+default_platform(:ios)
+
+PAKET = "com.kamilsaim.soyagaci"
+TAKIM = "NBTXFU47EV"
+SIGN_IN_WITH_APPLE = "APPLE_ID_AUTH" # App Store Connect API'deki yetenek türü adı
+
+platform :ios do
+  desc "Derle, imzala; yukle:true ise TestFlight'a yükle"
+  lane :testflight_yukle do |secenek|
+    yukle = secenek[:yukle].to_s != "false"
+
+    setup_ci # geçici anahtarlık (fastlane_tmp_keychain)
+
+    app_store_connect_api_key(
+      key_id: ENV["ASC_KEY_ID"],
+      issuer_id: ENV["ASC_ISSUER_ID"],
+      key_content: ENV["ASC_KEY_P8_BASE64"],
+      is_key_content_base64: true
+    )
+
+    import_certificate(
+      certificate_path: "dagitim.p12",
+      certificate_password: ENV["DIST_CERT_PASSWORD"],
+      keychain_name: "fastlane_tmp_keychain",
+      keychain_password: ""
+    )
+
+    # App ID: yoksa oluştur; Apple ile Giriş yeteneği yoksa ekle (profil buna göre üretilir).
+    kimlik = Spaceship::ConnectAPI::BundleId.find(PAKET)
+    if kimlik.nil?
+      UI.message("App ID yok, oluşturuluyor: #{PAKET}")
+      kimlik = Spaceship::ConnectAPI::BundleId.create(name: "Soy Agaci", platform: "IOS", identifier: PAKET)
+    end
+    yetenekler = kimlik.get_bundle_id_capabilities.map(&:capability_type)
+    unless yetenekler.include?(SIGN_IN_WITH_APPLE)
+      UI.message("Apple ile Giriş yeteneği ekleniyor")
+      kimlik.create_capability(SIGN_IN_WITH_APPLE)
+    end
+
+    get_provisioning_profile(app_identifier: PAKET, force: true)
+    profil = lane_context[SharedValues::SIGH_NAME]
+
+    proje = "SoyAgaci.xcodeproj"
+    update_code_signing_settings(
+      path: proje,
+      targets: ["SoyAgaci"],
+      build_configurations: ["Release"],
+      use_automatic_signing: false,
+      team_id: TAKIM,
+      code_sign_identity: "Apple Distribution",
+      profile_name: profil,
+      entitlements_file_path: "SoyAgaci/SoyAgaci.entitlements"
+    )
+
+    build_app(
+      project: proje,
+      scheme: "SoyAgaci",
+      configuration: "Release",
+      export_method: "app-store",
+      export_options: { provisioningProfiles: { PAKET => profil } },
+      output_directory: "build",
+      output_name: "SoyAgaci.ipa",
+      clean: true
+    )
+
+    if yukle
+      upload_to_testflight(skip_waiting_for_build_processing: true)
+    else
+      UI.important("yukle=false: arşiv ve imza tamam, TestFlight yüklemesi atlandı")
+    end
+  end
+end

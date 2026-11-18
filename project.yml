@@ -1,0 +1,95 @@
+# Soy Ağacı iOS (yerel SwiftUI) — XcodeGen proje tanımı.
+# Xcode projesi elle tutulmaz; bulut Mac'te `xcodegen generate` ile üretilir.
+name: SoyAgaci
+options:
+  bundleIdPrefix: com.kamilsaim
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: tr
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: NBTXFU47EV
+packages:
+  SoyCekirdek:
+    path: Paketler/SoyCekirdek
+  Supabase:
+    url: https://github.com/supabase/supabase-swift
+    from: 2.0.0
+  GoogleSignIn:
+    url: https://github.com/google/GoogleSignIn-iOS
+    from: 9.0.0
+targets:
+  SoyAgaci:
+    type: application
+    platform: iOS
+    scheme: {}
+    sources:
+      - path: SoyAgaci
+        excludes:
+          - "**/OFL-*.txt"
+          - Info.plist
+          - SoyAgaci.entitlements
+    dependencies:
+      - package: SoyCekirdek
+      - package: Supabase
+        product: Supabase
+      - package: GoogleSignIn
+        product: GoogleSignIn
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kamilsaim.soyagaci
+        PRODUCT_NAME: SoyAgaci
+        MARKETING_VERSION: "7.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        # Yerel Google girişi: istemci kimlikleri (gizli değil). Boşsa uygulama tarayıcı girişine düşer.
+        # Rehber: C:\mac\GOOGLE-YEREL-GIRIS-REHBERI.md
+        GOOGLE_IOS_ISTEMCI: 981361653395-esl6g4d5flvno7jbn0cm23qn37vpvvqj.apps.googleusercontent.com
+        GOOGLE_WEB_ISTEMCI: 981361653395-29bu0kvshm6l4p149u5vo0g5lkaqihus.apps.googleusercontent.com
+        GOOGLE_IOS_URL_SEMASI: com.googleusercontent.apps.981361653395-esl6g4d5flvno7jbn0cm23qn37vpvvqj
+        CODE_SIGN_ENTITLEMENTS: SoyAgaci/SoyAgaci.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: SoyAgaci/Info.plist
+      properties:
+        CFBundleDisplayName: Soy Ağacı
+        CFBundleDevelopmentRegion: tr
+        CFBundleLocalizations: [tr]
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        ITSAppUsesNonExemptEncryption: false
+        LSRequiresIPhoneOS: true
+        # Web uygulaması gibi yalnız açık (krem) tema
+        UIUserInterfaceStyle: Light
+        UIAppFonts:
+          - PlayfairDisplay-SemiBold.ttf
+          - PlayfairDisplay-Bold.ttf
+          - SourceSans3-Regular.ttf
+          - SourceSans3-SemiBold.ttf
+          - SourceSans3-Bold.ttf
+        UILaunchScreen:
+          UIColorName: Zemin
+          UIImageName: Acilis
+          UIImageRespectsSafeAreaInsets: true
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSPhotoLibraryUsageDescription: Kişilere fotoğraf eklemek için fotoğraflarınıza erişilir.
+        NSCameraUsageDescription: Kişilere fotoğraf çekip eklemek için kamera kullanılır.
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        # e-Devlet PDF'i Safari/Chrome/Dosyalar'dan Paylaş → Soy Ağacı ile açılır (SoyAgaciApp.onOpenURL)
+        CFBundleDocumentTypes:
+          - CFBundleTypeName: PDF Belgesi
+            CFBundleTypeRole: Viewer
+            LSHandlerRank: Alternate
+            LSItemContentTypes: [com.adobe.pdf]
+        GIDClientID: $(GOOGLE_IOS_ISTEMCI)
+        GIDServerClientID: $(GOOGLE_WEB_ISTEMCI)
+        CFBundleURLTypes:
+          - CFBundleURLName: com.kamilsaim.soyagaci
+            CFBundleURLSchemes: [com.kamilsaim.soyagaci]
+          - CFBundleURLName: google
+            CFBundleURLSchemes: [$(GOOGLE_IOS_URL_SEMASI)]
