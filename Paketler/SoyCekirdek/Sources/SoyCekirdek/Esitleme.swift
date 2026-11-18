@@ -19,6 +19,7 @@ public protocol BulutDeposu {
 }
 
 /// Cihazdaki localStorage karşılıkları. Sınıf-bağlı: aktör içinden değiştirilebilir.
+/// Sendable DEĞİL: uygulama depoya yalnızca `Esitleyici` üzerinden erişmeli (ya da kendi kilidini koymalı).
 public protocol YerelDeposu: AnyObject {
     /// sa4 (giriş yapmış kullanıcının bulut yedeği)
     var bulutKopya: Agac? { get set }
@@ -41,13 +42,23 @@ public enum YuklemeKaynagi: Equatable {
 public struct YuklemeSonucu {
     public var agac: Agac
     public var kaynak: YuklemeKaynagi
-    /// Yerel (kirli) kopya kazandı ama arada başka cihaz buluta yazmış: gönderim çakışma verecek, UI bilsin.
+    /// Yerel (kirli) kopya kazandı ama bulutun updated_at'i sa4_base'den 2 sn'den fazla yeni (arada başka
+    /// cihaz yazmış). Ardından gelen gönderim `.cakisma` verecek (`durumlar` akışında da görünür); UI bir kez sormalı.
     public var cakisma: Bool
     public init(agac: Agac, kaynak: YuklemeKaynagi, cakisma: Bool) {
         self.agac = agac
         self.kaynak = kaynak
         self.cakisma = cakisma
     }
+}
+
+/// Web `setSync` karşılığı: gecikmeli (debounce) gönderimlerin sonucu UI'ya bu akışla ulaşır.
+/// Hata metni tanılama içindir; kullanıcıya gösterilecek metin UI'nın ("Buluta kaydedilemedi — veri bu cihazda duruyor").
+public enum EsitlemeDurumu: Equatable {
+    case gonderiliyor
+    case tamam
+    case cakisma(bulutZamani: Date)
+    case hata(String)
 }
 
 public enum GonderimSonucu {
@@ -63,6 +74,9 @@ public actor Esitleyici {
     private let yerel: YerelDeposu
     private let gecikme: TimeInterval
     private let simdi: () -> Date
+    private let durumBildir: AsyncStream<EsitlemeDurumu>.Continuation
+    /// Gecikmeli gönderimlerin sonucu (web setSync). Tek tüketici için.
+    public nonisolated let durumlar: AsyncStream<EsitlemeDurumu>
 
     private var uid: String?
     private var sunucuMs: Int = 0          // _serverTs
@@ -77,6 +91,9 @@ public actor Esitleyici {
         self.yerel = yerel
         self.gecikme = gecikme
         self.simdi = simdi
+        var c: AsyncStream<EsitlemeDurumu>.Continuation!
+        self.durumlar = AsyncStream<EsitlemeDurumu> { c = $0 }
+        self.durumBildir = c
     }
 
     private static func ms(_ d: Date) -> Int {
@@ -87,6 +104,13 @@ public actor Esitleyici {
 
     /// Web `load()`. `uid == nil` -> yerel mod (bulut çağrılmaz).
     public func yukle(uid yeniUid: String?) async -> YuklemeSonucu {
+        if uid != yeniUid {
+            // hesap değişti: eski hesabın bekleyen/uçuştaki gönderimleri artık yazamaz
+            zamanlayici?.cancel()
+            zamanlayici = nil
+            nesil += 1
+            sunucuMs = 0
+        }
         uid = yeniUid
         guard let uid = yeniUid else {
             var a = yerel.yerelMod ?? Agac()
@@ -191,18 +215,20 @@ public actor Esitleyici {
         yerel.taban = Date(timeIntervalSince1970: Double(sunucuMs) / 1000)
         nesil += 1
         let n = nesil
+        durumBildir.yield(.gonderiliyor)
         zamanlayici?.cancel()
         let bekleme = UInt64(max(0, gecikme) * 1_000_000_000)
         zamanlayici = Task { [weak self] in
             try? await Task.sleep(nanoseconds: bekleme)
             if Task.isCancelled { return }
-            await self?.zamanlayiciDoldu(agac, n)
+            await self?.zamanlayiciDoldu(agac, n, uid)
         }
     }
 
-    private func zamanlayiciDoldu(_ agac: Agac, _ n: Int) async {
-        zamanlayici = nil
-        _ = await sirala { await self.gonderIc(agac, zorla: false, nesil: n) }
+    private func zamanlayiciDoldu(_ agac: Agac, _ n: Int, _ u: String) async {
+        // yalnız bu zamanlayıcı hâlâ güncelse tutamağı bırak (araya girmiş yeni zamanlayıcıyı ezme)
+        if n == nesil { zamanlayici = nil }
+        _ = await sirala { await self.gonderIc(agac, zorla: false, nesil: n, uid: u) }
     }
 
     /// Bekleyen zamanlayıcı ve kuyruk bitene kadar bekler (testler / uygulama kapanışı için).
@@ -225,30 +251,56 @@ public actor Esitleyici {
 
     // MARK: pushToCloud
 
-    /// Son kaydedilen anlık görüntüyü buluta gönderir. `zorla` çakışma denetimini atlar.
+    /// Son kaydedilen anlık görüntüyü buluta gönderir. `zorla` çakışma denetimini atlar (kullanıcı "evet" dedi).
+    /// Çağrı anındaki nesil ve uid yakalanır: gönderim sürerken yeni `kaydet` olursa kirli işareti kalır.
+    /// Uid yoksa web sessizce döner; burada `.hata` verilir.
     public func gonder(zorla: Bool) async -> GonderimSonucu {
+        guard let u = uid else { return .hata("Giriş yapılmadı") }
         guard let a = guncel else { return .tamam }
-        return await sirala { await self.gonderIc(a, zorla: zorla, nesil: nil) }
+        // web yalnız kirli veriyi iter; temiz kopya (ör. okunamayan bulut sonrası) zorla olmadan gitmez
+        if !zorla && yerel.kirli != u { return .tamam }
+        let n = nesil
+        durumBildir.yield(.gonderiliyor)
+        return await sirala { await self.gonderIc(a, zorla: zorla, nesil: n, uid: u) }
     }
 
-    private func gonderIc(_ d: Agac, zorla: Bool, nesil gen: Int?) async -> GonderimSonucu {
-        guard let uid = uid else { return .hata("Giriş yapılmadı") }
-        if let g = gen, g < nesil { return .tamam } // arkadan daha yeni bir kayıt geliyor
-        if !zorla && sunucuMs != 0 {
-            let simdiki = try? await bulut.oku(uid: uid)
-            if let s = simdiki, Esitleyici.ms(s.updatedAt) > sunucuMs + 2000 {
+    /// Tüm karar girdileri (uid, nesil, anlık görüntü) kuyruğa girerken yakalanır; await sonrası yalnız
+    /// hâlâ aynı hesap/nesilse durum değiştirilir.
+    private func gonderIc(_ d: Agac, zorla: Bool, nesil gen: Int, uid u: String) async -> GonderimSonucu {
+        if u != uid || gen < nesil { return .tamam } // hesap değişti / arkadan daha yeni bir kayıt geliyor
+        let tabanSunucu = sunucuMs
+        if !zorla && tabanSunucu != 0 {
+            // SAPMA (web'den kasıtlı): web okuma hatasını "satır yok" sayıp yazar (supabase-js hata fırlatmaz,
+            // data=null döner). Burada okunamazsa yazmayız: yeni bir bulut sürümünü sormadan ezme riski olmasın.
+            // Hata dönülür, kirli kalır, sonraki gönderimde yeniden denenir.
+            let simdiki: BulutSatiri?
+            do {
+                simdiki = try await bulut.oku(uid: u)
+            } catch {
+                durumBildir.yield(.hata("\(error)"))
+                return .hata("\(error)")
+            }
+            if u != uid || gen < nesil { return .tamam }
+            if let s = simdiki, Esitleyici.ms(s.updatedAt) > tabanSunucu + 2000 {
+                durumBildir.yield(.cakisma(bulutZamani: s.updatedAt))
                 return .cakisma(bulutZamani: s.updatedAt)
             }
         }
         do {
-            let yeni = try await bulut.yaz(uid: uid, agac: d)
-            sunucuMs = Esitleyici.ms(yeni)
-            if gen == nil || gen == nesil {
-                yerel.kirli = nil
-                yerel.taban = yeni
+            let yeni = try await bulut.yaz(uid: u, agac: d)
+            if u == uid {
+                sunucuMs = Esitleyici.ms(yeni)
+                // arada daha yeni bir kaydet olduysa kirli kalır (o veri henüz bulutta değil)
+                if gen == nesil && yerel.kirli == u {
+                    yerel.kirli = nil
+                    yerel.taban = yeni
+                }
             }
+            durumBildir.yield(.tamam)
             return .tamam
         } catch {
+            // Metin tanılama içindir; kullanıcıya UI kendi metnini gösterir.
+            durumBildir.yield(.hata("\(error)"))
             return .hata("\(error)")
         }
     }
@@ -259,8 +311,10 @@ public actor Esitleyici {
         zamanlayici?.cancel()
         zamanlayici = nil
         nesil += 1
+        if let k = kuyruk { await k.value }
         yerel.kirli = nil
         yerel.bulutKopya = nil
+        yerel.bulutKopyaUid = nil
         return await yukle(uid: uid)
     }
 
@@ -269,19 +323,20 @@ public actor Esitleyici {
     /// Web `signOut` başı: bekleyeni hemen gönder. Hâlâ buluta gitmemiş değişiklik varsa false
     /// (UI kullanıcıya sorar); true = çıkış güvenli.
     public func cikisaHazirla() async -> Bool {
+        guard let u = uid else { return true }
         if zamanlayici != nil, let a = guncel {
             zamanlayici?.cancel()
             zamanlayici = nil
             let n = nesil
-            _ = await sirala { await self.gonderIc(a, zorla: false, nesil: n) }
+            _ = await sirala { await self.gonderIc(a, zorla: false, nesil: n, uid: u) }
         }
         if let k = kuyruk { await k.value }
-        if let u = uid, yerel.kirli == u { return false }
-        return true
+        return yerel.kirli != u
     }
 
     /// Web `signOut` sonu: yerel bulut kopyası ve eşitleme izleri silinir (sa4, sa4_ts, sa4_dirty, sa4_base).
     public func cikisYap() {
+        nesil += 1 // uçuştaki/kuyruktaki gönderimler artık durum değiştiremez, yeni hesaba yazamaz
         zamanlayici?.cancel()
         zamanlayici = nil
         yerel.bulutKopya = nil
