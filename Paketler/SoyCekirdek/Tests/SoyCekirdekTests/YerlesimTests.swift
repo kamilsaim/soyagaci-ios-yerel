@@ -247,7 +247,7 @@ final class YerlesimTests: XCTestCase {
 
     func test_layoutBoundsFixture() {
         let vakalar = turVakalari("sinir")
-        XCTAssertEqual(vakalar.count, 14)
+        XCTAssertEqual(vakalar.count, 18)
         for v in vakalar {
             let ad = v.girdi["agac"]?.metin ?? ""
             guard let agac = YerlesimTests.agaclar[ad], let m = YerlesimTests.modeller[ad] else { XCTFail("agac yok"); continue }
