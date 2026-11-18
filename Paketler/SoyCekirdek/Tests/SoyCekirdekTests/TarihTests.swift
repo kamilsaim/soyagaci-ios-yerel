@@ -31,6 +31,8 @@ final class TarihTests: XCTestCase {
 
     func test_capStrTurkce() throws {
         XCTAssertEqual(Metin.capStr("ismail ılgaz"), "İsmail Ilgaz")
+        XCTAssertEqual(Metin.trKatla("I\u{307}x"), "ix")
+        XCTAssertEqual(Metin.trKatla("IŞIK İ"), "ışık i")
         let vakalar = try FixtureYukle.yukle("tarih")
         var n = 0
         for v in vakalar where v.girdi["tur"]?.metin == "metin" {

@@ -36,15 +36,25 @@ public enum Metin {
 
     /// Arama icin `toLocaleLowerCase('tr-TR')`: I -> ı, İ -> i, gerisi Unicode kucuk harf.
     public static func trKatla(_ s: String) -> String {
+        let a = Array(s.unicodeScalars)
         var cikti = ""
-        for u in s.unicodeScalars {
+        var i = 0
+        while i < a.count {
+            let u = a[i]
             if u == "I" {
+                if i + 1 < a.count && a[i + 1].value == 0x307 {
+                    // I + combining dot above -> i (ICU tr-TR)
+                    cikti += "i"
+                    i += 2
+                    continue
+                }
                 cikti += "\u{131}"
             } else if u == "\u{130}" {
                 cikti += "i"
             } else {
                 cikti += String(Character(u)).lowercased()
             }
+            i += 1
         }
         return cikti
     }

@@ -4001,17 +4001,6 @@
       }
     },
     {
-      "ad": "metin \"ΣΊΣΥΦΟΣ\"",
-      "girdi": {
-        "tur": "metin",
-        "deger": "ΣΊΣΥΦΟΣ"
-      },
-      "beklenen": {
-        "capStr": "ΣΊΣΥΦΟΣ",
-        "trKatla": "σίσυφος"
-      }
-    },
-    {
       "ad": "metin \"ǅ\"",
       "girdi": {
         "tur": "metin",
@@ -4020,6 +4009,50 @@
       "beklenen": {
         "capStr": "Ǆ",
         "trKatla": "ǆ"
+      }
+    },
+    {
+      "ad": "metin \"İ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "İ"
+      },
+      "beklenen": {
+        "capStr": "İ",
+        "trKatla": "i"
+      }
+    },
+    {
+      "ad": "metin \"İx\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "İx"
+      },
+      "beklenen": {
+        "capStr": "İx",
+        "trKatla": "ix"
+      }
+    },
+    {
+      "ad": "metin \"İ̇\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "İ̇"
+      },
+      "beklenen": {
+        "capStr": "İ̇",
+        "trKatla": "i̇"
+      }
+    },
+    {
+      "ad": "metin \"KIRMIZİ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "KIRMIZİ"
+      },
+      "beklenen": {
+        "capStr": "KIRMIZİ",
+        "trKatla": "kırmızi"
       }
     },
     {

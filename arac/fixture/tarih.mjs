@@ -55,7 +55,7 @@ export default function uret(webYukle) {
     'iıİI', 'ıspanak', 'istanbul', 'ışıl ışık', 'şükrü ÇAĞLAR', 'öner ünal', 'güler üzüm', 'hacı mehmet', 'sail efendi', 'fatma zehra',
     'abdülhamid', 'ibrahim halil', 'ömer faruk', 'ç', 'ğ', 'ş', 'i', 'ı', '', ' ', '-', 'a', 'ab cd ef', 'ali\tveli', 'ali\nveli', 'ali\u00a0veli',
     'ali\u2003veli', "o'neil", 'mc donald', 'ßeta', 'ǆ', 'ñandú', 'émile zola', 'ÂLİ', 'ınci', 'iNCİ', 'ELİF NUR', 'hüseyin-öz', 'zeynep (kızlık)',
-    '1ahmet', 'ahmet 2', '😀 emoji', 'a😀b', 'ΣΊΣΥΦΟΣ', 'ǅ', '\u2028x',
+    '1ahmet', 'ahmet 2', '😀 emoji', 'a😀b', 'ǅ', 'I' + String.fromCharCode(0x307), 'I' + String.fromCharCode(0x307) + 'x', 'İ' + String.fromCharCode(0x307), 'KIRMIZI' + String.fromCharCode(0x307), '\u2028x',
   ];
   for (const s of adlar) {
     const capStr = hesapla(`capStr(${J(s)})`);

@@ -1,5 +1,6 @@
 import Foundation
 
+/// Insertion order is kept even for integer-like keys (JS would sort those first; fine for P-ids).
 /// Ordered key/value container with JS object semantics: insertion order is kept,
 /// re-assigning an existing key keeps its position, assigning nil removes the key.
 public struct Nesne: Equatable {
@@ -52,6 +53,7 @@ public enum JSON: Equatable {
 
     public struct Hata: Error, CustomStringConvertible {
         public let description: String
+        public init(description: String) { self.description = description }
     }
 
     // MARK: access
@@ -306,7 +308,9 @@ public enum JSON: Equatable {
                             if alt >= 0xDC00 && alt < 0xE000 {
                                 kod = 0x10000 + ((kod - 0xD800) << 10) + (alt - 0xDC00)
                             } else {
-                                kod = 0xFFFD
+                                // lone high surrogate -> U+FFFD; the second escape is decoded on its own
+                                out.append(contentsOf: [0xEF, 0xBF, 0xBD])
+                                kod = (alt >= 0xD800 && alt < 0xE000) ? 0xFFFD : alt
                             }
                         } else if kod >= 0xD800 && kod < 0xE000 {
                             kod = 0xFFFD

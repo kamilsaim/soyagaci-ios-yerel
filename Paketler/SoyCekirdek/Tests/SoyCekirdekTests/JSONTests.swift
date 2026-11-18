@@ -27,7 +27,7 @@ final class JSONTests: XCTestCase {
         XCTAssertEqual(JSON.number(-0.0).metinOlarak(), "0")
         XCTAssertEqual(JSON.number(1e21).metinOlarak(), "1e+21")
         XCTAssertEqual(JSON.number(1e20).metinOlarak(), "100000000000000000000")
-        XCTAssertEqual(JSON.number(123456789012345680000).metinOlarak(), "123456789012345680000")
+        XCTAssertEqual(JSON.number(1.2345678901234568e20).metinOlarak(), "123456789012345680000")
         XCTAssertEqual(JSON.number(0.000001).metinOlarak(), "0.000001")
         XCTAssertEqual(JSON.number(0.0000001).metinOlarak(), "1e-7")
         XCTAssertEqual(JSON.number(1.5e-7).metinOlarak(), "1.5e-7")
@@ -43,11 +43,17 @@ final class JSONTests: XCTestCase {
     }
 
     func test_jsonKacislar() throws {
-        let s = "a\"b\c\n\r\t\u{08}\u{0C}\u{01}\u{1F}\u{7F}\u{2028}\u{2029}é😀"
+        let s = "a\"b\\c\n\r\t\u{08}\u{0C}\u{01}\u{1F}\u{7F}\u{2028}\u{2029}é😀"
         let yazilan = JSON.string(s).metinOlarak()
-        XCTAssertEqual(yazilan, "\"a\\\"b\\c\n\r\t\b\f\u0001\u001f\u{7F}\u{2028}\u{2029}é😀\"")
+        let beklenen = "\"" + #"a\"b\\c\n\r\t\b\f\u0001\u001f"# + "\u{7F}\u{2028}\u{2029}é😀" + "\""
+        XCTAssertEqual(yazilan, beklenen)
         XCTAssertEqual(try JSON.coz(yazilan), .string(s))
-        XCTAssertEqual(try JSON.coz("\"\ud83d\ude00\u0041\/\""), .string("😀A/"))
+        let bs = "\\"
+        let cift = "\"" + bs + "ud83d" + bs + "ude00" + bs + "x41" + bs + "/\""
+        XCTAssertEqual(try JSON.coz(cift.replacingOccurrences(of: "x41", with: "u0041")), .string("😀A/"))
+        // lone high surrogate followed by an ordinary escape: U+FFFD, then the escape is kept
+        let yalniz = "\"" + bs + "ud83d" + bs + "u0042\""
+        XCTAssertEqual(try JSON.coz(yalniz), .string("\u{FFFD}B"))
     }
 
     func test_jsonHatalar() {
