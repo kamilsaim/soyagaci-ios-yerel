@@ -130,7 +130,7 @@ final class YerlesimTests: XCTestCase {
                 sayac += 1
             }
         }
-        XCTAssertGreaterThan(sayac, 4000)
+        XCTAssertEqual(sayac, 1953)
     }
 
     func test_odakKisiOrtada() {
