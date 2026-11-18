@@ -181,13 +181,16 @@ final class OlaylarTests: XCTestCase {
         for i in 1..<plan.count { XCTAssertLessThanOrEqual(plan[i - 1].at, plan[i].at) }
         for p in plan { XCTAssertGreaterThan(p.at, GedcomTests.simdi) }
         // web ilk 60'ı ile birebir
+        var bulundu = 0
         for v in OlaylarTests.vakalar where v.ad == "plan yuz elli kisi 2026-11-18T09:00:00Z bd=true an=true lead=1 saat=9" {
+            bulundu += 1
             let b = try beklenenListe(v)
             for i in 0..<60 {
                 XCTAssertEqual(ilk[i].id, Int(b[i]["id"]?.sayi ?? -1))
                 XCTAssertEqual(ilk[i].personId, b[i]["personId"]?.metin)
             }
         }
+        XCTAssertEqual(bulundu, 1, "web ilk-60 vakasi bulunamadi")
     }
 
     func test_simdiVeSinirlar() throws {
@@ -200,5 +203,23 @@ final class OlaylarTests: XCTestCase {
         XCTAssertFalse(plan1.contains { $0.personId == "E1" })
         // id'ler filtrelemeden önceki sıra: boşluklu ve artan
         for i in 1..<plan1.count { XCTAssertLessThan(plan1[i - 1].id, plan1[i].id) }
+    }
+
+    func test_istanbulGunSiniri() throws {
+        var ist = Calendar(identifier: .gregorian)
+        ist.timeZone = TimeZone(identifier: "Europe/Istanbul")!
+        let ham = "{\"A\":{\"id\":\"A\",\"firstName\":\"Bir\",\"birthDate\":\"25/12/1980\"},\"B\":{\"id\":\"B\",\"firstName\":\"Iki\",\"birthDate\":\"26/12/1990\"}}"
+        let a = Agac(people: try JSON.coz(ham).nesne ?? Nesne(), nextId: 3)
+        // 2026-12-25T23:30Z = İstanbul'da 26 Aralık 02:30
+        let from = Date(timeIntervalSince1970: 1_798_241_400)
+        let ev = Olaylar.eventsBetween(from, 5, OlayFiltre(), a, takvim: ist, simdi: from)
+        XCTAssertEqual(ev.first?.id, "B")
+        XCTAssertEqual(ev.first?.diff, 0)
+        XCTAssertEqual(ev.first?.d, 26)
+        XCTAssertFalse(ev.contains { $0.id == "A" }, "25 Aralık İstanbul'da geçmişte")
+        // UTC takvimle aynı an 25 Aralık: A bugün
+        let utc = Olaylar.eventsBetween(from, 5, OlayFiltre(), a, takvim: GedcomTests.takvim, simdi: from)
+        XCTAssertEqual(utc.first?.id, "A")
+        XCTAssertEqual(utc.first?.diff, 0)
     }
 }

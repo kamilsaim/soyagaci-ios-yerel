@@ -98,9 +98,11 @@ public struct PlanliBildirim: Equatable {
 public enum Olaylar {
     /// `[from, from+days]` aralığındaki olaylar, `diff` sonra `kind` sırasıyla (kararlı).
     /// Web `new Date(y,m-1,d)` taşması (29 Şubat artık olmayan yıl, 31 Nisan, gün 0, ay 13) olayı atlar.
-    /// `simdi`: `isDead` için "şimdi" (web `new Date()`); verilmezse `from`. Web'de `from` ve şimdi ayrıdır (ay takvimi başka aya bakar).
-    public static func eventsBetween(_ from: Date, _ days: Int, _ opt: OlayFiltre, _ a: Agac, takvim: Calendar, simdi: Date? = nil) -> [Olay] {
-        let bugun = simdi ?? from
+    /// `simdi`: `isDead` için "şimdi" (web `new Date()`), ZORUNLU; `from`'dan ayrıdır (ay takvimi başka aya bakar).
+    /// `takvim`: uygulama `Calendar(identifier: .gregorian)` ve `timeZone = .current` vermeli (asla `Calendar.current` değil);
+    /// gün sınırları bu saat dilimine göre belirlenir.
+    public static func eventsBetween(_ from: Date, _ days: Int, _ opt: OlayFiltre, _ a: Agac, takvim: Calendar, simdi: Date) -> [Olay] {
+        let bugun = simdi
         let t0 = takvim.startOfDay(for: from)
         let yil0 = takvim.component(.year, from: t0)
         var ev: [Olay] = []
@@ -152,7 +154,7 @@ public enum Olaylar {
         return takvim.date(from: DateComponents(year: y, month: m, day: d))
     }
 
-    /// Web `upcomingEvents(days)`: ayara göre `simdi`'den itibaren.
+    /// Web `upcomingEvents(days)`: ayara göre `simdi`'den itibaren. `takvim`: gregorian + `timeZone = .current` (bkz. `eventsBetween`).
     public static func upcomingEvents(_ days: Int, _ a: Agac, ayar: HatirlatmaAyari, simdi: Date, takvim: Calendar) -> [Olay] {
         return eventsBetween(simdi, days, OlayFiltre(bd: ayar.bd, an: ayar.an), a, takvim: takvim, simdi: simdi)
     }
@@ -171,6 +173,7 @@ public enum Olaylar {
 
     /// Web `notificationPlan(hour)`: önümüzdeki 366 günün bildirimleri; `at` = olay günü - `lead` gün, saat `hour`:00.
     /// `id` filtrelemeden ÖNCEKİ sıra numarasıdır (1'den). `at <= simdi` olanlar atılır (`id` boşlukları kalır).
+    /// `takvim`: gregorian + `timeZone = .current` (asla `Calendar.current` değil); bildirim saati `hour` yerel saattir.
     /// iOS en fazla 64 yerel bildirim planlar: uygulama `Array(plan.prefix(60))` alır (liste zaten tarihe göre sıralı).
     public static func notificationPlan(_ a: Agac, ayar: HatirlatmaAyari, hour: Int = 9, simdi: Date, takvim: Calendar) -> [PlanliBildirim] {
         let olaylar = eventsBetween(simdi, 366, OlayFiltre(bd: ayar.bd, an: ayar.an), a, takvim: takvim, simdi: simdi)
