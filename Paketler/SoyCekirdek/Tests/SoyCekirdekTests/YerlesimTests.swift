@@ -153,7 +153,7 @@ final class YerlesimTests: XCTestCase {
                 let sirali = xs.sorted()
                 if sirali.count < 2 { continue }
                 for i in 1..<sirali.count {
-                    XCTAssertGreaterThanOrEqual(sirali[i] - sirali[i - 1], Agacla.NW, "\(ad) satir \(satir)")
+                    XCTAssertGreaterThanOrEqual(sirali[i] - sirali[i - 1], Agacla.NW + Agacla.HGAP / 2 - 0.001, "\(ad) satir \(satir)")
                 }
             }
         }
@@ -209,6 +209,70 @@ final class YerlesimTests: XCTestCase {
         XCTAssertEqual(vakalar.count, 13)
         for v in vakalar {
             XCTAssertEqual(Agacla.normDrag(v.girdi["d"] ?? .null), v.beklenen, v.ad)
+        }
+    }
+
+    /// Gercek agaclarda ulasilamayan duzeltme gecisi: elle cakistirilmis yerlesim
+    func test_ayniSatirDuzeltCakisan() {
+        var d = Yerlesim()
+        d.yerles("A", 100, 0, 0)
+        d.yerles("B", 100, 0, 0)   // ayni x: ekleme sirasi korunur
+        d.yerles("C", 150, 0, 0)
+        d.yerles("D", 0, 186, 1)
+        d.yerles("E", 10, 186, 1)
+        d.yerles("F", 500, 186, 1)  // yeterince uzak: degismez
+        Agacla.ayniSatirDuzelt(&d)
+        let a = Agacla.NW + Agacla.HGAP / 2
+        XCTAssertEqual(d.nodePos["A"]?.x, 100)
+        XCTAssertEqual(d.nodePos["B"]?.x ?? 0, 100 + a, accuracy: 1e-9)
+        XCTAssertEqual(d.nodePos["C"]?.x ?? 0, 100 + 2 * a, accuracy: 1e-9)
+        XCTAssertEqual(d.nodePos["D"]?.x, 0)
+        XCTAssertEqual(d.nodePos["E"]?.x ?? 0, a, accuracy: 1e-9)
+        XCTAssertEqual(d.nodePos["F"]?.x, 500)
+        XCTAssertEqual(d.sira, ["A", "B", "C", "D", "E", "F"])
+    }
+
+    func test_rowLabelFixture() {
+        let vakalar = turVakalari("etiket")
+        XCTAssertEqual(vakalar.count, 6)
+        for v in vakalar {
+            let odak = v.girdi["mod"]?.metin == "focus"
+            for (k, b) in v.beklenen.nesne?.ciftler ?? [] {
+                XCTAssertEqual(Agacla.rowLabel(Int(k) ?? 0, odak: odak), b.metin, "\(v.ad) \(k)")
+            }
+        }
+        XCTAssertEqual(Agacla.rowLabel(-1, odak: true), "Anne · Baba")
+        XCTAssertEqual(Agacla.rowLabel(2, odak: false), "3. Kuşak")
+    }
+
+    func test_layoutBoundsFixture() {
+        let vakalar = turVakalari("sinir")
+        XCTAssertEqual(vakalar.count, 14)
+        for v in vakalar {
+            let ad = v.girdi["agac"]?.metin ?? ""
+            guard let agac = YerlesimTests.agaclar[ad], let m = YerlesimTests.modeller[ad] else { XCTFail("agac yok"); continue }
+            var y: Yerlesim
+            var drag: [String: Nokta] = [:]
+            if v.girdi["mod"]?.metin == "focus" {
+                y = Yerlesim()
+                if let f = v.girdi["odak"]?.metin { y = Agacla.layoutFocus(f, upGen: 3, downGen: 2, agac, m) }
+            } else {
+                y = Agacla.layoutFull(agac, m)
+                for (id, o) in v.girdi["drag"]?.nesne?.ciftler ?? [] {
+                    drag[id] = Nokta(x: o["dx"]?.sayi ?? 0, y: o["dy"]?.sayi ?? 0)
+                }
+            }
+            karsilastir(y, v.beklenen["dugumler"], v.ad)
+            let b = Agacla.layoutBounds(y, drag: drag)
+            if let e = v.beklenen["b"], e.nesne != nil {
+                guard let b = b else { XCTFail("\(v.ad): sinir nil"); continue }
+                XCTAssertEqual(b.minX, e["minX"]?.sayi ?? .nan, accuracy: 0.001, v.ad)
+                XCTAssertEqual(b.maxX, e["maxX"]?.sayi ?? .nan, accuracy: 0.001, v.ad)
+                XCTAssertEqual(b.minY, e["minY"]?.sayi ?? .nan, accuracy: 0.001, v.ad)
+                XCTAssertEqual(b.maxY, e["maxY"]?.sayi ?? .nan, accuracy: 0.001, v.ad)
+            } else {
+                XCTAssertNil(b, v.ad)
+            }
         }
     }
 

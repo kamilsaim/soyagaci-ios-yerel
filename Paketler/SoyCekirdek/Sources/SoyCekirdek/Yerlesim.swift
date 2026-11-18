@@ -16,7 +16,7 @@ public struct Yerlesim: Equatable {
     public var nodePos: [String: Nokta] = [:]
     public var nodeRow: [String: Int] = [:]
     /// nodePos anahtarlarının ilk eklenme sırası (JS `Object.keys(nodePos)`)
-    var sira: [String] = []
+    public private(set) var sira: [String] = []
 
     public init() {}
 
@@ -302,7 +302,12 @@ public enum Agacla {
                 if sag > rightEdge { rightEdge = sag }
             }
         }
-        // Son güvenlik: aynı satırda çakışan kart kalmasın
+        ayniSatirDuzelt(&d)
+        return d
+    }
+
+    /// Son güvenlik: aynı satırda çakışan kart kalmasın (kartlar x'e göre dizilir, aralarında en az NW + HGAP/2)
+    static func ayniSatirDuzelt(_ d: inout Yerlesim) {
         var rows: [Int: [String]] = [:]
         for id in d.sira { rows[d.nodeRow[id] ?? 0, default: []].append(id) }
         for (_, ids0) in rows {
@@ -320,7 +325,6 @@ public enum Agacla {
                 if d.nodePos[ids[i]]!.x < alt { d.nodePos[ids[i]]!.x = alt }
             }
         }
-        return d
     }
 
     // MARK: Odak
@@ -500,5 +504,46 @@ public enum Agacla {
             break
         }
         return .object(cikti)
+    }
+
+    // MARK: etiket, sınırlar
+
+    /// Web `rowLabel(r)`: odak görünümünde kuşak adı, Tüm Ağaç'ta "N. Kuşak"
+    public static func rowLabel(_ r: Int, odak: Bool) -> String {
+        if odak {
+            switch r {
+            case -4: return "4. Kuşak Atalar"
+            case -3: return "Büyük Dedeler"
+            case -2: return "Dedeler · Nineler"
+            case -1: return "Anne · Baba"
+            case 0: return "Kendisi"
+            case 1: return "Çocuklar"
+            case 2: return "Torunlar"
+            case 3: return "Torun Çocukları"
+            case 4: return "4. Kuşak"
+            default: return ""
+            }
+        }
+        return String(r + 1) + ". Kuşak"
+    }
+
+    /// Web `layoutBounds()` (animasyonsuz): `drag` Tüm Ağaç'taki elle kaydırmalar (dx,dy), yoksa boş verin. Düğüm yoksa nil.
+    public static func layoutBounds(_ y: Yerlesim, drag: [String: Nokta] = [:]) -> (minX: Double, maxX: Double, minY: Double, maxY: Double)? {
+        var minX = Double.infinity
+        var maxX = -Double.infinity
+        var minY = Double.infinity
+        var maxY = -Double.infinity
+        for id in y.sira {
+            guard let p = y.nodePos[id] else { continue }
+            let o = drag[id]
+            let x = p.x + (o?.x ?? 0)
+            let yy = p.y + (o?.y ?? 0)
+            if x < minX { minX = x }
+            if x > maxX { maxX = x }
+            if yy < minY { minY = yy }
+            if yy > maxY { maxY = yy }
+        }
+        if minX == Double.infinity { return nil }
+        return (minX, maxX + NW, minY, maxY + NH)
     }
 }

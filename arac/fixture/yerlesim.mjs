@@ -269,6 +269,34 @@ export default function uret(webYukle) {
     secilen.forEach((id, i) => vakalar.push({ ad: `soy ${ad} ${id}`, girdi: { tur: 'soy', agac: ad, kisi: id }, beklenen: { kume: soy[i] } }));
   }
 
+  // rowLabel + layoutBounds (soy, heritage; odak ve tum ag.)
+  for (const ad of ['soy', 'heritage', 'bos']) {
+    const wb = kurW(agaclar[ad].people, agaclar[ad].nextId);
+    wb.calistir('buildFamilies();');
+    for (const mod of ['focus', 'full']) {
+      const etiket = JSON.parse(wb.calistir(`(()=>{treeMode='${mod}';const o={};for(let r=-6;r<=8;r++)o[r]=rowLabel(r);return JSON.stringify(o);})()`));
+      vakalar.push({ ad: `etiket ${ad} ${mod}`, girdi: { tur: 'etiket', agac: ad, mod }, beklenen: etiket });
+    }
+    const ids = Object.keys(agaclar[ad].people);
+    const secim = ad === 'bos' ? [] : [JSON.parse(wb.calistir('JSON.stringify(defaultFocus())')), ids[3], ids[ids.length - 1]];
+    for (const mod of ['focus', 'full']) {
+      for (const sur of [false, true]) {
+        const drag = {};
+        if (sur) ids.slice(0, 6).forEach((id, i) => { drag[id] = { dx: 40 * (i + 1) - 90, dy: i % 2 ? -300 : 250 }; });
+        wb.ctx.__drag = drag;
+        const dugumler = [];
+        for (const f of (mod === 'focus' ? secim : [null])) {
+          const b = JSON.parse(wb.calistir(`(()=>{treeMode='${mod}';nodeDrag=Object.assign({'$v':2},__drag);nodePos={};nodeRow={};
+            ${mod === 'focus' ? 'upGen=3;downGen=2;if(' + J(f) + '!==null)layoutFocus(' + J(f) + ');' : 'layoutFull();'}
+            const k=Object.keys(nodePos).map(i=>i+'|'+nodePos[i].x+'|'+nodePos[i].y+'|'+nodeRow[i]);
+            return JSON.stringify({dugumler:k,b:layoutBounds()});})()`));
+          vakalar.push({ ad: `sinir ${ad} ${mod} ${sur ? 'surukle' : 'duz'} ${f}`, girdi: { tur: 'sinir', agac: ad, mod, odak: f, drag: sur ? drag : {} }, beklenen: b });
+        }
+        void dugumler;
+      }
+    }
+  }
+
   // normDrag
   const w = taze();
   const dragGirdi = [
