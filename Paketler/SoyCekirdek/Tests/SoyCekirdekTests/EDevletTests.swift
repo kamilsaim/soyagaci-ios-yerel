@@ -29,11 +29,25 @@ final class EDevletTests: XCTestCase {
 
     func kisi(_ j: JSON) -> EDKisi {
         func m(_ k: String) -> String { return j[k]?.metin ?? "" }
-        return EDKisi(sira: Int(j["sira"]?.sayi ?? 0), cinsiyet: m("cinsiyet"), relationship: m("relationship"),
-                      givn: m("givn"), surn: m("surn"), babaAdi: m("babaAdi"), anaAdi: m("anaAdi"),
-                      birthPlace: m("birthPlace"), birthDate: m("birthDate"), il: m("il"), ilce: m("ilce"),
-                      mahalle: m("mahalle"), cilt: m("cilt"), hane: m("hane"), birey: m("birey"),
-                      medeniHal: m("medeniHal"), status: m("status"), deathDate: m("deathDate"))
+        var k = EDKisi(sira: Int(j["sira"]?.sayi ?? 0))
+        k.cinsiyet = m("cinsiyet")
+        k.relationship = m("relationship")
+        k.givn = m("givn")
+        k.surn = m("surn")
+        k.babaAdi = m("babaAdi")
+        k.anaAdi = m("anaAdi")
+        k.birthPlace = m("birthPlace")
+        k.birthDate = m("birthDate")
+        k.il = m("il")
+        k.ilce = m("ilce")
+        k.mahalle = m("mahalle")
+        k.cilt = m("cilt")
+        k.hane = m("hane")
+        k.birey = m("birey")
+        k.medeniHal = m("medeniHal")
+        k.status = m("status")
+        k.deathDate = m("deathDate")
+        return k
     }
 
     func kisiler(_ j: JSON?) -> [EDKisi] {
