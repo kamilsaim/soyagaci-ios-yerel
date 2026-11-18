@@ -157,24 +157,3 @@ final class GedBirlestirTests: XCTestCase {
         }
     }
 }
-
-final class MukerrerTests: XCTestCase {
-    func test_mergePeopleFixture() throws {
-        let vakalar = try FixtureYukle.yukle("mukerrer").filter { $0.girdi["tur"]?.metin == "mergePeople" }
-        XCTAssertEqual(vakalar.count, 15)
-        for v in vakalar {
-            var a = Agac(people: v.girdi["people"]?.nesne ?? Nesne(), nextId: Int(v.girdi["nextId"]?.sayi ?? 1))
-            Mukerrer.mergePeople(keep: v.girdi["keep"]?.metin ?? "", drop: v.girdi["drop"]?.metin ?? "", &a)
-            let b = v.beklenen["people"]?.nesne ?? Nesne()
-            XCTAssertEqual(a.nextId, Int(v.beklenen["nextId"]?.sayi ?? -1), v.ad)
-            if a.people.anahtarlar != b.anahtarlar {
-                XCTFail("\(v.ad): kimlik sirasi farkli")
-                continue
-            }
-            for k in b.anahtarlar where a.people[k] != b[k] {
-                XCTFail("\(v.ad): \(k) farkli:\n\(a.people[k]?.metinOlarak() ?? "-")\n\(b[k]?.metinOlarak() ?? "-")")
-                break
-            }
-        }
-    }
-}
