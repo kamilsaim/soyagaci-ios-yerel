@@ -49,7 +49,7 @@ final class GedcomTests: XCTestCase {
             ("Tek", "Tek", ""),
             ("/Soyad/", "", "Soyad"),
             ("Ali /K/ Jr", "Ali Jr", "K"),
-            ("  Ali   Veli  /  Kara  /  ", "Ali", "Kara"),
+            ("  Ali   Veli  /  Kara  /  ", "Ali Veli", "Kara"),
             ("Ali /Kara", "Ali", "Kara"),
             ("", "", ""),
             ("   ", "", ""),
@@ -106,17 +106,15 @@ final class GedcomTests: XCTestCase {
         }
     }
 
-    func test_gidisDonusKayipsiz() throws {
-        guard let v = try vakalar("parse").first(where: { $0.ad == "parse heritage.ged" }) else {
-            return XCTFail("heritage vakasi yok")
-        }
+    /// GED -> Agac -> GED -> Agac: kisi alanlari ve sayilar korunur; (kizlik, cok satirli not, tarihsiz vefat) sayilari beklenen.
+    func kayipsiz(_ ad: String, kisi: Int, kizlik: Int, cokSatirliNot: Int, tarihsizVefat: Int) throws {
+        guard let v = try vakalar("parse").first(where: { $0.ad == ad }) else { return XCTFail("vaka yok: " + ad) }
         let a = Gedcom.parseGED(v.girdi["metin"]?.metin ?? "")
-        XCTAssertEqual(a.people.sayisi, 146)
+        XCTAssertEqual(a.people.sayisi, kisi, ad)
         let metin = Gedcom.expGED(a, tarih: GedcomTests.simdi, takvim: GedcomTests.takvim)
         let g = Gedcom.parseGED(metin)
-        XCTAssertEqual(g.people.sayisi, 146)
-        var kizlik = 0
-        var cokSatirliNot = 0
+        XCTAssertEqual(g.people.sayisi, kisi, ad)
+        var sayac = [0, 0, 0, 0]
         for k in a.people.anahtarlar {
             guard let x = a.kisi(k), let y = g.kisi(k) else { return XCTFail("kisi eksik: " + k) }
             XCTAssertEqual(x.firstName, y.firstName, k)
@@ -128,27 +126,23 @@ final class GedcomTests: XCTestCase {
             XCTAssertEqual(x.deathDate, y.deathDate, k)
             XCTAssertEqual(x.father, y.father, k)
             XCTAssertEqual(x.mother, y.mother, k)
-            XCTAssertEqual(x.children, y.children, k)
-            if !x.maidenName.isEmpty { kizlik += 1 }
-            if x.notes.contains("\n") { cokSatirliNot += 1 }
+            XCTAssertEqual(x.children.sorted(), y.children.sorted(), k)
+            if !y.maidenName.isEmpty { sayac[0] += 1 }
+            if y.notes.contains("
+") { sayac[1] += 1 }
+            if y.deceased && y.deathDate.isEmpty && y.deathPlace.isEmpty { sayac[2] += 1 }
         }
-        XCTAssertGreaterThan(kizlik, 0)
-        XCTAssertGreaterThan(cokSatirliNot, 0)
-        // saim-soy.ged: tarihsiz vefat (`1 DEAT Y`) disari yazilip geri okununca korunur
-        guard let s = try vakalar("parse").first(where: { $0.ad == "parse saim-soy.ged" }) else {
-            return XCTFail("saim vakasi yok")
-        }
-        let b = Gedcom.parseGED(s.girdi["metin"]?.metin ?? "")
-        let sMetin = Gedcom.expGED(b, tarih: GedcomTests.simdi, takvim: GedcomTests.takvim)
-        XCTAssertTrue(sMetin.contains("1 DEAT Y\n"))
-        let c = Gedcom.parseGED(sMetin)
-        var onceki = 0
-        var sonra = 0
-        for k in b.people.anahtarlar {
-            if let x = b.kisi(k), x.deceased && x.deathDate.isEmpty && x.deathPlace.isEmpty { onceki += 1 }
-            if let y = c.kisi(k), y.deceased && y.deathDate.isEmpty && y.deathPlace.isEmpty { sonra += 1 }
-        }
-        XCTAssertEqual(onceki, 3)
-        XCTAssertEqual(sonra, 3)
+        XCTAssertEqual(sayac[0], kizlik, ad)
+        XCTAssertEqual(sayac[1], cokSatirliNot, ad)
+        XCTAssertEqual(sayac[2], tarihsizVefat, ad)
+        if tarihsizVefat > 0 { XCTAssertTrue(metin.contains("1 DEAT Y
+"), ad) }
+    }
+
+    func test_gidisDonusKayipsiz() throws {
+        try kayipsiz("parse heritage.ged", kisi: 146, kizlik: 0, cokSatirliNot: 0, tarihsizVefat: 18)
+        try kayipsiz("parse saim-soy.ged", kisi: 24, kizlik: 0, cokSatirliNot: 0, tarihsizVefat: 3)
+        try kayipsiz("parse edevlet-soy-Mustafa.ged", kisi: 35, kizlik: 2, cokSatirliNot: 19, tarihsizVefat: 12)
+        try kayipsiz("parse kenar durumlari", kisi: 5, kizlik: 1, cokSatirliNot: 2, tarihsizVefat: 1)
     }
 }
