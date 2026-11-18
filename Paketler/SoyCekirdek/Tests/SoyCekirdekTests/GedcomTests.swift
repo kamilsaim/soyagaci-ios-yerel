@@ -128,15 +128,13 @@ final class GedcomTests: XCTestCase {
             XCTAssertEqual(x.mother, y.mother, k)
             XCTAssertEqual(x.children.sorted(), y.children.sorted(), k)
             if !y.maidenName.isEmpty { sayac[0] += 1 }
-            if y.notes.contains("
-") { sayac[1] += 1 }
+            if y.notes.contains("\n") { sayac[1] += 1 }
             if y.deceased && y.deathDate.isEmpty && y.deathPlace.isEmpty { sayac[2] += 1 }
         }
         XCTAssertEqual(sayac[0], kizlik, ad)
         XCTAssertEqual(sayac[1], cokSatirliNot, ad)
         XCTAssertEqual(sayac[2], tarihsizVefat, ad)
-        if tarihsizVefat > 0 { XCTAssertTrue(metin.contains("1 DEAT Y
-"), ad) }
+        if tarihsizVefat > 0 { XCTAssertTrue(metin.contains("1 DEAT Y\n"), ad) }
     }
 
     func test_gidisDonusKayipsiz() throws {
