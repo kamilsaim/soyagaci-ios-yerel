@@ -10,12 +10,11 @@ struct AnaKabuk: View {
         NavigationStack(path: $g.yol) {
             VStack(spacing: 0) {
                 TabView(selection: $g.sekme) {
-                    YerTutucu(baslik: "Ana Sayfa").tag(Sekme.anaSayfa)
-                    YerTutucu(baslik: "Ağaç").tag(Sekme.agac)
-                    YerTutucu(baslik: "Kişiler").tag(Sekme.kisiler)
-                    YerTutucu(baslik: "Aktar").tag(Sekme.aktar)
+                    YerTutucu(baslik: "Ana Sayfa").tag(Sekme.anaSayfa).toolbar(.hidden, for: .tabBar)
+                    YerTutucu(baslik: "Ağaç").tag(Sekme.agac).toolbar(.hidden, for: .tabBar)
+                    YerTutucu(baslik: "Kişiler").tag(Sekme.kisiler).toolbar(.hidden, for: .tabBar)
+                    YerTutucu(baslik: "Aktar").tag(Sekme.aktar).toolbar(.hidden, for: .tabBar)
                 }
-                .toolbar(.hidden, for: .tabBar)
                 AltCubuk()
             }
             .background(Renk.zemin.ignoresSafeArea())
