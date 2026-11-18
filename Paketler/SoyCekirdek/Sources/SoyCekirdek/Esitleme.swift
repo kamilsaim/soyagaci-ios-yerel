@@ -142,15 +142,6 @@ public actor Esitleyici {
         }
         if self.uid != uid { sunucuMs = 0 }
         self.uid = uid
-
-        var veri: BulutSatiri?
-        var basarisiz = false
-        do {
-            veri = try await bulut.oku(uid: uid)
-        } catch {
-            basarisiz = true
-        }
-
         let kirliMi = yerel.kirli == uid
         let tabanMs = yerel.taban.map { Esitleyici.ms($0) } ?? 0
         let yerelKopya = yerelBulutKopyasi(uid)
