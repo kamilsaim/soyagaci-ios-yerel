@@ -35,7 +35,7 @@ final class JSONTests: XCTestCase {
         XCTAssertEqual(JSON.number(100).metinOlarak(), "100")
         XCTAssertEqual(JSON.number(-12.25).metinOlarak(), "-12.25")
         XCTAssertEqual(JSON.number(1.7976931348623157e308).metinOlarak(), "1.7976931348623157e+308")
-        XCTAssertEqual(JSON.number(5e-324).metinOlarak(), "5e-324")
+        XCTAssertEqual(JSON.number(Double.leastNonzeroMagnitude).metinOlarak(), "5e-324")
         XCTAssertEqual(JSON.number(Double.nan).metinOlarak(), "null")
         XCTAssertEqual(JSON.number(Double.infinity).metinOlarak(), "null")
         let j = try JSON.coz("[1,1.5,-0,1e21,0.1]")
