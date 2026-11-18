@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { webYukle } from './web-ortam.mjs';
 
 process.on('unhandledRejection', () => {});
-process.on('uncaughtException', (e) => { console.error('yakalanmamis hata (yoksayildi):', e && e.message); });
+process.on('uncaughtException', (e) => { console.error('yakalanmamis hata:', e && e.stack); process.exitCode = 1; });
 
 const kok = path.dirname(fileURLToPath(import.meta.url));
 const HTML = path.join(kok, 'kaynak', 'soy-agaci-7.0.0.html');
