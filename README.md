@@ -16,3 +16,10 @@ gh run list -R kamilsaim/soyagaci-ios-yerel
 gh run watch <id> --exit-status
 ```
 Yerelde Swift kurulu değilse testler yalnız GitHub Actions'ta çalışır.
+
+## Fixture üreticisi
+Web'in JS'i Node'da çalıştırılıp eşlik (parity) fixture'ları üretilir. Saat dilimi UTC şart:
+```
+TZ=UTC node arac/fixture-uret.mjs duman     # duman testi (fixture yazmaz)
+TZ=UTC node arac/fixture-uret.mjs <modül>   # arac/fixture/<modül>.mjs → Paketler/SoyCekirdek/Tests/SoyCekirdekTests/fixtures/<modül>.json
+```

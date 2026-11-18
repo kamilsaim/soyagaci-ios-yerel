@@ -1,0 +1,464 @@
+0 HEAD
+1 SOUR EDEVLET-GED
+2 NAME e-Devlet Soyagaci -> GEDCOM
+2 VERS 2.0
+1 DATE 28 OCT 2026
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 NOTE NVI Alt-Ust Soy Bilgisi. Gunu-ayi bilinmeyen eski dogumlar yalnizca yil olarak yazildi.
+0 @I1@ INDI
+1 NAME Mehmet /Saim/
+2 GIVN Mehmet
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 1874
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT Y
+1 NOTE e-Devlet yakınlık: Babasının Babasının Babası
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 2)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Babasının Babasının Babası
+1 FAMC @F1@
+1 FAMS @F5@
+0 @I2@ INDI
+1 NAME Bekir /Dağlıoğlu/
+2 GIVN Bekir
+2 SURN Dağlıoğlu
+1 SEX M
+1 BIRT
+2 DATE 1880
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 12 JUN 1940
+1 NOTE e-Devlet yakınlık: Annesinin Babasının Babası
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Keler Mahallesi (cilt 6, hane 35, birey 2)
+2 CONT Medeni hâli: Dul
+1 _YAKINLIK Annesinin Babasının Babası
+1 FAMC @F2@
+1 FAMS @F6@
+0 @I3@ INDI
+1 NAME Saniye /Dağlıoğlu/
+2 GIVN Saniye
+2 SURN Dağlıoğlu
+1 SEX F
+1 BIRT
+2 DATE 1884
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 2 NOV 1918
+1 NOTE e-Devlet yakınlık: Annesinin Babasının Annesi
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Keler Mahallesi (cilt 6, hane 35, birey 4)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Annesinin Babasının Annesi
+1 FAMC @F3@
+1 FAMS @F6@
+0 @I4@ INDI
+1 NAME Fatma /Saim/
+2 GIVN Fatma
+2 SURN Saim
+1 SEX F
+1 BIRT
+2 DATE 1884
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 10 JUN 1949
+1 NOTE e-Devlet yakınlık: Babasının Babasının Annesi
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 7)
+2 CONT Medeni hâli: Dul
+1 _YAKINLIK Babasının Babasının Annesi
+1 FAMC @F4@
+1 FAMS @F5@
+0 @I5@ INDI
+1 NAME Hasan /Saim/
+2 GIVN Hasan
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 1905
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 1 JUL 1995
+1 NOTE e-Devlet yakınlık: Babasının Babası
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 5)
+2 CONT Medeni hâli: Bekâr
+1 _YAKINLIK Babasının Babası
+1 FAMC @F5@
+1 FAMS @F8@
+0 @I6@ INDI
+1 NAME Mustafa /Dağlıoğlu/
+2 GIVN Mustafa
+2 SURN Dağlıoğlu
+1 SEX M
+1 BIRT
+2 DATE 24 OCT 1907
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 20 NOV 1973
+1 NOTE e-Devlet yakınlık: Annesinin Babası
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Keler Mahallesi (cilt 6, hane 35, birey 6)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Annesinin Babası
+1 FAMC @F6@
+1 FAMS @F9@
+0 @I7@ INDI
+1 NAME Sare /Dağlıoğlu/
+2 GIVN Sare
+2 SURN Dağlıoğlu
+1 SEX F
+1 BIRT
+2 DATE 18 MAR 1910
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 6 MAR 1995
+1 NOTE e-Devlet yakınlık: Annesinin Annesi
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Keler Mahallesi (cilt 6, hane 35, birey 11)
+2 CONT Medeni hâli: Dul
+1 _YAKINLIK Annesinin Annesi
+1 FAMC @F7@
+1 FAMS @F9@
+0 @I8@ INDI
+1 NAME Mehmet /Saim/
+2 GIVN Mehmet
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 13 JAN 1928
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 24 OCT 2018
+1 NOTE e-Devlet yakınlık: Babası
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 14)
+2 CONT Medeni hâli: Dul
+1 _YAKINLIK Babası
+1 FAMC @F8@
+1 FAMS @F10@
+0 @I9@ INDI
+1 NAME Fatma /Saim/
+2 GIVN Fatma
+2 SURN Saim
+1 NAME Fatma /Dağlıoğlu/
+2 TYPE birth
+1 SEX F
+1 BIRT
+2 DATE 17 MAR 1933
+2 PLAC Yeşilhisar, Kayseri
+1 DEAT
+2 DATE 7 OCT 2004
+1 NOTE e-Devlet yakınlık: Annesi
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 20)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Annesi
+1 FAMC @F9@
+1 FAMS @F10@
+0 @I10@ INDI
+1 NAME Mustafa /Saim/
+2 GIVN Mustafa
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 7 OCT 1957
+2 PLAC Yeşilhisar, Kayseri
+1 NOTE e-Devlet yakınlık: Kendisi
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 27)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Kendisi
+1 FAMC @F10@
+1 FAMS @F11@
+0 @I11@ INDI
+1 NAME Mehmet Akif /Saim/
+2 GIVN Mehmet Akif
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 5 MAY 1985
+2 PLAC Yeşilhisar, Kayseri
+1 NOTE e-Devlet yakınlık: Oğlu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 57)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Oğlu
+1 FAMC @F11@
+1 FAMS @F12@
+0 @I12@ INDI
+1 NAME Kamil /Saim/
+2 GIVN Kamil
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 7 JUL 1987
+2 PLAC Yeşilhisar, Kayseri
+1 NOTE e-Devlet yakınlık: Oğlu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 62)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Oğlu
+1 FAMC @F11@
+1 FAMS @F15@
+0 @I13@ INDI
+1 NAME Yusuf /Saim/
+2 GIVN Yusuf
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 5 SEP 1989
+2 PLAC Yeşilhisar, Kayseri
+1 NOTE e-Devlet yakınlık: Oğlu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 65)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Oğlu
+1 FAMC @F11@
+1 FAMS @F13@
+0 @I14@ INDI
+1 NAME Rahle Rabia /Türkay/
+2 GIVN Rahle Rabia
+2 SURN Türkay
+1 NAME Rahle Rabia /Saim/
+2 TYPE birth
+1 SEX F
+1 BIRT
+2 DATE 21 JAN 1995
+2 PLAC Kocasinan
+1 NOTE e-Devlet yakınlık: Kızı
+2 CONT Nüfusa kayıtlı: Kayseri / Talas / Kamber Mahallesi (cilt 16, hane 72, birey 150)
+2 CONT Medeni hâli: Evli
+1 _YAKINLIK Kızı
+1 FAMC @F11@
+1 FAMS @F14@
+0 @I15@ INDI
+1 NAME Hatice Habibe /Saim/
+2 GIVN Hatice Habibe
+2 SURN Saim
+1 SEX F
+1 BIRT
+2 DATE 16 DEC 2011
+2 PLAC Melikgazi
+1 NOTE e-Devlet yakınlık: Torunu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 93)
+2 CONT Medeni hâli: Bekâr
+1 _YAKINLIK Torunu
+1 FAMC @F12@
+0 @I16@ INDI
+1 NAME Hasan Emir Sami /Saim/
+2 GIVN Hasan Emir Sami
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 10 JUL 2016
+2 PLAC Kocasinan
+1 NOTE e-Devlet yakınlık: Torunu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 105)
+2 CONT Medeni hâli: Bekâr
+1 _YAKINLIK Torunu
+1 FAMC @F12@
+0 @I17@ INDI
+1 NAME Zeynep Almila /Saim/
+2 GIVN Zeynep Almila
+2 SURN Saim
+1 SEX F
+1 BIRT
+2 DATE 7 NOV 2020
+2 PLAC Kocasinan
+1 NOTE e-Devlet yakınlık: Torunu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 113)
+2 CONT Medeni hâli: Bekâr
+1 _YAKINLIK Torunu
+1 FAMC @F13@
+0 @I18@ INDI
+1 NAME Serra /Türkay/
+2 GIVN Serra
+2 SURN Türkay
+1 SEX F
+1 BIRT
+2 DATE 17 DEC 2021
+2 PLAC Kocasinan
+1 NOTE e-Devlet yakınlık: Torunu
+2 CONT Nüfusa kayıtlı: Kayseri / Talas / Kamber Mahallesi (cilt 16, hane 72, birey 155)
+2 CONT Medeni hâli: Bekâr
+1 _YAKINLIK Torunu
+1 FAMC @F14@
+0 @I19@ INDI
+1 NAME Ahmet Kayra /Saim/
+2 GIVN Ahmet Kayra
+2 SURN Saim
+1 SEX M
+1 BIRT
+2 DATE 19 AUG 2025
+2 PLAC Melikgazi
+1 NOTE e-Devlet yakınlık: Torunu
+2 CONT Nüfusa kayıtlı: Kayseri / Yeşilhisar / Beyleryukarı Mahallesi (cilt 1, hane 22, birey 120)
+2 CONT Medeni hâli: Bekâr
+1 _YAKINLIK Torunu
+1 FAMC @F15@
+0 @I20@ INDI
+1 NAME İsmail //
+2 GIVN İsmail
+1 SEX M
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Mehmet Saim kişisinin baba adı.
+1 FAMS @F1@
+0 @I21@ INDI
+1 NAME Fatma //
+2 GIVN Fatma
+1 SEX F
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Mehmet Saim kişisinin ana adı.
+1 FAMS @F1@
+0 @I22@ INDI
+1 NAME Emin Hasan //
+2 GIVN Emin Hasan
+1 SEX M
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Bekir Dağlıoğlu kişisinin baba adı.
+1 FAMS @F2@
+0 @I23@ INDI
+1 NAME Fatma //
+2 GIVN Fatma
+1 SEX F
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Bekir Dağlıoğlu kişisinin ana adı.
+1 FAMS @F2@
+0 @I24@ INDI
+1 NAME Mehmet //
+2 GIVN Mehmet
+1 SEX M
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Saniye Dağlıoğlu kişisinin baba adı.
+1 FAMS @F3@
+0 @I25@ INDI
+1 NAME Fatma //
+2 GIVN Fatma
+1 SEX F
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Saniye Dağlıoğlu kişisinin ana adı.
+1 FAMS @F3@
+0 @I26@ INDI
+1 NAME Sail Efendi //
+2 GIVN Sail Efendi
+1 SEX M
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Fatma Saim kişisinin baba adı.
+1 FAMS @F4@
+0 @I27@ INDI
+1 NAME Pempe //
+2 GIVN Pempe
+1 SEX F
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Fatma Saim kişisinin ana adı.
+1 FAMS @F4@
+0 @I28@ INDI
+1 NAME Mehmet //
+2 GIVN Mehmet
+1 SEX M
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Sare Dağlıoğlu kişisinin baba adı.
+1 FAMS @F7@
+0 @I29@ INDI
+1 NAME Zeynep //
+2 GIVN Zeynep
+1 SEX F
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Sare Dağlıoğlu kişisinin ana adı.
+1 FAMS @F7@
+0 @I30@ INDI
+1 NAME Kadın //
+2 GIVN Kadın
+1 SEX F
+1 DEAT Y
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Mehmet Saim kişisinin ana adı.
+1 FAMS @F8@
+0 @I31@ INDI
+1 NAME Naciye Nuran //
+2 GIVN Naciye Nuran
+1 SEX F
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Mehmet Akif Saim kişisinin ana adı.
+1 FAMS @F11@
+0 @I32@ INDI
+1 NAME Tuğba //
+2 GIVN Tuğba
+1 SEX F
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Hatice Habibe Saim kişisinin ana adı.
+1 FAMS @F12@
+0 @I33@ INDI
+1 NAME Mehtap //
+2 GIVN Mehtap
+1 SEX F
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Zeynep Almila Saim kişisinin ana adı.
+1 FAMS @F13@
+0 @I34@ INDI
+1 NAME Seyfi //
+2 GIVN Seyfi
+1 SEX M
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Serra Türkay kişisinin baba adı.
+1 FAMS @F14@
+0 @I35@ INDI
+1 NAME Esra //
+2 GIVN Esra
+1 SEX F
+1 NOTE Yalnızca adı biliniyor: e-Devlet'te Ahmet Kayra Saim kişisinin ana adı.
+1 FAMS @F15@
+0 @F1@ FAM
+1 HUSB @I20@
+1 WIFE @I21@
+1 CHIL @I1@
+0 @F2@ FAM
+1 HUSB @I22@
+1 WIFE @I23@
+1 CHIL @I2@
+0 @F3@ FAM
+1 HUSB @I24@
+1 WIFE @I25@
+1 CHIL @I3@
+0 @F4@ FAM
+1 HUSB @I26@
+1 WIFE @I27@
+1 CHIL @I4@
+0 @F5@ FAM
+1 HUSB @I1@
+1 WIFE @I4@
+1 CHIL @I5@
+0 @F6@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I6@
+0 @F7@ FAM
+1 HUSB @I28@
+1 WIFE @I29@
+1 CHIL @I7@
+0 @F8@ FAM
+1 HUSB @I5@
+1 WIFE @I30@
+1 CHIL @I8@
+0 @F9@ FAM
+1 HUSB @I6@
+1 WIFE @I7@
+1 CHIL @I9@
+0 @F10@ FAM
+1 HUSB @I8@
+1 WIFE @I9@
+1 CHIL @I10@
+0 @F11@ FAM
+1 HUSB @I10@
+1 WIFE @I31@
+1 CHIL @I11@
+1 CHIL @I12@
+1 CHIL @I13@
+1 CHIL @I14@
+0 @F12@ FAM
+1 HUSB @I11@
+1 WIFE @I32@
+1 CHIL @I15@
+1 CHIL @I16@
+0 @F13@ FAM
+1 HUSB @I13@
+1 WIFE @I33@
+1 CHIL @I17@
+0 @F14@ FAM
+1 HUSB @I34@
+1 WIFE @I14@
+1 CHIL @I18@
+0 @F15@ FAM
+1 HUSB @I12@
+1 WIFE @I35@
+1 CHIL @I19@
+0 TRLR
