@@ -46,7 +46,7 @@ final class GedBirlestirTests: XCTestCase {
 
     func test_eslesmeFixture() throws {
         let vakalar = try FixtureYukle.yukle("gedbirlestir")
-        XCTAssertEqual(vakalar.count, 8)
+        XCTAssertEqual(vakalar.count, 13)
         for v in vakalar {
             let h = hazirla(v)
             let b = v.beklenen
@@ -61,6 +61,9 @@ final class GedBirlestirTests: XCTestCase {
                     continue
                 }
                 XCTAssertEqual(GedBirlestir.gedSum(k, h.a), metin.metin ?? "", "\(v.ad) gedSum \(kimlik)")
+                let o = GedBirlestir.gedOzet(k, h.a)
+                XCTAssertFalse(o.ad.isEmpty, v.ad)
+                XCTAssertFalse(o.ozet.contains("<"), v.ad)
             }
         }
     }
@@ -100,6 +103,20 @@ final class GedBirlestirTests: XCTestCase {
         XCTAssertEqual(k.firstName, "Yeni Kuzen")
         XCTAssertNotNil(k.father)
         XCTAssertTrue(h.taban.kisi(k.father ?? "") != nil, "baba eski agactaki kayit olmali")
+    }
+
+    func test_elleBelirsizlik() throws {
+        let vakalar = try FixtureYukle.yukle("gedbirlestir")
+        func esleme(_ on: String) -> Int {
+            let v = vakalar.first { $0.ad.hasPrefix(on) }!
+            let h = hazirla(v)
+            return GedBirlestir.matchImported(h.ids, h.a).count
+        }
+        XCTAssertEqual(esleme("elle (a)"), 0)
+        XCTAssertEqual(esleme("elle (b)"), 0)
+        XCTAssertEqual(esleme("elle (c)"), 2)
+        XCTAssertEqual(esleme("elle (d1)"), 1)
+        XCTAssertEqual(esleme("elle (d2)"), 1)
     }
 
     func test_uygulaFixture() throws {

@@ -63,16 +63,19 @@ public enum GedBirlestir {
         var haritada = Set<String>()
         var used = Set<String>()
         var olds: [Kisi] = []
-        for (_, j) in a.people.ciftler {
+        // Eşleştirme sırasında ağaç değişmez: kişi görünümleri bir kez kurulur
+        var kisiler: [String: Kisi] = [:]
+        for (anahtar, j) in a.people.ciftler {
             if case .object(let o) = j {
                 let k = Kisi(o)
+                kisiler[anahtar] = k
                 if !isNew.contains(k.id) { olds.append(k) }
             }
         }
 
         func pn(_ p: Kisi, _ r: String) -> String {
             let bag: String? = r == "father" ? p.father : p.mother
-            guard let id = bag, let q = a.kisi(id) else { return "" }
+            guard let id = bag, let q = kisiler[id] else { return "" }
             return q.firstName
         }
         func free(_ id: String) -> Bool {
@@ -130,13 +133,13 @@ public enum GedBirlestir {
         }
 
         for id in ids {
-            guard let ka = a.kisi(id) else { continue }
+            guard let ka = kisiler[id] else { continue }
             var c: [Kisi] = []
             for b in olds where !used.contains(b.id) && strong(ka, b) { c.append(b) }
             if c.count != 1 { continue }
             var sayac = 0
             for x in ids where free(x) {
-                if let kx = a.kisi(x), strong(kx, c[0]) { sayac += 1 }
+                if let kx = kisiler[x], strong(kx, c[0]) { sayac += 1 }
             }
             if sayac != 1 { continue }
             ekle(id, c[0].id)
@@ -150,12 +153,12 @@ public enum GedBirlestir {
             for n in serbest {
                 var c: [String] = []
                 for o in oids where !o.isEmpty && !isNew.contains(o) && !used.contains(o) {
-                    if let kn = a.kisi(n), let ko = a.kisi(o), fit(kn, ko, true) { c.append(o) }
+                    if let kn = kisiler[n], let ko = kisiler[o], fit(kn, ko, true) { c.append(o) }
                 }
                 if c.count != 1 { continue }
                 var sayac = 0
                 for x in nids where free(x) {
-                    if let kx = a.kisi(x), let kc = a.kisi(c[0]), fit(kx, kc, true) { sayac += 1 }
+                    if let kx = kisiler[x], let kc = kisiler[c[0]], fit(kx, kc, true) { sayac += 1 }
                 }
                 if sayac != 1 { continue }
                 ekle(n, c[0])
@@ -167,7 +170,7 @@ public enum GedBirlestir {
         while go {
             go = false
             for (n, o) in esler {
-                guard let ka = a.kisi(n), let kb = a.kisi(o) else { continue }
+                guard let ka = kisiler[n], let kb = kisiler[o] else { continue }
                 var nBaba: [String] = []
                 if let f = ka.father { nBaba.append(f) }
                 var nAnne: [String] = []
@@ -222,8 +225,20 @@ public enum GedBirlestir {
         return t
     }
 
-    /// Önizleme satırı (HTML): kişi adı, kızlık soyadı, doğum, ebeveyn, eş. Web `people` aramaları için `a` gerekir.
-    public static func gedSum(_ p: Kisi, _ a: Agac) -> String {
+    /// Önizleme satırının düz metin hâli (HTML kaçışı yok): uygulama arayüzü için.
+    public struct GedOzet: Equatable {
+        public var ad: String
+        public var kizlik: String
+        public var ozet: String
+        public init(ad: String, kizlik: String, ozet: String) {
+            self.ad = ad
+            self.kizlik = kizlik
+            self.ozet = ozet
+        }
+    }
+
+    /// Kişi adı, kızlık soyadı ve "d. doğum · yer · ebeveyn: … · eş: …" özeti (yoksa "bilgi yok").
+    public static func gedOzet(_ p: Kisi, _ a: Agac) -> GedOzet {
         func nm(_ id: String?) -> String {
             guard let i = id, let q = a.kisi(i) else { return "" }
             return q.firstName.isEmpty ? "İsimsiz" : q.firstName
@@ -242,14 +257,22 @@ public enum GedBirlestir {
         if !p.birthPlace.isEmpty { bits.append(p.birthPlace) }
         if !par.isEmpty { bits.append("ebeveyn: " + par) }
         if !sp.isEmpty { bits.append("eş: " + sp) }
-        var s = "<b>" + esc(Islem.pname(p)) + "</b>"
-        if !p.maidenName.isEmpty { s += " <i>d. " + esc(p.maidenName) + "</i>" }
         let ozet = bits.isEmpty ? "bilgi yok" : bits.joined(separator: " · ")
-        s += "<div>" + esc(ozet) + "</div>"
+        return GedOzet(ad: Islem.pname(p), kizlik: p.maidenName, ozet: ozet)
+    }
+
+    /// Önizleme satırı (HTML), web `gedSum`; `gedOzet` üzerine kurulu. Web `people` aramaları için `a` gerekir.
+    public static func gedSum(_ p: Kisi, _ a: Agac) -> String {
+        let o = gedOzet(p, a)
+        var s = "<b>" + esc(o.ad) + "</b>"
+        if !o.kizlik.isEmpty { s += " <i>d. " + esc(o.kizlik) + "</i>" }
+        s += "<div>" + esc(o.ozet) + "</div>"
         return s
     }
 
     /// Web `cancelGedMerge`: içe aktarılan kişileri siler, `nextId`'yi geri alır.
+    /// Yalnızca `applyImported`'tan ÖNCE geçerli (birleştirme sonrası geri alınamaz); çağıran
+    /// `nextId0`'ı `parseGEDEkle`'den önce kaydetmiş olmalı.
     public static func iptal(_ ids: [String], nextId0: Int, _ a: inout Agac) {
         for id in ids { a.people[id] = nil }
         a.nextId = nextId0

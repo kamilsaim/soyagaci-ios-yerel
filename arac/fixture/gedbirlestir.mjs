@@ -7,6 +7,39 @@ const veriDizini = path.join(path.dirname(fileURLToPath(import.meta.url)), '..',
 const oku = (ad) => fs.readFileSync(path.join(veriDizini, ad), 'utf8');
 const J = (x) => JSON.stringify(x);
 
+const K = (id, ad, soyad, g, o = {}) => ({
+  id, firstName: ad, lastName: soyad, gender: g, birthDate: '', birthPlace: '', deathDate: '', deathPlace: '',
+  occupation: '', notes: '', photo: null, gallery: [], mother: null, father: null, spouse: null, spouses: [], children: [], ...o,
+});
+const gedYap = (kayitlar, aileler = []) => ['0 HEAD', '1 CHAR UTF-8', ...kayitlar.flatMap((k) => [
+  `0 @${k.id}@ INDI`, `1 NAME ${k.ad}`, `1 SEX ${k.cins || 'M'}`, ...(k.yil ? ['1 BIRT', `2 DATE ${k.yil}`] : []),
+]), ...aileler.flatMap((f, i) => [`0 @F${i + 1}@ FAM`, ...(f.b ? [`1 HUSB @${f.b}@`] : []), ...(f.a ? [`1 WIFE @${f.a}@`] : []), ...(f.c || []).map((c) => `1 CHIL @${c}@`)]), '0 TRLR', ''].join('\n');
+
+// Elle yazilmis belirsizlik vakalari: matchImported'in koruma dallarini tetikler
+export function elleVakalar() {
+  const agac = (...l) => ({ people: Object.fromEntries(l.map((k) => [k.id, k])), nextId: 50 });
+  const ahmet = (ek = {}) => K('P1', 'Ahmet', 'Soy', 'M', { birthDate: '1920', ...ek });
+  return [
+    ['elle (a) iki eski Mehmet Yilmaz 1950 -> eslesme yok',
+      agac(K('P1', 'Mehmet', 'Yilmaz', 'M', { birthDate: '1950' }), K('P2', 'Mehmet', 'Yilmaz', 'M', { birthDate: '1950' })),
+      gedYap([{ id: 'I1', ad: 'Mehmet /Yilmaz/', yil: '1950' }]), [0]],
+    ['elle (b) iki ayni yeni kayit tek eskiyi ceker -> eslesme yok',
+      agac(K('P1', 'Ali', 'Kara', 'M', { birthDate: '1950' })),
+      gedYap([{ id: 'I1', ad: 'Ali /Kara/', yil: '1950' }, { id: 'I2', ad: 'Ali /Kara/', yil: '1950' }]), [0]],
+    ['elle (c) yalniz baba adiyla destekli, yil bir fark; ikincisi destek yok',
+      agac(K('P1', 'Hasan', 'Demir', 'M', { birthDate: '1950', children: ['P2'] }),
+        K('P2', 'Veli', 'Demir', 'M', { birthDate: '1980', father: 'P1' }),
+        K('P3', 'Osman', 'Kaya', 'M', { birthDate: '1970' })),
+      gedYap([{ id: 'I1', ad: 'Hasan', yil: '1950' }, { id: 'I2', ad: 'Veli', yil: '1981' }, { id: 'I3', ad: 'Osman', yil: '1971' }], [{ b: 'I1', c: ['I2'] }]), [0]],
+    ['elle (d1) ebeveynin iki ayni adli cocugu (yayilmada c>1)',
+      agac(ahmet({ children: ['P2', 'P3'] }), K('P2', 'Can', 'Soy', 'M', { father: 'P1' }), K('P3', 'Can', 'Soy', 'M', { father: 'P1' })),
+      gedYap([{ id: 'I1', ad: 'Ahmet /Soy/', yil: '1920' }, { id: 'I2', ad: 'Can' }], [{ b: 'I1', c: ['I2'] }]), [0]],
+    ['elle (d2) iki ayni yeni cocuk tek eski cocuga (yayilmada tersi tek degil)',
+      agac(ahmet({ children: ['P2'] }), K('P2', 'Can', 'Soy', 'M', { father: 'P1' })),
+      gedYap([{ id: 'I1', ad: 'Ahmet /Soy/', yil: '1920' }, { id: 'I2', ad: 'Can' }, { id: 'I3', ad: 'Can' }], [{ b: 'I1', c: ['I2', 'I3'] }]), [0]],
+  ];
+}
+
 export default function uret(webYukle) {
   const yedek = JSON.parse(oku('soy-agaci.json'));
   const saim = oku('saim-soy.ged');
@@ -63,6 +96,7 @@ export default function uret(webYukle) {
     ['saim-soy kendi ustune', saimTaban, saim, [1]],
     ['heritage kendi ustune', heritageTaban, heritage, [3]],
     ['bos ag + saim-soy.ged', { people: {}, nextId: 1 }, saim, [0]],
+    ...elleVakalar().map(([ad, taban, metin, kaldir]) => [ad, taban, metin, kaldir]),
   ];
 
   const vakalar = [];
