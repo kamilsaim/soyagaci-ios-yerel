@@ -1,0 +1,4037 @@
+{
+  "kaynak": "7.0.0",
+  "vakalar": [
+    {
+      "ad": "tarih \"30/07/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/7/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/7/1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1959\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1959"
+      },
+      "beklenen": {
+        "norm": "01/07/1959",
+        "ged": "1 JUL 1959",
+        "yil": "1959",
+        "fmt": "1959",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1959
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1960\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1960"
+      },
+      "beklenen": {
+        "norm": "01/07/1960",
+        "ged": "1 JUL 1960",
+        "yil": "1960",
+        "fmt": "1 Temmuz 1960",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1960
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1.7.1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1.7.1900"
+      },
+      "beklenen": {
+        "norm": "01/07/1900",
+        "ged": "1 JUL 1900",
+        "yil": "1900",
+        "fmt": "1900",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1900
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"30.07.2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30.07.2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5.12.1988\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5.12.1988"
+      },
+      "beklenen": {
+        "norm": "05/12/1988",
+        "ged": "5 DEC 1988",
+        "yil": "1988",
+        "fmt": "5 Aralık 1988",
+        "parca": {
+          "d": 5,
+          "m": 12,
+          "y": 1988
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30-07-2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30-07-2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5-3-1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5-3-1999"
+      },
+      "beklenen": {
+        "norm": "05/03/1999",
+        "ged": "5 MAR 1999",
+        "yil": "1999",
+        "fmt": "5 Mart 1999",
+        "parca": {
+          "d": 5,
+          "m": 3,
+          "y": 1999
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"15/3/2001\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "15/3/2001"
+      },
+      "beklenen": {
+        "norm": "15/03/2001",
+        "ged": "15 MAR 2001",
+        "yil": "2001",
+        "fmt": "15 Mart 2001",
+        "parca": {
+          "d": 15,
+          "m": 3,
+          "y": 2001
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"31/02/2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "31/02/2000"
+      },
+      "beklenen": {
+        "norm": "31/02/2000",
+        "ged": "31 FEB 2000",
+        "yil": "2000",
+        "fmt": "31 Şubat 2000",
+        "parca": {
+          "d": 31,
+          "m": 2,
+          "y": 2000
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"00/13/2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "00/13/2000"
+      },
+      "beklenen": {
+        "norm": "00/13/2000",
+        "ged": "00/13/2000",
+        "yil": "2000",
+        "fmt": "0 undefined 2000",
+        "parca": {
+          "d": 0,
+          "m": 13,
+          "y": 2000
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"0/0/2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "0/0/2000"
+      },
+      "beklenen": {
+        "norm": "00/00/2000",
+        "ged": "00/00/2000",
+        "yil": "2000",
+        "fmt": "0 undefined 2000",
+        "parca": {
+          "d": 0,
+          "m": 0,
+          "y": 2000
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"99/99/9999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "99/99/9999"
+      },
+      "beklenen": {
+        "norm": "99/99/9999",
+        "ged": "99/99/9999",
+        "yil": "9999",
+        "fmt": "99 undefined 9999",
+        "parca": {
+          "d": 99,
+          "m": 99,
+          "y": 9999
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/1/0001\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/1/0001"
+      },
+      "beklenen": {
+        "norm": "01/01/0001",
+        "ged": "1 JAN 0001",
+        "yil": "0001",
+        "fmt": "1 Ocak 1",
+        "parca": {
+          "d": 1,
+          "m": 1,
+          "y": 1
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JUL 2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1 jan 2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1 jan 2000"
+      },
+      "beklenen": {
+        "norm": "01/01/2000",
+        "ged": "1 JAN 2000",
+        "yil": "2000",
+        "fmt": "1 Ocak 2000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"05 Feb 1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "05 Feb 1999"
+      },
+      "beklenen": {
+        "norm": "05/02/1999",
+        "ged": "5 FEB 1999",
+        "yil": "1999",
+        "fmt": "5 Şubat 1999",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5 FEB 1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5 FEB 1999"
+      },
+      "beklenen": {
+        "norm": "05/02/1999",
+        "ged": "5 FEB 1999",
+        "yil": "1999",
+        "fmt": "5 Şubat 1999",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30  JUL  2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30  JUL  2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 XXX 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 XXX 2003"
+      },
+      "beklenen": {
+        "norm": "30 XXX 2003",
+        "ged": "30 XXX 2003",
+        "yil": "2003",
+        "fmt": "30 XXX 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"123 JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "123 JUL 2003"
+      },
+      "beklenen": {
+        "norm": "123 JUL 2003",
+        "ged": "123 JUL 2003",
+        "yil": "2003",
+        "fmt": "123 JUL 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"3 AUG 2003 \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "3 AUG 2003 "
+      },
+      "beklenen": {
+        "norm": "03/08/2003",
+        "ged": "3 AUG 2003",
+        "yil": "2003",
+        "fmt": "3 Ağustos 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JUL 2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "JUL 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"jul 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "jul 2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "jul 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"Dec 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "Dec 1900"
+      },
+      "beklenen": {
+        "norm": "12/1900",
+        "ged": "DEC 1900",
+        "yil": "1900",
+        "fmt": "Dec 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"XXX 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "XXX 2003"
+      },
+      "beklenen": {
+        "norm": "XXX 2003",
+        "ged": "XXX 2003",
+        "yil": "2003",
+        "fmt": "XXX 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JUL  2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JUL  2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "JUL  2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"07/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "07/2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "07/2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"7-2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "7-2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "7-2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"7.2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "7.2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "7.2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"13/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "13/2003"
+      },
+      "beklenen": {
+        "norm": "13/2003",
+        "ged": "13/2003",
+        "yil": "2003",
+        "fmt": "13/2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"00/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "00/2003"
+      },
+      "beklenen": {
+        "norm": "00/2003",
+        "ged": "00/2003",
+        "yil": "2003",
+        "fmt": "00/2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"ABT 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "ABT 1900"
+      },
+      "beklenen": {
+        "norm": "ABT 1900",
+        "ged": "ABT 1900",
+        "yil": "1900",
+        "fmt": "ABT 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"ABT 1900 \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "ABT 1900 "
+      },
+      "beklenen": {
+        "norm": "ABT 1900",
+        "ged": "ABT 1900",
+        "yil": "1900",
+        "fmt": "ABT 1900 ",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"BEF 1850\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "BEF 1850"
+      },
+      "beklenen": {
+        "norm": "BEF 1850",
+        "ged": "BEF 1850",
+        "yil": "1850",
+        "fmt": "BEF 1850",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"AFT 1700\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "AFT 1700"
+      },
+      "beklenen": {
+        "norm": "AFT 1700",
+        "ged": "AFT 1700",
+        "yil": "1700",
+        "fmt": "AFT 1700",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"BET 1800 AND 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "BET 1800 AND 1900"
+      },
+      "beklenen": {
+        "norm": "BET 1800 AND 1900",
+        "ged": "BET 1800 AND 1900",
+        "yil": "1800",
+        "fmt": "BET 1800 AND 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"CAL 1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "CAL 1950"
+      },
+      "beklenen": {
+        "norm": "CAL 1950",
+        "ged": "CAL 1950",
+        "yil": "1950",
+        "fmt": "CAL 1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1900"
+      },
+      "beklenen": {
+        "norm": "1900",
+        "ged": "1900",
+        "yil": "1900",
+        "fmt": "1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"  1900  \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "  1900  "
+      },
+      "beklenen": {
+        "norm": "1900",
+        "ged": "1900",
+        "yil": "1900",
+        "fmt": "  1900  ",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"190\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "190"
+      },
+      "beklenen": {
+        "norm": "190",
+        "ged": "190",
+        "yil": "",
+        "fmt": "190",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"19000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "19000"
+      },
+      "beklenen": {
+        "norm": "19000",
+        "ged": "19000",
+        "yil": "1900",
+        "fmt": "19000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"12345\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "12345"
+      },
+      "beklenen": {
+        "norm": "12345",
+        "ged": "12345",
+        "yil": "1234",
+        "fmt": "12345",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1900-1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1900-1950"
+      },
+      "beklenen": {
+        "norm": "1900-1950",
+        "ged": "1900-1950",
+        "yil": "1900",
+        "fmt": "1900-1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"ca. 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "ca. 1900"
+      },
+      "beklenen": {
+        "norm": "ca. 1900",
+        "ged": "ca. 1900",
+        "yil": "1900",
+        "fmt": "ca. 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"~1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "~1900"
+      },
+      "beklenen": {
+        "norm": "~1900",
+        "ged": "~1900",
+        "yil": "1900",
+        "fmt": "~1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"dogum 1900?\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "dogum 1900?"
+      },
+      "beklenen": {
+        "norm": "dogum 1900?",
+        "ged": "dogum 1900?",
+        "yil": "1900",
+        "fmt": "dogum 1900?",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": ""
+      },
+      "beklenen": {
+        "norm": "",
+        "ged": "",
+        "yil": "",
+        "fmt": "",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \" \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": " "
+      },
+      "beklenen": {
+        "norm": "",
+        "ged": "",
+        "yil": "",
+        "fmt": " ",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"   \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "   "
+      },
+      "beklenen": {
+        "norm": "",
+        "ged": "",
+        "yil": "",
+        "fmt": "   ",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"abc\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "abc"
+      },
+      "beklenen": {
+        "norm": "abc",
+        "ged": "abc",
+        "yil": "",
+        "fmt": "abc",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"??\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "??"
+      },
+      "beklenen": {
+        "norm": "??",
+        "ged": "??",
+        "yil": "",
+        "fmt": "??",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"-\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "-"
+      },
+      "beklenen": {
+        "norm": "-",
+        "ged": "-",
+        "yil": "",
+        "fmt": "-",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"/\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "/"
+      },
+      "beklenen": {
+        "norm": "/",
+        "ged": "/",
+        "yil": "",
+        "fmt": "/",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"//\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "//"
+      },
+      "beklenen": {
+        "norm": "//",
+        "ged": "//",
+        "yil": "",
+        "fmt": "//",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07/\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/"
+      },
+      "beklenen": {
+        "norm": "30/07/",
+        "ged": "30/07/",
+        "yil": "",
+        "fmt": "30/07/",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"/07/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "/07/2003"
+      },
+      "beklenen": {
+        "norm": "/07/2003",
+        "ged": "/07/2003",
+        "yil": "2003",
+        "fmt": "/07/2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07/20033\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/20033"
+      },
+      "beklenen": {
+        "norm": "30/07/20033",
+        "ged": "30/07/20033",
+        "yil": "2003",
+        "fmt": "30/07/20033",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07/203\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/203"
+      },
+      "beklenen": {
+        "norm": "30/07/203",
+        "ged": "30/07/203",
+        "yil": "",
+        "fmt": "30/07/203",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07-2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07-2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30.07/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30.07/2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30-07.2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30-07.2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/7/59\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/7/59"
+      },
+      "beklenen": {
+        "norm": "1/7/59",
+        "ged": "1/7/59",
+        "yil": "",
+        "fmt": "1/7/59",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"\\t30/07/2003\\n\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "\t30/07/2003\n"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07/2003\\n\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/2003\n"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \" 30/07/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": " 30/07/2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07/2003 \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/2003 "
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \" 30 JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": " 30 JUL 2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"Jul 3000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "Jul 3000"
+      },
+      "beklenen": {
+        "norm": "07/3000",
+        "ged": "JUL 3000",
+        "yil": "3000",
+        "fmt": "Jul 3000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"MAY 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "MAY 2003"
+      },
+      "beklenen": {
+        "norm": "05/2003",
+        "ged": "MAY 2003",
+        "yil": "2003",
+        "fmt": "MAY 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"mar 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "mar 2003"
+      },
+      "beklenen": {
+        "norm": "03/2003",
+        "ged": "MAR 2003",
+        "yil": "2003",
+        "fmt": "mar 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"MART 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "MART 2003"
+      },
+      "beklenen": {
+        "norm": "MART 2003",
+        "ged": "MART 2003",
+        "yil": "2003",
+        "fmt": "MART 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1 Ocak 2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1 Ocak 2000"
+      },
+      "beklenen": {
+        "norm": "1 Ocak 2000",
+        "ged": "1 Ocak 2000",
+        "yil": "2000",
+        "fmt": "1 Ocak 2000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"12 Mart 1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "12 Mart 1950"
+      },
+      "beklenen": {
+        "norm": "12 Mart 1950",
+        "ged": "12 Mart 1950",
+        "yil": "1950",
+        "fmt": "12 Mart 1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"ŞUBAT 2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "ŞUBAT 2000"
+      },
+      "beklenen": {
+        "norm": "ŞUBAT 2000",
+        "ged": "ŞUBAT 2000",
+        "yil": "2000",
+        "fmt": "ŞUBAT 2000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"٣٠/٠٧/٢٠٠٣\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "٣٠/٠٧/٢٠٠٣"
+      },
+      "beklenen": {
+        "norm": "٣٠/٠٧/٢٠٠٣",
+        "ged": "٣٠/٠٧/٢٠٠٣",
+        "yil": "",
+        "fmt": "٣٠/٠٧/٢٠٠٣",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"０１/０７/１９５０\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "０１/０７/１９５０"
+      },
+      "beklenen": {
+        "norm": "０１/０７/１９５０",
+        "ged": "０１/０７/１９５０",
+        "yil": "",
+        "fmt": "０１/０７/１９５０",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/07/195０\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/195０"
+      },
+      "beklenen": {
+        "norm": "01/07/195０",
+        "ged": "01/07/195０",
+        "yil": "",
+        "fmt": "01/07/195０",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1950x\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1950x"
+      },
+      "beklenen": {
+        "norm": "01/07/1950x",
+        "ged": "01/07/1950x",
+        "yil": "1950",
+        "fmt": "01/07/1950x",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"x01/07/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "x01/07/1950"
+      },
+      "beklenen": {
+        "norm": "x01/07/1950",
+        "ged": "x01/07/1950",
+        "yil": "1950",
+        "fmt": "x01/07/1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/07/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/07/1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/7/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/7/1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"07/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "07/1950"
+      },
+      "beklenen": {
+        "norm": "07/1950",
+        "ged": "JUL 1950",
+        "yil": "1950",
+        "fmt": "07/1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"7/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "7/1950"
+      },
+      "beklenen": {
+        "norm": "07/1950",
+        "ged": "JUL 1950",
+        "yil": "1950",
+        "fmt": "7/1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"00/00/0000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "00/00/0000"
+      },
+      "beklenen": {
+        "norm": "00/00/0000",
+        "ged": "00/00/0000",
+        "yil": "0000",
+        "fmt": "0 undefined 0",
+        "parca": {
+          "d": 0,
+          "m": 0,
+          "y": 0
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/01/1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/01/1900"
+      },
+      "beklenen": {
+        "norm": "01/01/1900",
+        "ged": "1 JAN 1900",
+        "yil": "1900",
+        "fmt": "1 Ocak 1900",
+        "parca": {
+          "d": 1,
+          "m": 1,
+          "y": 1900
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"31/12/1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "31/12/1999"
+      },
+      "beklenen": {
+        "norm": "31/12/1999",
+        "ged": "31 DEC 1999",
+        "yil": "1999",
+        "fmt": "31 Aralık 1999",
+        "parca": {
+          "d": 31,
+          "m": 12,
+          "y": 1999
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"29/02/2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "29/02/2000"
+      },
+      "beklenen": {
+        "norm": "29/02/2000",
+        "ged": "29 FEB 2000",
+        "yil": "2000",
+        "fmt": "29 Şubat 2000",
+        "parca": {
+          "d": 29,
+          "m": 2,
+          "y": 2000
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/07/2020\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/2020"
+      },
+      "beklenen": {
+        "norm": "01/07/2020",
+        "ged": "1 JUL 2020",
+        "yil": "2020",
+        "fmt": "1 Temmuz 2020",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 2020
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1900"
+      },
+      "beklenen": {
+        "norm": "01/07/1900",
+        "ged": "1 JUL 1900",
+        "yil": "1900",
+        "fmt": "1900",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1900
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1800\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1800"
+      },
+      "beklenen": {
+        "norm": "01/07/1800",
+        "ged": "1 JUL 1800",
+        "yil": "1800",
+        "fmt": "1800",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1800
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1"
+      },
+      "beklenen": {
+        "norm": "01/07/1",
+        "ged": "01/07/1",
+        "yil": "",
+        "fmt": "01/07/1",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/7/10000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/7/10000"
+      },
+      "beklenen": {
+        "norm": "1/7/10000",
+        "ged": "1/7/10000",
+        "yil": "1000",
+        "fmt": "1/7/10000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01 JUL 1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01 JUL 1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1 JUL 1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1 JUL 1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01 JUL 1959\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01 JUL 1959"
+      },
+      "beklenen": {
+        "norm": "01/07/1959",
+        "ged": "1 JUL 1959",
+        "yil": "1959",
+        "fmt": "1959",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1 JUL 1960\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1 JUL 1960"
+      },
+      "beklenen": {
+        "norm": "01/07/1960",
+        "ged": "1 JUL 1960",
+        "yil": "1960",
+        "fmt": "1 Temmuz 1960",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JUL 1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JUL 1950"
+      },
+      "beklenen": {
+        "norm": "07/1950",
+        "ged": "JUL 1950",
+        "yil": "1950",
+        "fmt": "JUL 1950",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/07\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07"
+      },
+      "beklenen": {
+        "norm": "01/07",
+        "ged": "01/07",
+        "yil": "",
+        "fmt": "01/07",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1 JUL\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1 JUL"
+      },
+      "beklenen": {
+        "norm": "1 JUL",
+        "ged": "1 JUL",
+        "yil": "",
+        "fmt": "1 JUL",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 JUL\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JUL"
+      },
+      "beklenen": {
+        "norm": "30 JUL",
+        "ged": "30 JUL",
+        "yil": "",
+        "fmt": "30 JUL",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "2003"
+      },
+      "beklenen": {
+        "norm": "2003",
+        "ged": "2003",
+        "yil": "2003",
+        "fmt": "2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"03\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "03"
+      },
+      "beklenen": {
+        "norm": "03",
+        "ged": "03",
+        "yil": "",
+        "fmt": "03",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"3\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "3"
+      },
+      "beklenen": {
+        "norm": "3",
+        "ged": "3",
+        "yil": "",
+        "fmt": "3",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1"
+      },
+      "beklenen": {
+        "norm": "1",
+        "ged": "1",
+        "yil": "",
+        "fmt": "1",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1940\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1940"
+      },
+      "beklenen": {
+        "norm": "01/07/1940",
+        "ged": "1 JUL 1940",
+        "yil": "1940",
+        "fmt": "1940",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1940
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01/07/1930\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/07/1930"
+      },
+      "beklenen": {
+        "norm": "01/07/1930",
+        "ged": "1 JUL 1930",
+        "yil": "1930",
+        "fmt": "1930",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1930
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"02/07/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "02/07/1950"
+      },
+      "beklenen": {
+        "norm": "02/07/1950",
+        "ged": "2 JUL 1950",
+        "yil": "1950",
+        "fmt": "2 Temmuz 1950",
+        "parca": {
+          "d": 2,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/08/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/08/1950"
+      },
+      "beklenen": {
+        "norm": "01/08/1950",
+        "ged": "1 AUG 1950",
+        "yil": "1950",
+        "fmt": "1 Ağustos 1950",
+        "parca": {
+          "d": 1,
+          "m": 8,
+          "y": 1950
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"01/06/1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01/06/1950"
+      },
+      "beklenen": {
+        "norm": "01/06/1950",
+        "ged": "1 JUN 1950",
+        "yil": "1950",
+        "fmt": "1 Haziran 1950",
+        "parca": {
+          "d": 1,
+          "m": 6,
+          "y": 1950
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1.07.1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1.07.1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01.7.1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01.7.1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"01-07-1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "01-07-1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"1-7-1950\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1-7-1950"
+      },
+      "beklenen": {
+        "norm": "01/07/1950",
+        "ged": "1 JUL 1950",
+        "yil": "1950",
+        "fmt": "1950",
+        "parca": {
+          "d": 1,
+          "m": 7,
+          "y": 1950
+        },
+        "ph": true
+      }
+    },
+    {
+      "ad": "tarih \"30 JUL 2003 AD\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JUL 2003 AD"
+      },
+      "beklenen": {
+        "norm": "30 JUL 2003 AD",
+        "ged": "30 JUL 2003 AD",
+        "yil": "2003",
+        "fmt": "30 JUL 2003 AD",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JUL 2003 BC\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JUL 2003 BC"
+      },
+      "beklenen": {
+        "norm": "JUL 2003 BC",
+        "ged": "JUL 2003 BC",
+        "yil": "2003",
+        "fmt": "JUL 2003 BC",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"Mon 30 JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "Mon 30 JUL 2003"
+      },
+      "beklenen": {
+        "norm": "Mon 30 JUL 2003",
+        "ged": "Mon 30 JUL 2003",
+        "yil": "2003",
+        "fmt": "Mon 30 JUL 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"2003/07/30\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "2003/07/30"
+      },
+      "beklenen": {
+        "norm": "2003/07/30",
+        "ged": "2003/07/30",
+        "yil": "2003",
+        "fmt": "2003/07/30",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"2003-07-30\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "2003-07-30"
+      },
+      "beklenen": {
+        "norm": "2003-07-30",
+        "ged": "2003-07-30",
+        "yil": "2003",
+        "fmt": "2003-07-30",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"2003.07.30\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "2003.07.30"
+      },
+      "beklenen": {
+        "norm": "2003.07.30",
+        "ged": "2003.07.30",
+        "yil": "2003",
+        "fmt": "2003.07.30",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"2003-07\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "2003-07"
+      },
+      "beklenen": {
+        "norm": "2003-07",
+        "ged": "2003-07",
+        "yil": "2003",
+        "fmt": "2003-07",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"07-30-2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "07-30-2003"
+      },
+      "beklenen": {
+        "norm": "07/30/2003",
+        "ged": "07/30/2003",
+        "yil": "2003",
+        "fmt": "7 undefined 2003",
+        "parca": {
+          "d": 7,
+          "m": 30,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/7/2003 14:00\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/7/2003 14:00"
+      },
+      "beklenen": {
+        "norm": "30/7/2003 14:00",
+        "ged": "30/7/2003 14:00",
+        "yil": "2003",
+        "fmt": "30/7/2003 14:00",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"İ\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "İ"
+      },
+      "beklenen": {
+        "norm": "İ",
+        "ged": "İ",
+        "yil": "",
+        "fmt": "İ",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"ı\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "ı"
+      },
+      "beklenen": {
+        "norm": "ı",
+        "ged": "ı",
+        "yil": "",
+        "fmt": "ı",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30/07/2003 \"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30/07/2003 "
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": {
+          "d": 30,
+          "m": 7,
+          "y": 2003
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"​30/07/2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "​30/07/2003"
+      },
+      "beklenen": {
+        "norm": "​30/07/2003",
+        "ged": "​30/07/2003",
+        "yil": "2003",
+        "fmt": "​30/07/2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JUL 2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JUL 2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JUL 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JUL 2003"
+      },
+      "beklenen": {
+        "norm": "07/2003",
+        "ged": "JUL 2003",
+        "yil": "2003",
+        "fmt": "JUL 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 JUL\\t2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JUL\t2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30\\nJUL\\n2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30\nJUL\n2003"
+      },
+      "beklenen": {
+        "norm": "30/07/2003",
+        "ged": "30 JUL 2003",
+        "yil": "2003",
+        "fmt": "30 Temmuz 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"ya da 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "ya da 1900"
+      },
+      "beklenen": {
+        "norm": "ya da 1900",
+        "ged": "ya da 1900",
+        "yil": "1900",
+        "fmt": "ya da 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"okuyamadim 1923 civari\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "okuyamadim 1923 civari"
+      },
+      "beklenen": {
+        "norm": "okuyamadim 1923 civari",
+        "ged": "okuyamadim 1923 civari",
+        "yil": "1923",
+        "fmt": "okuyamadim 1923 civari",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"d. 1850\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "d. 1850"
+      },
+      "beklenen": {
+        "norm": "d. 1850",
+        "ged": "d. 1850",
+        "yil": "1850",
+        "fmt": "d. 1850",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1850 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1850 1900"
+      },
+      "beklenen": {
+        "norm": "1850 1900",
+        "ged": "1850 1900",
+        "yil": "1850",
+        "fmt": "1850 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"2003 JUL\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "2003 JUL"
+      },
+      "beklenen": {
+        "norm": "2003 JUL",
+        "ged": "2003 JUL",
+        "yil": "2003",
+        "fmt": "2003 JUL",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 2003 JUL\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 2003 JUL"
+      },
+      "beklenen": {
+        "norm": "30 2003 JUL",
+        "ged": "30 2003 JUL",
+        "yil": "2003",
+        "fmt": "30 2003 JUL",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JUL 30 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JUL 30 2003"
+      },
+      "beklenen": {
+        "norm": "JUL 30 2003",
+        "ged": "JUL 30 2003",
+        "yil": "2003",
+        "fmt": "JUL 30 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"JULY 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "JULY 2003"
+      },
+      "beklenen": {
+        "norm": "JULY 2003",
+        "ged": "JULY 2003",
+        "yil": "2003",
+        "fmt": "JULY 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"SEPT 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "SEPT 2003"
+      },
+      "beklenen": {
+        "norm": "SEPT 2003",
+        "ged": "SEPT 2003",
+        "yil": "2003",
+        "fmt": "SEPT 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"Sep 2003\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "Sep 2003"
+      },
+      "beklenen": {
+        "norm": "09/2003",
+        "ged": "SEP 2003",
+        "yil": "2003",
+        "fmt": "Sep 2003",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"OCT 1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "OCT 1999"
+      },
+      "beklenen": {
+        "norm": "10/1999",
+        "ged": "OCT 1999",
+        "yil": "1999",
+        "fmt": "OCT 1999",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"NOV 1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "NOV 1999"
+      },
+      "beklenen": {
+        "norm": "11/1999",
+        "ged": "NOV 1999",
+        "yil": "1999",
+        "fmt": "NOV 1999",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"oct 1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "oct 1999"
+      },
+      "beklenen": {
+        "norm": "10/1999",
+        "ged": "OCT 1999",
+        "yil": "1999",
+        "fmt": "oct 1999",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"nov 1999\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "nov 1999"
+      },
+      "beklenen": {
+        "norm": "11/1999",
+        "ged": "NOV 1999",
+        "yil": "1999",
+        "fmt": "nov 1999",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"15 Apr 1815\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "15 Apr 1815"
+      },
+      "beklenen": {
+        "norm": "15/04/1815",
+        "ged": "15 APR 1815",
+        "yil": "1815",
+        "fmt": "15 Nisan 1815",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"15 APR 1815\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "15 APR 1815"
+      },
+      "beklenen": {
+        "norm": "15/04/1815",
+        "ged": "15 APR 1815",
+        "yil": "1815",
+        "fmt": "15 Nisan 1815",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9 SEP 1923\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9 SEP 1923"
+      },
+      "beklenen": {
+        "norm": "09/09/1923",
+        "ged": "9 SEP 1923",
+        "yil": "1923",
+        "fmt": "9 Eylül 1923",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"29 OCT 1923\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "29 OCT 1923"
+      },
+      "beklenen": {
+        "norm": "29/10/1923",
+        "ged": "29 OCT 1923",
+        "yil": "1923",
+        "fmt": "29 Ekim 1923",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"10 NOV 1938\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "10 NOV 1938"
+      },
+      "beklenen": {
+        "norm": "10/11/1938",
+        "ged": "10 NOV 1938",
+        "yil": "1938",
+        "fmt": "10 Kasım 1938",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9/1976\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9/1976"
+      },
+      "beklenen": {
+        "norm": "09/1976",
+        "ged": "SEP 1976",
+        "yil": "1976",
+        "fmt": "9/1976",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"27.9.1818\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "27.9.1818"
+      },
+      "beklenen": {
+        "norm": "27/09/1818",
+        "ged": "27 SEP 1818",
+        "yil": "1818",
+        "fmt": "27 Eylül 1818",
+        "parca": {
+          "d": 27,
+          "m": 9,
+          "y": 1818
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1 MAY 1740\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1 MAY 1740"
+      },
+      "beklenen": {
+        "norm": "01/05/1740",
+        "ged": "1 MAY 1740",
+        "yil": "1740",
+        "fmt": "1 Mayıs 1740",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/1798\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/1798"
+      },
+      "beklenen": {
+        "norm": "05/1798",
+        "ged": "MAY 1798",
+        "yil": "1798",
+        "fmt": "5/1798",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"3 JAN 1882\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "3 JAN 1882"
+      },
+      "beklenen": {
+        "norm": "03/01/1882",
+        "ged": "3 JAN 1882",
+        "yil": "1882",
+        "fmt": "3 Ocak 1882",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/1774\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/1774"
+      },
+      "beklenen": {
+        "norm": "01/1774",
+        "ged": "JAN 1774",
+        "yil": "1774",
+        "fmt": "1/1774",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"11 MAY 1800\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "11 MAY 1800"
+      },
+      "beklenen": {
+        "norm": "11/05/1800",
+        "ged": "11 MAY 1800",
+        "yil": "1800",
+        "fmt": "11 Mayıs 1800",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1.1938\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1.1938"
+      },
+      "beklenen": {
+        "norm": "01/1938",
+        "ged": "JAN 1938",
+        "yil": "1938",
+        "fmt": "1.1938",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/1894\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/1894"
+      },
+      "beklenen": {
+        "norm": "01/1894",
+        "ged": "JAN 1894",
+        "yil": "1894",
+        "fmt": "1/1894",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"4/5-1764\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "4/5-1764"
+      },
+      "beklenen": {
+        "norm": "04/05/1764",
+        "ged": "4 MAY 1764",
+        "yil": "1764",
+        "fmt": "4 Mayıs 1764",
+        "parca": {
+          "d": 4,
+          "m": 5,
+          "y": 1764
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/1858\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/1858"
+      },
+      "beklenen": {
+        "norm": "05/1858",
+        "ged": "MAY 1858",
+        "yil": "1858",
+        "fmt": "5/1858",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"29-9-1826\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "29-9-1826"
+      },
+      "beklenen": {
+        "norm": "29/09/1826",
+        "ged": "29 SEP 1826",
+        "yil": "1826",
+        "fmt": "29 Eylül 1826",
+        "parca": {
+          "d": 29,
+          "m": 9,
+          "y": 1826
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"23.9/1738\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "23.9/1738"
+      },
+      "beklenen": {
+        "norm": "23/09/1738",
+        "ged": "23 SEP 1738",
+        "yil": "1738",
+        "fmt": "23 Eylül 1738",
+        "parca": {
+          "d": 23,
+          "m": 9,
+          "y": 1738
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"30 JAN 1900\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "30 JAN 1900"
+      },
+      "beklenen": {
+        "norm": "30/01/1900",
+        "ged": "30 JAN 1900",
+        "yil": "1900",
+        "fmt": "30 Ocak 1900",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"26.5-1712\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "26.5-1712"
+      },
+      "beklenen": {
+        "norm": "26/05/1712",
+        "ged": "26 MAY 1712",
+        "yil": "1712",
+        "fmt": "26 Mayıs 1712",
+        "parca": {
+          "d": 26,
+          "m": 5,
+          "y": 1712
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9.1964\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9.1964"
+      },
+      "beklenen": {
+        "norm": "09/1964",
+        "ged": "SEP 1964",
+        "yil": "1964",
+        "fmt": "9.1964",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5-1808\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5-1808"
+      },
+      "beklenen": {
+        "norm": "05/1808",
+        "ged": "MAY 1808",
+        "yil": "1808",
+        "fmt": "5-1808",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5.5-1852\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5.5-1852"
+      },
+      "beklenen": {
+        "norm": "05/05/1852",
+        "ged": "5 MAY 1852",
+        "yil": "1852",
+        "fmt": "5 Mayıs 1852",
+        "parca": {
+          "d": 5,
+          "m": 5,
+          "y": 1852
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/1754\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/1754"
+      },
+      "beklenen": {
+        "norm": "05/1754",
+        "ged": "MAY 1754",
+        "yil": "1754",
+        "fmt": "5/1754",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"17.5/1902\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "17.5/1902"
+      },
+      "beklenen": {
+        "norm": "17/05/1902",
+        "ged": "17 MAY 1902",
+        "yil": "1902",
+        "fmt": "17 Mayıs 1902",
+        "parca": {
+          "d": 17,
+          "m": 5,
+          "y": 1902
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9/1752\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9/1752"
+      },
+      "beklenen": {
+        "norm": "09/1752",
+        "ged": "SEP 1752",
+        "yil": "1752",
+        "fmt": "9/1752",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"16 JAN 1988\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "16 JAN 1988"
+      },
+      "beklenen": {
+        "norm": "16/01/1988",
+        "ged": "16 JAN 1988",
+        "yil": "1988",
+        "fmt": "16 Ocak 1988",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"22-5-1700\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "22-5-1700"
+      },
+      "beklenen": {
+        "norm": "22/05/1700",
+        "ged": "22 MAY 1700",
+        "yil": "1700",
+        "fmt": "22 Mayıs 1700",
+        "parca": {
+          "d": 22,
+          "m": 5,
+          "y": 1700
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/2018\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/2018"
+      },
+      "beklenen": {
+        "norm": "05/2018",
+        "ged": "MAY 2018",
+        "yil": "2018",
+        "fmt": "5/2018",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"7 MAY 1980\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "7 MAY 1980"
+      },
+      "beklenen": {
+        "norm": "07/05/1980",
+        "ged": "7 MAY 1980",
+        "yil": "1980",
+        "fmt": "7 Mayıs 1980",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"16/9/1918\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "16/9/1918"
+      },
+      "beklenen": {
+        "norm": "16/09/1918",
+        "ged": "16 SEP 1918",
+        "yil": "1918",
+        "fmt": "16 Eylül 1918",
+        "parca": {
+          "d": 16,
+          "m": 9,
+          "y": 1918
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1.2012\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1.2012"
+      },
+      "beklenen": {
+        "norm": "01/2012",
+        "ged": "JAN 2012",
+        "yil": "2012",
+        "fmt": "1.2012",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"24/9.1780\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "24/9.1780"
+      },
+      "beklenen": {
+        "norm": "24/09/1780",
+        "ged": "24 SEP 1780",
+        "yil": "1780",
+        "fmt": "24 Eylül 1780",
+        "parca": {
+          "d": 24,
+          "m": 9,
+          "y": 1780
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"10 MAY 1802\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "10 MAY 1802"
+      },
+      "beklenen": {
+        "norm": "10/05/1802",
+        "ged": "10 MAY 1802",
+        "yil": "1802",
+        "fmt": "10 Mayıs 1802",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9 JAN 1962\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9 JAN 1962"
+      },
+      "beklenen": {
+        "norm": "09/01/1962",
+        "ged": "9 JAN 1962",
+        "yil": "1962",
+        "fmt": "9 Ocak 1962",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9.1800\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9.1800"
+      },
+      "beklenen": {
+        "norm": "09/1800",
+        "ged": "SEP 1800",
+        "yil": "1800",
+        "fmt": "9.1800",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1/1894\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1/1894"
+      },
+      "beklenen": {
+        "norm": "01/1894",
+        "ged": "JAN 1894",
+        "yil": "1894",
+        "fmt": "1/1894",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/1770\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/1770"
+      },
+      "beklenen": {
+        "norm": "05/1770",
+        "ged": "MAY 1770",
+        "yil": "1770",
+        "fmt": "5/1770",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"21 MAY 2006\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "21 MAY 2006"
+      },
+      "beklenen": {
+        "norm": "21/05/2006",
+        "ged": "21 MAY 2006",
+        "yil": "2006",
+        "fmt": "21 Mayıs 2006",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9.1794\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9.1794"
+      },
+      "beklenen": {
+        "norm": "09/1794",
+        "ged": "SEP 1794",
+        "yil": "1794",
+        "fmt": "9.1794",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"1.1974\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "1.1974"
+      },
+      "beklenen": {
+        "norm": "01/1974",
+        "ged": "JAN 1974",
+        "yil": "1974",
+        "fmt": "1.1974",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"31 SEP 1972\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "31 SEP 1972"
+      },
+      "beklenen": {
+        "norm": "31/09/1972",
+        "ged": "31 SEP 1972",
+        "yil": "1972",
+        "fmt": "31 Eylül 1972",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"23 JAN 1892\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "23 JAN 1892"
+      },
+      "beklenen": {
+        "norm": "23/01/1892",
+        "ged": "23 JAN 1892",
+        "yil": "1892",
+        "fmt": "23 Ocak 1892",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"7.5.2028\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "7.5.2028"
+      },
+      "beklenen": {
+        "norm": "07/05/2028",
+        "ged": "7 MAY 2028",
+        "yil": "2028",
+        "fmt": "7 Mayıs 2028",
+        "parca": {
+          "d": 7,
+          "m": 5,
+          "y": 2028
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"14-5.1838\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "14-5.1838"
+      },
+      "beklenen": {
+        "norm": "14/05/1838",
+        "ged": "14 MAY 1838",
+        "yil": "1838",
+        "fmt": "14 Mayıs 1838",
+        "parca": {
+          "d": 14,
+          "m": 5,
+          "y": 1838
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"6-9/1752\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "6-9/1752"
+      },
+      "beklenen": {
+        "norm": "06/09/1752",
+        "ged": "6 SEP 1752",
+        "yil": "1752",
+        "fmt": "6 Eylül 1752",
+        "parca": {
+          "d": 6,
+          "m": 9,
+          "y": 1752
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/1946\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/1946"
+      },
+      "beklenen": {
+        "norm": "05/1946",
+        "ged": "MAY 1946",
+        "yil": "1946",
+        "fmt": "5/1946",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"22 MAY 1856\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "22 MAY 1856"
+      },
+      "beklenen": {
+        "norm": "22/05/1856",
+        "ged": "22 MAY 1856",
+        "yil": "1856",
+        "fmt": "22 Mayıs 1856",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5.1744\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5.1744"
+      },
+      "beklenen": {
+        "norm": "05/1744",
+        "ged": "MAY 1744",
+        "yil": "1744",
+        "fmt": "5.1744",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"20 JAN 1826\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "20 JAN 1826"
+      },
+      "beklenen": {
+        "norm": "20/01/1826",
+        "ged": "20 JAN 1826",
+        "yil": "1826",
+        "fmt": "20 Ocak 1826",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"19.9-1902\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "19.9-1902"
+      },
+      "beklenen": {
+        "norm": "19/09/1902",
+        "ged": "19 SEP 1902",
+        "yil": "1902",
+        "fmt": "19 Eylül 1902",
+        "parca": {
+          "d": 19,
+          "m": 9,
+          "y": 1902
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"8 MAY 2000\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "8 MAY 2000"
+      },
+      "beklenen": {
+        "norm": "08/05/2000",
+        "ged": "8 MAY 2000",
+        "yil": "2000",
+        "fmt": "8 Mayıs 2000",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9-2016\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9-2016"
+      },
+      "beklenen": {
+        "norm": "09/2016",
+        "ged": "SEP 2016",
+        "yil": "2016",
+        "fmt": "9-2016",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"26-5.1934\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "26-5.1934"
+      },
+      "beklenen": {
+        "norm": "26/05/1934",
+        "ged": "26 MAY 1934",
+        "yil": "1934",
+        "fmt": "26 Mayıs 1934",
+        "parca": {
+          "d": 26,
+          "m": 5,
+          "y": 1934
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9-1964\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9-1964"
+      },
+      "beklenen": {
+        "norm": "09/1964",
+        "ged": "SEP 1964",
+        "yil": "1964",
+        "fmt": "9-1964",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"9-1794\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "9-1794"
+      },
+      "beklenen": {
+        "norm": "09/1794",
+        "ged": "SEP 1794",
+        "yil": "1794",
+        "fmt": "9-1794",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"18 MAY 2002\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "18 MAY 2002"
+      },
+      "beklenen": {
+        "norm": "18/05/2002",
+        "ged": "18 MAY 2002",
+        "yil": "2002",
+        "fmt": "18 Mayıs 2002",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"23.9/1938\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "23.9/1938"
+      },
+      "beklenen": {
+        "norm": "23/09/1938",
+        "ged": "23 SEP 1938",
+        "yil": "1938",
+        "fmt": "23 Eylül 1938",
+        "parca": {
+          "d": 23,
+          "m": 9,
+          "y": 1938
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"28 JAN 1880\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "28 JAN 1880"
+      },
+      "beklenen": {
+        "norm": "28/01/1880",
+        "ged": "28 JAN 1880",
+        "yil": "1880",
+        "fmt": "28 Ocak 1880",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"8.1-1704\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "8.1-1704"
+      },
+      "beklenen": {
+        "norm": "08/01/1704",
+        "ged": "8 JAN 1704",
+        "yil": "1704",
+        "fmt": "8 Ocak 1704",
+        "parca": {
+          "d": 8,
+          "m": 1,
+          "y": 1704
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"5/1718\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "5/1718"
+      },
+      "beklenen": {
+        "norm": "05/1718",
+        "ged": "MAY 1718",
+        "yil": "1718",
+        "fmt": "5/1718",
+        "parca": null,
+        "ph": false
+      }
+    },
+    {
+      "ad": "tarih \"16/1-1780\"",
+      "girdi": {
+        "tur": "tarih",
+        "deger": "16/1-1780"
+      },
+      "beklenen": {
+        "norm": "16/01/1780",
+        "ged": "16 JAN 1780",
+        "yil": "1780",
+        "fmt": "16 Ocak 1780",
+        "parca": {
+          "d": 16,
+          "m": 1,
+          "y": 1780
+        },
+        "ph": false
+      }
+    },
+    {
+      "ad": "metin \"ismail ılgaz\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ismail ılgaz"
+      },
+      "beklenen": {
+        "capStr": "İsmail Ilgaz",
+        "trKatla": "ismail ılgaz"
+      }
+    },
+    {
+      "ad": "metin \"İSMAİL ILGAZ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "İSMAİL ILGAZ"
+      },
+      "beklenen": {
+        "capStr": "İSMAİL ILGAZ",
+        "trKatla": "ismail ılgaz"
+      }
+    },
+    {
+      "ad": "metin \"ayşe\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ayşe"
+      },
+      "beklenen": {
+        "capStr": "Ayşe",
+        "trKatla": "ayşe"
+      }
+    },
+    {
+      "ad": "metin \"AYŞE nur\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "AYŞE nur"
+      },
+      "beklenen": {
+        "capStr": "AYŞE Nur",
+        "trKatla": "ayşe nur"
+      }
+    },
+    {
+      "ad": "metin \"mehmet ali\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "mehmet ali"
+      },
+      "beklenen": {
+        "capStr": "Mehmet Ali",
+        "trKatla": "mehmet ali"
+      }
+    },
+    {
+      "ad": "metin \"ali-veli\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ali-veli"
+      },
+      "beklenen": {
+        "capStr": "Ali-Veli",
+        "trKatla": "ali-veli"
+      }
+    },
+    {
+      "ad": "metin \"ali - veli\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ali - veli"
+      },
+      "beklenen": {
+        "capStr": "Ali - Veli",
+        "trKatla": "ali - veli"
+      }
+    },
+    {
+      "ad": "metin \"a -b\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "a -b"
+      },
+      "beklenen": {
+        "capStr": "A -b",
+        "trKatla": "a -b"
+      }
+    },
+    {
+      "ad": "metin \"a --b\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "a --b"
+      },
+      "beklenen": {
+        "capStr": "A --B",
+        "trKatla": "a --b"
+      }
+    },
+    {
+      "ad": "metin \"-ali\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "-ali"
+      },
+      "beklenen": {
+        "capStr": "-ali",
+        "trKatla": "-ali"
+      }
+    },
+    {
+      "ad": "metin \" ali\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": " ali"
+      },
+      "beklenen": {
+        "capStr": " Ali",
+        "trKatla": " ali"
+      }
+    },
+    {
+      "ad": "metin \"  ali  veli  \"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "  ali  veli  "
+      },
+      "beklenen": {
+        "capStr": "  Ali  Veli  ",
+        "trKatla": "  ali  veli  "
+      }
+    },
+    {
+      "ad": "metin \"iıİI\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "iıİI"
+      },
+      "beklenen": {
+        "capStr": "İıİI",
+        "trKatla": "iıiı"
+      }
+    },
+    {
+      "ad": "metin \"ıspanak\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ıspanak"
+      },
+      "beklenen": {
+        "capStr": "Ispanak",
+        "trKatla": "ıspanak"
+      }
+    },
+    {
+      "ad": "metin \"istanbul\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "istanbul"
+      },
+      "beklenen": {
+        "capStr": "İstanbul",
+        "trKatla": "istanbul"
+      }
+    },
+    {
+      "ad": "metin \"ışıl ışık\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ışıl ışık"
+      },
+      "beklenen": {
+        "capStr": "Işıl Işık",
+        "trKatla": "ışıl ışık"
+      }
+    },
+    {
+      "ad": "metin \"şükrü ÇAĞLAR\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "şükrü ÇAĞLAR"
+      },
+      "beklenen": {
+        "capStr": "Şükrü ÇAĞLAR",
+        "trKatla": "şükrü çağlar"
+      }
+    },
+    {
+      "ad": "metin \"öner ünal\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "öner ünal"
+      },
+      "beklenen": {
+        "capStr": "Öner Ünal",
+        "trKatla": "öner ünal"
+      }
+    },
+    {
+      "ad": "metin \"güler üzüm\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "güler üzüm"
+      },
+      "beklenen": {
+        "capStr": "Güler Üzüm",
+        "trKatla": "güler üzüm"
+      }
+    },
+    {
+      "ad": "metin \"hacı mehmet\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "hacı mehmet"
+      },
+      "beklenen": {
+        "capStr": "Hacı Mehmet",
+        "trKatla": "hacı mehmet"
+      }
+    },
+    {
+      "ad": "metin \"sail efendi\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "sail efendi"
+      },
+      "beklenen": {
+        "capStr": "Sail Efendi",
+        "trKatla": "sail efendi"
+      }
+    },
+    {
+      "ad": "metin \"fatma zehra\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "fatma zehra"
+      },
+      "beklenen": {
+        "capStr": "Fatma Zehra",
+        "trKatla": "fatma zehra"
+      }
+    },
+    {
+      "ad": "metin \"abdülhamid\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "abdülhamid"
+      },
+      "beklenen": {
+        "capStr": "Abdülhamid",
+        "trKatla": "abdülhamid"
+      }
+    },
+    {
+      "ad": "metin \"ibrahim halil\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ibrahim halil"
+      },
+      "beklenen": {
+        "capStr": "İbrahim Halil",
+        "trKatla": "ibrahim halil"
+      }
+    },
+    {
+      "ad": "metin \"ömer faruk\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ömer faruk"
+      },
+      "beklenen": {
+        "capStr": "Ömer Faruk",
+        "trKatla": "ömer faruk"
+      }
+    },
+    {
+      "ad": "metin \"ç\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ç"
+      },
+      "beklenen": {
+        "capStr": "Ç",
+        "trKatla": "ç"
+      }
+    },
+    {
+      "ad": "metin \"ğ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ğ"
+      },
+      "beklenen": {
+        "capStr": "Ğ",
+        "trKatla": "ğ"
+      }
+    },
+    {
+      "ad": "metin \"ş\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ş"
+      },
+      "beklenen": {
+        "capStr": "Ş",
+        "trKatla": "ş"
+      }
+    },
+    {
+      "ad": "metin \"i\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "i"
+      },
+      "beklenen": {
+        "capStr": "İ",
+        "trKatla": "i"
+      }
+    },
+    {
+      "ad": "metin \"ı\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ı"
+      },
+      "beklenen": {
+        "capStr": "I",
+        "trKatla": "ı"
+      }
+    },
+    {
+      "ad": "metin \"\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": ""
+      },
+      "beklenen": {
+        "capStr": "",
+        "trKatla": ""
+      }
+    },
+    {
+      "ad": "metin \" \"",
+      "girdi": {
+        "tur": "metin",
+        "deger": " "
+      },
+      "beklenen": {
+        "capStr": " ",
+        "trKatla": " "
+      }
+    },
+    {
+      "ad": "metin \"-\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "-"
+      },
+      "beklenen": {
+        "capStr": "-",
+        "trKatla": "-"
+      }
+    },
+    {
+      "ad": "metin \"a\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "a"
+      },
+      "beklenen": {
+        "capStr": "A",
+        "trKatla": "a"
+      }
+    },
+    {
+      "ad": "metin \"ab cd ef\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ab cd ef"
+      },
+      "beklenen": {
+        "capStr": "Ab Cd Ef",
+        "trKatla": "ab cd ef"
+      }
+    },
+    {
+      "ad": "metin \"ali\\tveli\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ali\tveli"
+      },
+      "beklenen": {
+        "capStr": "Ali\tVeli",
+        "trKatla": "ali\tveli"
+      }
+    },
+    {
+      "ad": "metin \"ali\\nveli\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ali\nveli"
+      },
+      "beklenen": {
+        "capStr": "Ali\nVeli",
+        "trKatla": "ali\nveli"
+      }
+    },
+    {
+      "ad": "metin \"ali veli\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ali veli"
+      },
+      "beklenen": {
+        "capStr": "Ali Veli",
+        "trKatla": "ali veli"
+      }
+    },
+    {
+      "ad": "metin \"ali veli\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ali veli"
+      },
+      "beklenen": {
+        "capStr": "Ali Veli",
+        "trKatla": "ali veli"
+      }
+    },
+    {
+      "ad": "metin \"o'neil\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "o'neil"
+      },
+      "beklenen": {
+        "capStr": "O'neil",
+        "trKatla": "o'neil"
+      }
+    },
+    {
+      "ad": "metin \"mc donald\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "mc donald"
+      },
+      "beklenen": {
+        "capStr": "Mc Donald",
+        "trKatla": "mc donald"
+      }
+    },
+    {
+      "ad": "metin \"ßeta\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ßeta"
+      },
+      "beklenen": {
+        "capStr": "SSeta",
+        "trKatla": "ßeta"
+      }
+    },
+    {
+      "ad": "metin \"ǆ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ǆ"
+      },
+      "beklenen": {
+        "capStr": "Ǆ",
+        "trKatla": "ǆ"
+      }
+    },
+    {
+      "ad": "metin \"ñandú\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ñandú"
+      },
+      "beklenen": {
+        "capStr": "Ñandú",
+        "trKatla": "ñandú"
+      }
+    },
+    {
+      "ad": "metin \"émile zola\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "émile zola"
+      },
+      "beklenen": {
+        "capStr": "Émile Zola",
+        "trKatla": "émile zola"
+      }
+    },
+    {
+      "ad": "metin \"ÂLİ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ÂLİ"
+      },
+      "beklenen": {
+        "capStr": "ÂLİ",
+        "trKatla": "âli"
+      }
+    },
+    {
+      "ad": "metin \"ınci\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ınci"
+      },
+      "beklenen": {
+        "capStr": "Inci",
+        "trKatla": "ınci"
+      }
+    },
+    {
+      "ad": "metin \"iNCİ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "iNCİ"
+      },
+      "beklenen": {
+        "capStr": "İNCİ",
+        "trKatla": "inci"
+      }
+    },
+    {
+      "ad": "metin \"ELİF NUR\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ELİF NUR"
+      },
+      "beklenen": {
+        "capStr": "ELİF NUR",
+        "trKatla": "elif nur"
+      }
+    },
+    {
+      "ad": "metin \"hüseyin-öz\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "hüseyin-öz"
+      },
+      "beklenen": {
+        "capStr": "Hüseyin-Öz",
+        "trKatla": "hüseyin-öz"
+      }
+    },
+    {
+      "ad": "metin \"zeynep (kızlık)\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "zeynep (kızlık)"
+      },
+      "beklenen": {
+        "capStr": "Zeynep (kızlık)",
+        "trKatla": "zeynep (kızlık)"
+      }
+    },
+    {
+      "ad": "metin \"1ahmet\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "1ahmet"
+      },
+      "beklenen": {
+        "capStr": "1ahmet",
+        "trKatla": "1ahmet"
+      }
+    },
+    {
+      "ad": "metin \"ahmet 2\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ahmet 2"
+      },
+      "beklenen": {
+        "capStr": "Ahmet 2",
+        "trKatla": "ahmet 2"
+      }
+    },
+    {
+      "ad": "metin \"😀 emoji\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "😀 emoji"
+      },
+      "beklenen": {
+        "capStr": "😀 Emoji",
+        "trKatla": "😀 emoji"
+      }
+    },
+    {
+      "ad": "metin \"a😀b\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "a😀b"
+      },
+      "beklenen": {
+        "capStr": "A😀b",
+        "trKatla": "a😀b"
+      }
+    },
+    {
+      "ad": "metin \"ΣΊΣΥΦΟΣ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ΣΊΣΥΦΟΣ"
+      },
+      "beklenen": {
+        "capStr": "ΣΊΣΥΦΟΣ",
+        "trKatla": "σίσυφος"
+      }
+    },
+    {
+      "ad": "metin \"ǅ\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": "ǅ"
+      },
+      "beklenen": {
+        "capStr": "Ǆ",
+        "trKatla": "ǆ"
+      }
+    },
+    {
+      "ad": "metin \" x\"",
+      "girdi": {
+        "tur": "metin",
+        "deger": " x"
+      },
+      "beklenen": {
+        "capStr": " X",
+        "trKatla": " x"
+      }
+    }
+  ]
+}
