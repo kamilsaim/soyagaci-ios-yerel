@@ -55,8 +55,12 @@ final class EDevletTests: XCTestCase {
     }
 
     func parca(_ j: JSON) -> PdfParca {
-        return PdfParca(str: j["str"]?.metin ?? "", x: j["x"]?.sayi ?? 0, y: j["y"]?.sayi ?? 0,
-                        w: j["w"]?.sayi ?? 0, h: j["h"]?.sayi ?? 0)
+        let str: String = j["str"]?.metin ?? ""
+        let x: Double = j["x"]?.sayi ?? 0
+        let y: Double = j["y"]?.sayi ?? 0
+        let w: Double = j["w"]?.sayi ?? 0
+        let h: Double = j["h"]?.sayi ?? 0
+        return PdfParca(str: str, x: x, y: y, w: w, h: h)
     }
 
     // MARK: textToGrid
@@ -88,8 +92,11 @@ final class EDevletTests: XCTestCase {
     func ebeveyn(_ j: JSON?) -> EDEbeveyn? {
         guard let j = j, j != .null else { return nil }
         if j["tur"]?.metin == "dugum" { return .dugum(Int(j["i"]?.sayi ?? -1)) }
-        return .hayali(anahtar: j["anahtar"]?.metin ?? "", ad: j["ad"]?.metin ?? "", cins: j["cins"]?.metin ?? "",
-                       cocuk: Int(j["cocuk"]?.sayi ?? -1))
+        let anahtar: String = j["anahtar"]?.metin ?? ""
+        let ad: String = j["ad"]?.metin ?? ""
+        let cins: String = j["cins"]?.metin ?? ""
+        let cocuk: Int = Int(j["cocuk"]?.sayi ?? -1)
+        return .hayali(anahtar: anahtar, ad: ad, cins: cins, cocuk: cocuk)
     }
 
     func test_analizFixture() {
