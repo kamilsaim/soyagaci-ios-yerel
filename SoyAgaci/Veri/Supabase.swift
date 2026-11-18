@@ -14,7 +14,7 @@ enum Servis {
         supabaseURL: url,
         supabaseKey: anahtar,
         options: SupabaseClientOptions(
-            auth: SupabaseClientOptions.AuthOptions(redirectToURL: donusAdresi, flowType: .pkce)
+            auth: SupabaseClientOptions.AuthOptions(redirectToURL: donusAdresi, flowType: .pkce, emitLocalSessionAsInitialSession: true)
         )
     )
 }

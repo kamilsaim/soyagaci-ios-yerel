@@ -30,6 +30,7 @@ final class Depo {
     private let yerel: DosyaYerel
     private var islemler: AsyncStream<Is>.Continuation!
     private var yuklemeNo = 0
+    private var zincir: Task<Void, Never>?
     private var yenileme: Task<Void, Never>?
 
     /// Kayıtlar sırayla `Esitleyici`'ye gider (Task'ların sırası garanti olmadığından tek tüketicili akış).
@@ -86,7 +87,9 @@ final class Depo {
     // MARK: değiştirme
 
     /// Ağacı değiştirir ve kaydeder (yerel + 800 ms sonra bulut). Web `save()`.
+    /// Yükleme sürerken yok sayılır: gösterilen ağaç henüz eski hesabın/modun ağacıdır ve yeni hesaba sızmamalıdır.
     func degistir(_ f: (inout Agac) -> Void) {
+        guard !yukleniyor else { return }
         var a = agac
         f(&a)
         guard a != agac else { return }
@@ -103,36 +106,58 @@ final class Depo {
 
     // MARK: yükleme (web load())
 
+    /// Yüklemeler (yukle / bosalt / çakışmada bulutu kabul) sıraya girer: öncekinin bitmesi beklenir, araya
+    /// daha yeni biri girdiyse eski olan hiç başlamaz.
+    private func sirala(_ no: Int, _ is_: @escaping @MainActor () async -> Void) async {
+        let onceki = zincir
+        let t = Task { @MainActor in
+            await onceki?.value
+            guard no == self.yuklemeNo else { return }
+            await is_()
+        }
+        zincir = t
+        await t.value
+    }
+
     /// Kullanıcı değişince çağrılır. `uid == nil` yerel mod verisini yükler.
     func yukle(uid yeniUid: String?) async {
         yuklemeNo += 1
         let no = yuklemeNo
         yukleniyor = true
-        await kayitlariBekle()
-        await foto.kullaniciAyarla(yeniUid)
-        let sonuc = await esitleyici.yukle(uid: yeniUid)
-        let k = await konum.yukle(uid: yeniUid)
-        guard no == yuklemeNo else { return } // daha yeni bir yükleme başladı
-        uid = yeniUid
-        agac = sonuc.agac
-        kaynak = sonuc.kaynak
-        konumlar = k
-        cakisma = nil
-        esitleme = .tamam
-        yukleniyor = false
-        await fotolariImzala(zorla: true)
+        await sirala(no) {
+            await self.kayitlariBekle()
+            await self.foto.kullaniciAyarla(yeniUid)
+            let sonuc = await self.esitleyici.yukle(uid: yeniUid)
+            guard no == self.yuklemeNo else { return }
+            // ağaç hemen atanır; `yukleniyor` true olduğundan konum beklenirken `degistir` zaten reddedilir
+            self.uid = yeniUid
+            self.agac = sonuc.agac
+            self.kaynak = sonuc.kaynak
+            let k = await self.konum.yukle(uid: yeniUid)
+            guard no == self.yuklemeNo else { return }
+            self.konumlar = k
+            self.cakisma = nil
+            self.esitleme = .tamam
+            self.yukleniyor = false
+            await self.fotolariImzala(zorla: true)
+        }
     }
 
     /// Oturum yok ve yerel mod seçilmedi (giriş ekranı): veri bellekten atılır, yerel dosyalar kalır.
     func bosalt() async {
         yuklemeNo += 1
-        await kayitlariBekle()
-        await foto.kullaniciAyarla(nil)
-        _ = await esitleyici.yukle(uid: nil) // eşitleyicinin eski hesap durumunu bırakması için
-        uid = nil
-        agac = Agac()
-        konumlar = Agacla.normDrag(.null)
-        yukleniyor = false
+        let no = yuklemeNo
+        yukleniyor = true
+        await sirala(no) {
+            await self.kayitlariBekle()
+            await self.foto.kullaniciAyarla(nil)
+            _ = await self.esitleyici.yukle(uid: nil) // eşitleyicinin eski hesap durumunu bırakması için
+            guard no == self.yuklemeNo else { return }
+            self.uid = nil
+            self.agac = Agac()
+            self.konumlar = Agacla.normDrag(.null)
+            self.yukleniyor = false
+        }
     }
 
     // MARK: çakışma (web pushToCloud askConfirm)
@@ -140,16 +165,26 @@ final class Depo {
     /// Evet ("Üzerine yaz") → zorla gönder; hayır → buluttaki sürümü yükle, yerel değişiklik bırakılır.
     func cakismayiCoz(uzerineYaz: Bool) async {
         cakisma = nil
+        await kayitlariBekle()
         if uzerineYaz {
             _ = await esitleyici.gonder(zorla: true)
-        } else {
-            let sonuc = await esitleyici.bulutuKabulEt()
-            let k = await konum.yukle(uid: uid)
-            agac = sonuc.agac
-            kaynak = sonuc.kaynak
-            konumlar = k
-            esitleme = .tamam
-            await fotolariImzala(zorla: true)
+            return
+        }
+        yuklemeNo += 1
+        let no = yuklemeNo
+        yukleniyor = true
+        await sirala(no) {
+            await self.kayitlariBekle()
+            let sonuc = await self.esitleyici.bulutuKabulEt()
+            guard no == self.yuklemeNo else { return }
+            self.agac = sonuc.agac
+            self.kaynak = sonuc.kaynak
+            let k = await self.konum.yukle(uid: self.uid)
+            guard no == self.yuklemeNo else { return }
+            self.konumlar = k
+            self.esitleme = .tamam
+            self.yukleniyor = false
+            await self.fotolariImzala(zorla: true)
         }
     }
 

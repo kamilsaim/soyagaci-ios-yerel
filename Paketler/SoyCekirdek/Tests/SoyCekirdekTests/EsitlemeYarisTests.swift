@@ -246,4 +246,77 @@ final class EsitlemeYarisTests: XCTestCase {
         }
         XCTAssertEqual(n, 8)
     }
+
+    // yukle(u1) bulut okurken gelen kaydet() misafir verisidir: u1'in kirli verisi olarak SIZMAZ
+    func test_yukleBulutOkurken_kaydet_yeniHesabaSizmaz() async {
+        let b = OkuBekleyenBulut()
+        b.satir = BulutSatiri(agac: agac(3), updatedAt: t0)
+        let y = BellekYerel()
+        let e = Esitleyici(bulut: b, yerel: y, gecikme: 5, simdi: { self.t0 })
+        let g = Task { await e.yukle(uid: "u1") }
+        await b.bekle()
+        await e.kaydet(agac(7))          // misafir düzenlemesi
+        b.birak()
+        let s = await g.value
+        XCTAssertNil(y.kirli)
+        XCTAssertNil(y.bulutKopya)
+        XCTAssertEqual(y.yerelMod?.people.sayisi, 7)
+        XCTAssertEqual(s.kaynak, .bulut)
+        XCTAssertEqual(s.agac.people.sayisi, 3)
+        XCTAssertFalse(s.cakisma)
+        await e.cikisYap()
+    }
+
+    // askıdaki yukle(u1) sonradan biterse, araya giren yukle(nil)'in durumunu (uid = nil) bozmaz
+    func test_eskiYukleSonradanBiter_durumuBozmaz() async {
+        let b = OkuBekleyenBulut()
+        b.satir = BulutSatiri(agac: agac(3), updatedAt: t0)
+        let y = BellekYerel()
+        let e = Esitleyici(bulut: b, yerel: y, gecikme: 5, simdi: { self.t0 })
+        let g = Task { await e.yukle(uid: "u1") }
+        await b.bekle()
+        _ = await e.yukle(uid: nil)
+        b.birak()
+        _ = await g.value
+        await e.kaydet(agac(2))
+        XCTAssertEqual(y.yerelMod?.people.sayisi, 2)
+        XCTAssertNil(y.kirli)
+        XCTAssertNil(y.bulutKopya)
+    }
+}
+
+/// oku() bir devam noktasında bekler; test `birak()` ile sürdürür.
+final class OkuBekleyenBulut: BulutDeposu, @unchecked Sendable {
+    private let kilit = NSLock()
+    private var devam: CheckedContinuation<Void, Never>?
+    var satir: BulutSatiri?
+
+    func oku(uid: String) async throws -> BulutSatiri? {
+        await withCheckedContinuation { (c: CheckedContinuation<Void, Never>) in
+            kilit.lock()
+            devam = c
+            kilit.unlock()
+        }
+        return satir
+    }
+
+    func yaz(uid: String, agac: Agac) async throws -> Date { throw SahteHata() }
+
+    var bekliyor: Bool {
+        kilit.lock()
+        defer { kilit.unlock() }
+        return devam != nil
+    }
+
+    func bekle() async {
+        while !bekliyor { await Task.yield() }
+    }
+
+    func birak() {
+        kilit.lock()
+        let c = devam
+        devam = nil
+        kilit.unlock()
+        c?.resume()
+    }
 }

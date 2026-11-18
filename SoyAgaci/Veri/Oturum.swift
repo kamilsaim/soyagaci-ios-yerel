@@ -44,6 +44,7 @@ final class Oturum {
     }
 
     private func olayIsle(_ olay: AuthChangeEvent, _ oturum: Session?) {
+        // Kayıtlı oturum süresi dolmuş olsa da girişli sayılır (SDK sonra yeniler); çevrimdışı açılışta veri gizlenmez.
         kullanici = oturum?.user
         if kullanici != nil && yerelMod { yerelModAyarla(false) }
         if olay == .initialSession { hazir = true }
@@ -88,10 +89,14 @@ final class Oturum {
 
     private func yerelGoogle() async throws {
         guard let vc = Oturum.ustEkran() else { throw BulutHatasi(description: "Ekran bulunamadı") }
-        let sonuc = try await GIDSignIn.sharedInstance.signIn(withPresenting: vc)
+        // GoogleSignIn kimlik jetonuna nonce koyar: ham değer Supabase'e, sha256'sı Google'a gider.
+        let ham = Oturum.nonceUret()
+        let sonuc = try await GIDSignIn.sharedInstance.signIn(
+            withPresenting: vc, hint: nil, additionalScopes: nil, nonce: Oturum.sha256(ham)
+        )
         guard let idJeton = sonuc.user.idToken?.tokenString else { throw BulutHatasi(description: "Google kimlik jetonu yok") }
         _ = try await istemci.auth.signInWithIdToken(
-            credentials: OpenIDConnectCredentials(provider: .google, idToken: idJeton, accessToken: sonuc.user.accessToken.tokenString)
+            credentials: OpenIDConnectCredentials(provider: .google, idToken: idJeton, accessToken: sonuc.user.accessToken.tokenString, nonce: ham)
         )
     }
 
@@ -176,6 +181,8 @@ final class Oturum {
 
     /// Edge Function `hesap-sil` (Task 19'da yayınlanır; yoksa hata fırlatılır). Başarılıysa yerel veriler silinir ve oturum kapanır.
     func hesabiSil() async throws {
+        // bekleyen/uçuştaki kayıt sunucu silmesinden sonra satırı yeniden yaratmasın
+        _ = await cikisHazirlik?()
         try await istemci.functions.invoke("hesap-sil")
         await cikisTemizle?(kullanici?.id.uuidString.lowercased())
         try? await istemci.auth.signOut(scope: .local)

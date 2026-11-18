@@ -81,6 +81,7 @@ public actor Esitleyici {
     private var uid: String?
     private var sunucuMs: Int = 0          // _serverTs
     private var nesil: Int = 0             // _saveGen
+    private var yuklemeNo: Int = 0         // yukle() çağrı sırası (eski yükleme sonucu durumu bozmasın)
     private var guncel: Agac?              // son kaydedilen anlık görüntü (gonder için)
     private var zamanlayici: Task<Void, Never>?
     private var kuyruk: Task<Void, Never>? // _pushQ
@@ -108,21 +109,39 @@ public actor Esitleyici {
 
     /// Web `load()`. `uid == nil` -> yerel mod (bulut çağrılmaz).
     public func yukle(uid yeniUid: String?) async -> YuklemeSonucu {
+        yuklemeNo += 1
+        let no = yuklemeNo
         if uid != yeniUid {
             // hesap değişti: eski hesabın bekleyen/uçuştaki gönderimleri artık yazamaz
             zamanlayici?.cancel()
             zamanlayici = nil
             nesil += 1
-            sunucuMs = 0
         }
-        uid = yeniUid
         guard let uid = yeniUid else {
+            self.uid = nil
+            sunucuMs = 0
             var a = yerel.yerelMod ?? Agac()
             if a.nextId == 0 { a.nextId = 1 }
             Islem.migrateData(&a)
             guncel = a
             return YuklemeSonucu(agac: a, kaynak: .yerel, cakisma: false)
         }
+
+        // `self.uid` bulut okunurken ESKİ değerde kalır: bu pencerede gelen kaydet() eski hesaba/yerel moda
+        // yazılır, yeni hesabın "kirli" verisi olarak sızmaz.
+        var veri: BulutSatiri?
+        var basarisiz = false
+        do {
+            veri = try await bulut.oku(uid: uid)
+        } catch {
+            basarisiz = true
+        }
+        if no != yuklemeNo {
+            // araya daha yeni bir yukle() girdi (hesap değişti): durumu ona bırak
+            return YuklemeSonucu(agac: guncel ?? Agac(), kaynak: .yerelOkunamadi, cakisma: false)
+        }
+        if self.uid != uid { sunucuMs = 0 }
+        self.uid = uid
 
         var veri: BulutSatiri?
         var basarisiz = false
