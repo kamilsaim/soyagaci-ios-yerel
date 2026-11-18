@@ -22,7 +22,7 @@ const moduller = hedef === 'hepsi'
 const webYukleSabit = () => webYukle(HTML, { simdi: SIMDI });
 for (const m of moduller) {
   const mod = await import(pathToFileURL(path.join(dizin, m + '.mjs')).href);
-  const sonuc = mod.default(webYukleSabit);
+  const sonuc = await mod.default(webYukleSabit);
   if (sonuc) {
     fs.mkdirSync(CIKTI, { recursive: true });
     fs.writeFileSync(path.join(CIKTI, m + '.json'), JSON.stringify(sonuc, null, 2) + '\n');

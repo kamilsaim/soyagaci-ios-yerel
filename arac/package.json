@@ -1,0 +1,10 @@
+{
+  "name": "soy-agaci-arac",
+  "private": true,
+  "type": "module",
+  "description": "Fixture uretim araclari (yalniz gelistirme)",
+  "devDependencies": {
+    "jsdom": "^24.1.0",
+    "xlsx": "^0.18.5"
+  }
+}
