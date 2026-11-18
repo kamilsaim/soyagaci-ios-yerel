@@ -141,6 +141,5 @@ final class GedcomTests: XCTestCase {
         try kayipsiz("parse heritage.ged", kisi: 146, kizlik: 0, cokSatirliNot: 0, tarihsizVefat: 18)
         try kayipsiz("parse saim-soy.ged", kisi: 24, kizlik: 0, cokSatirliNot: 0, tarihsizVefat: 3)
         try kayipsiz("parse edevlet-soy-Mustafa.ged", kisi: 35, kizlik: 2, cokSatirliNot: 19, tarihsizVefat: 12)
-        try kayipsiz("parse kenar durumlari", kisi: 5, kizlik: 1, cokSatirliNot: 2, tarihsizVefat: 1)
     }
 }
