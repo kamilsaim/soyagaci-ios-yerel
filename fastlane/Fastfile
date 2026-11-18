@@ -34,10 +34,12 @@ platform :ios do
       UI.message("App ID yok, oluşturuluyor: #{PAKET}")
       kimlik = Spaceship::ConnectAPI::BundleId.create(name: "Soy Agaci", platform: "IOS", identifier: PAKET)
     end
-    yetenekler = kimlik.get_bundle_id_capabilities.map(&:capability_type)
+    yetenekler = kimlik.get_capabilities.map(&:capability_type)
     unless yetenekler.include?(SIGN_IN_WITH_APPLE)
       UI.message("Apple ile Giriş yeteneği ekleniyor")
-      kimlik.create_capability(SIGN_IN_WITH_APPLE)
+      kimlik.create_capability(SIGN_IN_WITH_APPLE, settings: [
+        { key: "APPLE_ID_AUTH_APP_CONSENT", options: [{ key: "PRIMARY_APP_CONSENT" }] }
+      ])
     end
 
     get_provisioning_profile(app_identifier: PAKET, force: true)
