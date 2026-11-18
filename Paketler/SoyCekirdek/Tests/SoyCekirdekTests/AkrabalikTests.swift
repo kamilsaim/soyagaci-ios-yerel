@@ -122,7 +122,7 @@ final class AkrabalikTests: XCTestCase {
             XCTAssertEqual(Akrabalik.kinPhrase(a, b, agac), metinVeyaNil(v.beklenen["kisi"]), v.ad)
             // Kisi varsa web "Aynı kişi" dondurur, yoksa null (cokme yok)
             if agac.kisi(a) != nil { XCTAssertEqual(cumle, "Aynı kişi", v.ad) } else { XCTAssertNil(cumle, v.ad) }
-            XCTAssertEqual(Akrabalik.kinship(a, b, agac)?.ayni, agac.kisi(a) != nil ? true : nil, v.ad)
+            XCTAssertEqual(Akrabalik.kinship(a, b, agac)?.ayni ?? false, agac.kisi(a) != nil, v.ad)
         }
     }
 
