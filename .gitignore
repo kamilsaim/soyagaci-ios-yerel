@@ -1,0 +1,13 @@
+/build/
+*.xcodeproj/
+DerivedData/
+.build/
+.swiftpm/
+node_modules/
+fastlane/report.xml
+*.p12
+*.p8
+*.ipa
+*.dSYM.zip
+.DS_Store
+.superpowers/

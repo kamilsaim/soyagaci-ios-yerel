@@ -1,0 +1,24 @@
+# Soy Ağacı çekirdek paketi testleri — Linux'ta, her push'ta.
+name: Cekirdek testleri
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    container: swift:6.0
+    defaults:
+      run:
+        # bash = pipefail; yoksa `| tee` kırmızı testi yeşil gösterir
+        shell: bash
+        working-directory: Paketler/SoyCekirdek
+    steps:
+      - uses: actions/checkout@v4
+      - name: swift test
+        run: |
+          set -o pipefail
+          swift test 2>&1 | tee test.log
