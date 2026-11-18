@@ -92,8 +92,12 @@ public actor Esitleyici {
         self.gecikme = gecikme
         self.simdi = simdi
         var c: AsyncStream<EsitlemeDurumu>.Continuation!
-        self.durumlar = AsyncStream<EsitlemeDurumu> { c = $0 }
+        self.durumlar = AsyncStream<EsitlemeDurumu>(bufferingPolicy: .bufferingNewest(8)) { c = $0 }
         self.durumBildir = c
+    }
+
+    deinit {
+        durumBildir.finish() // tüketici `for await` döngüsü takılı kalmasın
     }
 
     private static func ms(_ d: Date) -> Int {
@@ -312,6 +316,11 @@ public actor Esitleyici {
         zamanlayici = nil
         nesil += 1
         if let k = kuyruk { await k.value }
+        // kuyruk beklenirken (çakışma penceresi açıkken) yeni bir kaydet() zamanlayıcı kurmuş olabilir:
+        // kabul edilen bulut kopyasının üstüne itmesin
+        zamanlayici?.cancel()
+        zamanlayici = nil
+        nesil += 1
         yerel.kirli = nil
         yerel.bulutKopya = nil
         yerel.bulutKopyaUid = nil

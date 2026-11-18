@@ -209,4 +209,41 @@ final class EsitlemeYarisTests: XCTestCase {
         if case .hata? = hata {} else { XCTFail("hata bekleniyordu") }
         await e.cikisYap()
     }
+
+    // bulutuKabulEt kuyruğu beklerken (çakışma penceresi) gelen kaydet(), kabul edilen bulut kopyasının üstüne itmemeli
+    func test_bulutuKabulEt_beklerkenKaydedilenZamanlayiciIptalEdilir() async {
+        let (e, b, y) = kur(gecikme: 0.3)
+        _ = await e.yukle(uid: "u1")
+        await e.kaydet(agac(2))
+        let g = Task { await e.gonder(zorla: true) }
+        await b.bekle(1)                       // yazma ucusta
+        let k = Task { await e.bulutuKabulEt() }
+        try? await Task.sleep(nanoseconds: 60_000_000) // bulutuKabulEt kuyrukta bekliyor
+        await e.kaydet(agac(5))                // diyalog acikken yeni kayit: zamanlayici kurulur
+        b.birakIlk()
+        _ = await g.value
+        _ = await k.value
+        try? await Task.sleep(nanoseconds: 500_000_000)
+        XCTAssertEqual(b.bekleyenSayisi, 0)
+        XCTAssertEqual(b.yazilanlar.count, 1)
+        XCTAssertNil(y.kirli)
+        await e.cikisYap()
+    }
+
+    // durumlar: en yeni 8 tutulur, Esitleyici bitince akis kapanir
+    func test_durumlarAkisi_tamponluVeDeinitteKapanir() async {
+        let b = KilitliBulut()
+        let y = BellekYerel()
+        var e: Esitleyici? = Esitleyici(bulut: b, yerel: y, gecikme: 5)
+        let akis = e!.durumlar
+        _ = await e!.yukle(uid: "u1")
+        for i in 0..<20 { await e!.kaydet(agac(i + 1)) }
+        e = nil
+        var n = 0
+        for await d in akis {
+            XCTAssertEqual(d, .gonderiliyor)
+            n += 1
+        }
+        XCTAssertEqual(n, 8)
+    }
 }
