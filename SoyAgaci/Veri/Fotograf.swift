@@ -64,14 +64,9 @@ actor FotoServisi {
             i += 100
             let bitis = simdi.addingTimeInterval(3300)
             do {
-                let adresler = try await depo.createSignedURLs(paths: paket, expiresIn: 3600)
-                if adresler.count == paket.count {
-                    for (r, u) in zip(paket, adresler) { onbellek.koy(r, u, bitis) }
-                } else {
-                    // yanıt eksik döndü: eşleşme belirsiz, tek tek al
-                    for r in paket {
-                        if let u = try? await depo.createSignedURL(path: r, expiresIn: 3600) { onbellek.koy(r, u, bitis) }
-                    }
+                let sonuclar = try await depo.createSignedURLs(paths: paket, expiresIn: 3600)
+                for s in sonuclar {
+                    if let u = s.signedURL { onbellek.koy(s.path, u, bitis) }
                 }
             } catch {
                 continue
